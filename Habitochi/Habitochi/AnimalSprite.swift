@@ -11,7 +11,6 @@ import SpriteKit
 class AnimalSprite : SKSpriteNode{
     
     //need a way to tell parent viewController to segue to another scene
-    var delegate = false
     init(imageName: String, name: String){
         let texture = SKTexture(imageNamed: imageName)
         super.init(texture: texture, color: .clear, size: texture.size())
@@ -24,8 +23,7 @@ class AnimalSprite : SKSpriteNode{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("\(String(describing: self.name)) has been touched")
-        delegate = true
+        print("\(self.name!) has been touched")
     }
     
 }

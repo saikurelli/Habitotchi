@@ -10,15 +10,20 @@ import UIKit
 class HabitViewController: UIViewController {
 
     @IBOutlet weak var temp: UILabel!
-    var t = ""
+    var fetchedHabit = Habit(name: "", goal: "")
+    var delegate : UIViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
-        temp.text = t
+        
+        temp.text = fetchedHabit.name
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func buttonPressed(_ sender: Any) {
+        fetchedHabit.habitCircleChecked()
+    }
+    
     /*
     // MARK: - Navigation
 

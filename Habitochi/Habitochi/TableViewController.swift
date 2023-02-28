@@ -7,32 +7,46 @@
 
 import UIKit
 
-public let temp = ["test1", "test2", "test3"]
-
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    
+    let textCellIdentifier = "TextCell"
     let tableSegueIdentifier = "HabitTableViewSegueIdentifier"
     var animalSegueIdentifier = ""
    
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return temp.count
+        print(tempProfile.habits.count)
+        return tempProfile.habits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath) as! HabitCell
         
         let row = indexPath.row
-        cell.textLabel?.text = temp[row]
+        let fetchedHabit = tempProfile.habits[row]
+       
+        if fetchedHabit.habitCompleted{
+            cell.tabelCellImage = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
+            cell.tabelCellImage.tintColor = .green
+        }
+        
+        cell.tabelCellImage.tintColor = .green
+        //cell.tabelCellImage.backgroundColor = .black
+        cell.tableCellLabel.text = fetchedHabit.name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        habit1.animal = animal
+        tempProfile.habits.append(habit1)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,7 +59,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitViewController,
            let habit = tableView.indexPathForSelectedRow?.row {
-            destination.t = temp[habit]
+            destination.fetchedHabit = tempProfile.habits[habit]
+            destination.delegate = self
+
+            
             
         }
         
@@ -54,4 +71,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
    
 
+}
+
+class HabitCell : UITableViewCell {
+
+    @IBOutlet var tabelCellImage: UIImageView!
+    @IBOutlet var tableCellLabel: UILabel!
+    
 }
