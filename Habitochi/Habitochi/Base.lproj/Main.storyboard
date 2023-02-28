@@ -19,6 +19,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< Updated upstream
+=======
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Sprite Kit View Controller-->
+        <scene sceneID="8hm-qb-13K">
+            <objects>
+                <viewController id="mef-Pm-uDl" customClass="SpriteKitViewController" customModule="Habitochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="410-Ze-0KK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Gz-Vu-Epr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="5Gz-Vu-Epr" id="mtg-dG-hWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEw-h9-77d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1907.6335877862596" y="-458.45070422535213"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="91x-MZ-TQk">
+            <objects>
+                <viewController id="Jsg-3l-vsh" customClass="TableViewController" customModule="Habitochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IOL-LN-RPC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="369"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="B33-4w-iaR">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B33-4w-iaR" id="EhV-rc-6DF">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wDb-Fg-uRb" kind="show" identifier="HabitTableViewSegueIdentifier" id="NKg-i5-PxP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableVIew" destination="IOL-LN-RPC" id="5Tz-BM-Lhx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYw-qp-SHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="223"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1cn-0y-G4m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b9U-IB-TVV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iPm-ff-FOh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ugJ-bt-qSZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDV-wR-YbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+>>>>>>> Stashed changes
+        </scene>
+        <!--HabitViewStoryboard-->
+        <scene sceneID="6mv-M9-dw5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HabitView" referencedIdentifier="HabitViewStoryboard" id="wDb-Fg-uRb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Eef-IO-he8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6N3-ug-Jm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2667" y="223"/>
+        </scene>
+        <!--AnimalStatus-->
+        <scene sceneID="h1A-Of-jiv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnimalStatus" referencedIdentifier="AnimalStatus" id="r3t-hz-xa0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBa-Ju-OGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="-458"/>
         </scene>
     </scenes>
 </document>
