@@ -18,10 +18,10 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
+            </objects> 
+             =======
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
         </scene>
-        =======
         <!--Sprite Kit View Controller-->
         <scene sceneID="8hm-qb-13K">
             <objects>
