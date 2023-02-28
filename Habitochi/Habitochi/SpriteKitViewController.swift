@@ -15,7 +15,6 @@ class SpriteKitViewController: UIViewController {
     
     @IBOutlet weak var skView: SKView!
     
-    
     //Cole - Need to create a PropertyManager that observes to see if a sprite has been selected, then will perform the segue
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,7 @@ class SpriteKitViewController: UIViewController {
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        let sprite = AnimalSprite(imageName: "spriteTest.png", name: "dog")
+        let sprite = AnimalSprite(imageName: "SpriteTest", name: "dog")
         sprite.position = CGPoint(x: 100.0, y: 100.0)
         sprite.size = CGSize(width: 100.0, height: 100.0)
         scene.addChild(sprite)

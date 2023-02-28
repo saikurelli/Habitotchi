@@ -16,14 +16,14 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let tableSegueIdentifier = "HabitTableViewSegueIdentifier"
     var animalSegueIdentifier = ""
    
-    @IBOutlet var tableVIew: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temp.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableVIew.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath as IndexPath)
         
         let row = indexPath.row
         cell.textLabel?.text = temp[row]
@@ -34,8 +34,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableVIew.delegate = self
-        tableVIew.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -44,7 +44,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitViewController,
-           let habit = tableVIew.indexPathForSelectedRow?.row {
+           let habit = tableView.indexPathForSelectedRow?.row {
             destination.t = temp[habit]
             
         }
