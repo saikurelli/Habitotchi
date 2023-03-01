@@ -12,9 +12,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let textCellIdentifier = "TextCell"
     let tableSegueIdentifier = "HabitTableViewSegueIdentifier"
-    var animalSegueIdentifier = ""
+    let habitCreationSegueIdentifier = "habitCreationSegueIdentifier"
    
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var addHabitButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tempProfile.habits.count
@@ -59,6 +60,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
+        addHabitButton.tintColor = DARK_GREEN
 
         // Do any additional setup after loading the view.
     }
@@ -71,6 +73,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.fetchedHabit = tempProfile.habits[habit]
             destination.delegate = self
         }
+        
+        if segue.identifier == habitCreationSegueIdentifier,
+           let destination = segue.destination as? HabitCreationViewController {
+            
+        }
+        
+        
         
     }
     

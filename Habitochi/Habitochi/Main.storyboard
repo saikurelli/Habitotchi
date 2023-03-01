@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,6 +31,11 @@
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
                                 </connections>
                             </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-Kr-csG">
+                                <rect key="frame" x="-2" y="103" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <navigationBarAppearance key="standardAppearance"/>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,8 +72,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53C-bh-7SM">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ez-Vr2">
+                                <rect key="frame" x="347" y="59" width="44" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="person.crop.circle.fill" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                            </button>
+                            <skView opaque="NO" contentMode="scaleToFill" id="53C-bh-7SM">
+                                <rect key="frame" x="0.0" y="59" width="394" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
@@ -75,13 +92,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="profileButton" destination="NiM-Ez-Vr2" id="MZ0-WY-Xwn"/>
                         <outlet property="skView" destination="53C-bh-7SM" id="Bgm-FR-Myt"/>
                         <segue destination="4Wg-tg-4nr" kind="presentation" identifier="animalStatusSegueIdentifier" id="Dri-s2-Mw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJV-uy-xgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938.9312977099237" y="-167.95774647887325"/>
+            <point key="canvasLocation" x="1938.9312977099237" y="-168.3098591549296"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="qKz-E8-rDP">
@@ -92,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-ZL-38Q">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="316"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -129,11 +147,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0D-AA-Np8">
+                                <rect key="frame" x="20" y="315" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="oeX-RZ-OCR" kind="show" identifier="habitCreationSegueIdentifier" id="PBq-iC-8wK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SFw-f4-BRE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="addHabitButton" destination="X0D-AA-Np8" id="HsW-zW-jiD"/>
                         <outlet property="tableView" destination="QOJ-ZL-38Q" id="w7b-tV-Plg"/>
                     </connections>
                 </viewController>
@@ -159,9 +187,21 @@
             </objects>
             <point key="canvasLocation" x="2801" y="-168"/>
         </scene>
+        <!--HabitCreation-->
+        <scene sceneID="IUP-BR-lv3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HabitCreation" referencedIdentifier="HabitCreation" id="oeX-RZ-OCR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LiZ-b0-LqI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJs-fY-bhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="417"/>
+        </scene>
     </scenes>
     <resources>
         <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

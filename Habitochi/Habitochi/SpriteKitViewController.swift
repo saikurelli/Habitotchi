@@ -19,6 +19,7 @@ class SpriteKitViewController: UIViewController {
     
     
     @IBOutlet weak var skView: SKView!
+    @IBOutlet var profileButton: UIButton!
     
     
     
@@ -33,6 +34,8 @@ class SpriteKitViewController: UIViewController {
         habit2.animal = animal2
         tempProfile.habits.append(habit2)
         
+        profileButton.tintColor = .black
+        
         self.view = skView
         let scene = SKScene(size: skView.bounds.size)
         scene.backgroundColor = UIColor.white
@@ -42,12 +45,8 @@ class SpriteKitViewController: UIViewController {
         
         
         loadSprites(profile: tempProfile, scene: scene)
+        skView.presentScene(scene)
         
-       
-        if let skView = self.view as? SKView {
-            skView.presentScene(scene)
-        }
-
     
         
         
@@ -68,6 +67,7 @@ class SpriteKitViewController: UIViewController {
             scene.addChild(animalSprite)
             pos += offset
         }
+        createProfileButton(scene : scene)
     }
     
     func presentAnimalStatus(animal : Animal){
@@ -75,9 +75,24 @@ class SpriteKitViewController: UIViewController {
         
     }
     
+    func createProfileButton(scene : SKScene){
+        
+        //MARK: Need to change this to be whatever the profile picture is
+        let image = UIImage(systemName: "person.crop.circle")
+        let button = SpriteButton(image: image!, role: "profile")
+        button.color = DARK_GREEN
+        button.position = CGPoint(x: 50.0, y: 50.0)
+        button.size = CGSize(width: 20.0, height: 20.0)
+        scene.addChild(button)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "animalStatusSegueIdentifier",
            let destination = segue.destination as? AnimalStatusViewController{
+            if let sheet = destination.sheetPresentationController{
+                sheet.detents = [.medium(),.large()]
+            }
+            
             destination.clickedAnimal = (sender as! Animal)
             destination.delegate = self
         }
