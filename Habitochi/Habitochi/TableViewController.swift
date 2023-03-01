@@ -17,7 +17,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(tempProfile.habits.count)
         return tempProfile.habits.count
     }
     
@@ -26,14 +25,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let row = indexPath.row
         let fetchedHabit = tempProfile.habits[row]
-       
-        if fetchedHabit.habitCompleted{
-            cell.tabelCellImage = UIImageView(image: UIImage(systemName: "checkmark.circle.fill"))
-            cell.tabelCellImage.tintColor = .green
-        }
-        
-        cell.tabelCellImage.tintColor = .green
-        //cell.tabelCellImage.backgroundColor = .black
+        cell.delegate = self
+        cell.indexPath = indexPath
+        cell.habitCompletionButton.tintColor = GREEN
         cell.tableCellLabel.text = fetchedHabit.name
         return cell
     }
@@ -42,11 +36,30 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func changeTableCellBackground(tableView : UITableView, indexPath : IndexPath, checked: Bool){
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        if checked{
+            cell?.backgroundColor = GREEN
+        }
+        else{
+            cell?.backgroundColor = .white
+        }
+    }
+    
+    
+    
+    
+        
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         habit1.animal = animal
         tempProfile.habits.append(habit1)
+        habit2.animal = animal2
+        tempProfile.habits.append(habit2)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,8 +87,52 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 }
 
 class HabitCell : UITableViewCell {
-
-    @IBOutlet var tabelCellImage: UIImageView!
-    @IBOutlet var tableCellLabel: UILabel!
     
+    
+    @IBOutlet weak var habitCompletionButton: UIButton!
+    @IBOutlet var tableCellLabel: UILabel!
+    var completed = false
+    var delegate : TableViewController!
+    var indexPath : IndexPath!
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        //need to be able to reset it at beginning of new day
+        
+        let habit = tempProfile.habits.first { Habit in
+            Habit.name == tableCellLabel.text
+        }
+        
+        
+        if !completed {
+            completed = true
+            
+            habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+            habitCompletionButton.tintColor = DARK_GREEN
+            
+            if habit != nil {
+                habit!.habitCircleChecked()
+            }else{
+                print("ERROR HABIT CELL")
+            }
+            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: true)
+            
+        }
+        
+        else if completed {
+            completed = false
+            habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
+            habitCompletionButton.tintColor = GREEN
+            if habit != nil {
+                habit!.habitCircleUnchecked()
+            }else{
+                print("ERROR HABIT CELL")
+            }
+            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: false)
+            
+            
+        }
+        
+    }
 }
+    
+

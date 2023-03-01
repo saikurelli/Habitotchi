@@ -7,6 +7,8 @@
 
 
 //MARK: If we add a new habit, need to add a new animal to the scene
+
+//Idea for how to get to modally present Animal Status page, have a delegate in the animal sprite class that will tell parent animal class that it has been touched, from which the animal will create the modal sheet
 import UIKit
 import SpriteKit
 
