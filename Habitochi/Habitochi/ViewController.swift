@@ -22,7 +22,7 @@ extension UIColor {
 
 var habit1 = Habit(name: "Exercise", goal: "I want to run 2 miles a day")
 
-var animal = Animal(AnimalName: "john", spriteName: "SpriteTest")
+var animal = Animal(AnimalName: "john", spriteName: "SpriteTest2")
 
 var habit2 = Habit(name: "Read", goal: "Read for an hour everyday")
 

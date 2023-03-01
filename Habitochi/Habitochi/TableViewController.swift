@@ -56,10 +56,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        habit1.animal = animal
-        tempProfile.habits.append(habit1)
-        habit2.animal = animal2
-        tempProfile.habits.append(habit2)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -97,6 +93,7 @@ class HabitCell : UITableViewCell {
     
     @IBAction func buttonPressed(_ sender: Any) {
         //need to be able to reset it at beginning of new day
+        
         
         let habit = tempProfile.habits.first { Habit in
             Habit.name == tableCellLabel.text
