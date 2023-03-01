@@ -9,11 +9,13 @@ import UIKit
 
 class AnimalStatusViewController: UIViewController {
 
+    var clickedAnimal : Animal!
+    var delegate : SpriteKitViewController!
     @IBOutlet weak var tempLabel: UILabel!
     var temp = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempLabel.text = temp
+        tempLabel.text = clickedAnimal.name
         // Do any additional setup after loading the view.
     }
     

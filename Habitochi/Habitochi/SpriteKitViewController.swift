@@ -36,7 +36,6 @@ class SpriteKitViewController: UIViewController {
         self.view = skView
         let scene = SKScene(size: skView.bounds.size)
         scene.backgroundColor = UIColor.white
-
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
@@ -60,11 +59,27 @@ class SpriteKitViewController: UIViewController {
         let offset = 100
         var pos = 0
         for habit in profile.habits{
-            let animalSprite = habit.animal.sprite
+            let animal = habit.animal
+            animal.setAnimalSpriteDelegate()
+            animal.delegate = self
+            let animalSprite = animal.sprite
             animalSprite.position = CGPoint(x: pos , y: pos)
             animalSprite.size = CGSize(width: 50.0, height: 50.0)
             scene.addChild(animalSprite)
             pos += offset
+        }
+    }
+    
+    func presentAnimalStatus(animal : Animal){
+        performSegue(withIdentifier: "animalStatusSegueIdentifier", sender: animal)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "animalStatusSegueIdentifier",
+           let destination = segue.destination as? AnimalStatusViewController{
+            destination.clickedAnimal = (sender as! Animal)
+            destination.delegate = self
         }
     }
     

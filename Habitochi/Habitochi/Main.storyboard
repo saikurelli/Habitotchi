@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
-                                <rect key="frame" x="-1" y="102" width="394" height="350"/>
+                                <rect key="frame" x="-2" y="101" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
-                                <rect key="frame" x="-1" y="450" width="394" height="350"/>
+                                <rect key="frame" x="-2" y="449" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
@@ -76,6 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="skView" destination="53C-bh-7SM" id="Bgm-FR-Myt"/>
+                        <segue destination="4Wg-tg-4nr" kind="presentation" identifier="animalStatusSegueIdentifier" id="Dri-s2-Mw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJV-uy-xgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,6 +150,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHW-zc-BVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2822" y="196"/>
+        </scene>
+        <!--AnimalStatus-->
+        <scene sceneID="OIH-Nk-HMn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AnimalStatus" storyboardName="AnimalStatus" referencedIdentifier="AnimalStatus" id="4Wg-tg-4nr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPd-Y3-U1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="-168"/>
         </scene>
     </scenes>
     <resources>

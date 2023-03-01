@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: basic data structure for an animal, each habit will only have one habit
 
@@ -19,6 +20,7 @@ class Animal {
     var xpts : Int
     var xptsNeeded = 100
     var sprite : AnimalSprite
+    var delegate : SpriteKitViewController!
     
     init() {
         name = ""
@@ -54,6 +56,18 @@ class Animal {
     //MARK: need to add further functionality
     func levelUp(){
         level += 1
+    }
+    
+    func setAnimalSpriteDelegate(){
+        if self.sprite.animal == nil {
+            self.sprite.setAnimal(animal: self)
+        }
+    }
+    
+    //should only be called when the associated sprite is touched
+    func spriteTouched(){
+        print("\(self.name) - can see that the animal sprite has been touched in animal class")
+        self.delegate.presentAnimalStatus(animal: self)
     }
     
 }

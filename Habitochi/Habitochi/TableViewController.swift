@@ -70,9 +70,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
            let habit = tableView.indexPathForSelectedRow?.row {
             destination.fetchedHabit = tempProfile.habits[habit]
             destination.delegate = self
-
-            
-            
         }
         
     }
