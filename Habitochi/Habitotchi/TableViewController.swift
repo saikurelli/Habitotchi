@@ -18,14 +18,14 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var addHabitButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tempProfile.habits.count
+        return currentProfile.habits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath) as! HabitCell
         
         let row = indexPath.row
-        let fetchedHabit = tempProfile.habits[row]
+        let fetchedHabit = currentProfile.habits[row]
         cell.delegate = self
         cell.indexPath = indexPath
         cell.habitCompletionButton.tintColor = GREEN
@@ -70,7 +70,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitViewController,
            let habit = tableView.indexPathForSelectedRow?.row {
-            destination.fetchedHabit = tempProfile.habits[habit]
+            destination.fetchedHabit = currentProfile.habits[habit]
             destination.delegate = self
         }
         
@@ -103,7 +103,7 @@ class HabitCell : UITableViewCell {
         //need to be able to reset it at beginning of new day
         
         
-        let habit = tempProfile.habits.first { Habit in
+        let habit = currentProfile.habits.first { Habit in
             Habit.name == tableCellLabel.text
         }
         
@@ -123,19 +123,19 @@ class HabitCell : UITableViewCell {
             
         }
         
-        else if completed {
-            completed = false
-            habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
-            habitCompletionButton.tintColor = GREEN
-            if habit != nil {
-                habit!.habitCircleUnchecked()
-            }else{
-                print("ERROR HABIT CELL")
-            }
-            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: false)
-            
-            
-        }
+//        else if completed {
+//            completed = false
+//            habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
+//            habitCompletionButton.tintColor = GREEN
+//            if habit != nil {
+//                habit!.habitCircleUnchecked()
+//            }else{
+//                print("ERROR HABIT CELL")
+//            }
+//            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: false)
+//
+//
+//        }
         
     }
 }

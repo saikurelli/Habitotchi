@@ -11,7 +11,7 @@ import UIKit
 //MARK: basic data structure for an animal, each habit will only have one habit
 
 //MARK: Each habit will have a habit name, goal, associated animal, and schedule for how to send reminders
-class Animal {
+class Animal : NSObject{
     
     var name : String
     var level : Int
@@ -22,7 +22,7 @@ class Animal {
     var sprite : AnimalSprite
     var delegate : SpriteKitViewController!
     
-    init() {
+    override init() {
         name = ""
         level = 1
         health = maxHealth

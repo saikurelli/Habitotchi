@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FEE29A6C1330008D07C /* AppDelegate.swift */; };
 		07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF029A6C1330008D07C /* SceneDelegate.swift */; };
-		07CA9FF329A6C1330008D07C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF229A6C1330008D07C /* ViewController.swift */; };
+		07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF229A6C1330008D07C /* HomeViewController.swift */; };
 		07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF729A6C1350008D07C /* Assets.xcassets */; };
 		07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF929A6C1350008D07C /* LaunchScreen.storyboard */; };
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
@@ -27,13 +27,15 @@
 		877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5329AEAA9700DEE93C /* Profile.swift */; };
 		877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5529AEAAA000DEE93C /* Habit.swift */; };
 		877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5729AEAAAB00DEE93C /* Animal.swift */; };
+		87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EDAE6429B14FAC003A2466 /* Signin.storyboard */; };
+		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07CA9FEB29A6C1330008D07C /* Habitotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA9FEE29A6C1330008D07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CA9FF029A6C1330008D07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07CA9FF229A6C1330008D07C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07CA9FF229A6C1330008D07C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		07CA9FF729A6C1350008D07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07CA9FFA29A6C1350008D07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07CA9FFC29A6C1350008D07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		877ECA5329AEAA9700DEE93C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		877ECA5529AEAAA000DEE93C /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		877ECA5729AEAAAB00DEE93C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		87EDAE6429B14FAC003A2466 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,13 @@
 		07CA9FED29A6C1330008D07C /* Habitotchi */ = {
 			isa = PBXGroup;
 			children = (
+				87EDAE6329B142E4003A2466 /* CoreData */,
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
 				8745433929B0203F00F60C0C /* Model.xcdatamodeld */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
-				07CA9FF229A6C1330008D07C /* ViewController.swift */,
+				87EDAE6429B14FAC003A2466 /* Signin.storyboard */,
+				87EDAE6629B14FB8003A2466 /* SignInViewController.swift */,
+				07CA9FF229A6C1330008D07C /* HomeViewController.swift */,
 				877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */,
 				877ECA4729AE70A100DEE93C /* AnimalSprite.swift */,
 				877ECA4929AE740F00DEE93C /* AnimalStatus.storyboard */,
@@ -107,6 +114,13 @@
 				07CA9FFC29A6C1350008D07C /* Info.plist */,
 			);
 			path = Habitotchi;
+			sourceTree = "<group>";
+		};
+		87EDAE6329B142E4003A2466 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,7 @@
 			files = (
 				8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */,
 				07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */,
+				87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */,
 				877ECA4429AE646D00DEE93C /* HabitView.storyboard in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
@@ -185,12 +200,13 @@
 			files = (
 				877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */,
 				877ECA4C29AE741E00DEE93C /* AnimalStatusViewController.swift in Sources */,
-				07CA9FF329A6C1330008D07C /* ViewController.swift in Sources */,
+				07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */,
 				8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */,
 				877ECA4629AE647E00DEE93C /* HabitViewController.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
 				07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */,
 				877ECA4829AE70A100DEE93C /* AnimalSprite.swift in Sources */,
+				87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */,
 				877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */,
 				8745431529B0104A00F60C0C /* SpriteButton.swift in Sources */,
 				877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */,

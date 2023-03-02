@@ -11,7 +11,7 @@ import Foundation
 
 //MARK: Each habit will have a habit name, goal, associated animal, and schedule for how to send reminders
 
-class Habit {
+class Habit : NSObject{
     
     var name : String
     var goal : String

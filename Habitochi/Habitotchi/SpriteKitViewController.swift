@@ -26,10 +26,6 @@ class SpriteKitViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        habit1.animal = animal
-        tempProfile.habits.append(habit1)
-        habit2.animal = animal2
-        tempProfile.habits.append(habit2)
         
         profileButton.tintColor = .black
         
@@ -40,8 +36,7 @@ class SpriteKitViewController: UIViewController {
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
         
-        
-        loadSprites(profile: tempProfile, scene: scene)
+        loadSprites(profile: currentProfile, scene: scene)
         scene.backgroundColor = DARK_GREEN
         skView.presentScene(scene)
         
@@ -50,6 +45,7 @@ class SpriteKitViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
     
     //loads the sprites that are in the profile habit's arrays
     func loadSprites(profile : Profile, scene : SKScene){
@@ -76,16 +72,7 @@ class SpriteKitViewController: UIViewController {
         
     }
     
-    func createProfileButton(scene : SKScene){
-        
-        //MARK: Need to change this to be whatever the profile picture is
-        let image = UIImage(systemName: "person.crop.circle")
-        let button = SpriteButton(image: image!, role: "profile")
-        button.color = DARK_GREEN
-        button.position = CGPoint(x: 125.0, y: 100.0)
-        button.size = CGSize(width: 15.0, height: 15.0)
-        scene.addChild(button)
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "animalStatusSegueIdentifier",
