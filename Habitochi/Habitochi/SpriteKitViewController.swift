@@ -61,7 +61,7 @@ class SpriteKitViewController: UIViewController {
             animal.setAnimalSpriteDelegate()
             animal.delegate = self
             let animalSprite = animal.sprite
-            animalSprite.position = CGPoint(x: pos , y: pos)
+            animalSprite.position = CGPoint(x: -pos , y: -50)
             animalSprite.size = CGSize(width: 50.0, height: 50.0)
             scene.addChild(animalSprite)
             pos += offset
@@ -81,8 +81,8 @@ class SpriteKitViewController: UIViewController {
         let image = UIImage(systemName: "person.crop.circle")
         let button = SpriteButton(image: image!, role: "profile")
         button.color = DARK_GREEN
-        button.position = CGPoint(x: 50.0, y: 50.0)
-        button.size = CGSize(width: 20.0, height: 20.0)
+        button.position = CGPoint(x: 125.0, y: 100.0)
+        button.size = CGSize(width: 15.0, height: 15.0)
         scene.addChild(button)
     }
     
