@@ -8,9 +8,6 @@
 
 //MARK: If we add a new habit, need to add a new animal to the scene
 
-//Idea 1: for how to get to modally present Animal Status page, have a delegate in the animal sprite class that will tell parent animal class that it has been touched, from which the animal will create the modal sheet
-
-//Idea 2: When we are going to tap on an animal sprite, we can pass a delegate (the SpriteKitViewController) so that when the animalSprite is touched, the animal will request a modal street
 
 import UIKit
 import SpriteKit
@@ -57,6 +54,8 @@ class SpriteKitViewController: UIViewController {
     func loadSprites(profile : Profile, scene : SKScene){
         let offset = 100
         var pos = 0
+        
+        //Move this to a new func
         for habit in profile.habits{
             let animal = habit.animal
             animal.setAnimalSpriteDelegate()
@@ -67,6 +66,7 @@ class SpriteKitViewController: UIViewController {
             scene.addChild(animalSprite)
             pos += offset
         }
+        
         createProfileButton(scene : scene)
     }
     

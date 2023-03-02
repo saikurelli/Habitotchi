@@ -15,6 +15,7 @@
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745431529B0104A00F60C0C /* SpriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431429B0104A00F60C0C /* SpriteButton.swift */; };
+		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
 		877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */; };
 		877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA3F29AE5A1D00DEE93C /* TableViewController.swift */; };
 		877ECA4429AE646D00DEE93C /* HabitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877ECA4329AE646D00DEE93C /* HabitView.storyboard */; };
@@ -39,6 +40,7 @@
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745431429B0104A00F60C0C /* SpriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteButton.swift; sourceTree = "<group>"; };
+		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		877ECA3F29AE5A1D00DEE93C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		877ECA4329AE646D00DEE93C /* HabitView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitView.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
+				8745433929B0203F00F60C0C /* Model.xcdatamodeld */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
 				07CA9FF229A6C1330008D07C /* ViewController.swift */,
 				877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */,
@@ -183,6 +186,7 @@
 				877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */,
 				877ECA4C29AE741E00DEE93C /* AnimalStatusViewController.swift in Sources */,
 				07CA9FF329A6C1330008D07C /* ViewController.swift in Sources */,
+				8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */,
 				877ECA4629AE647E00DEE93C /* HabitViewController.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
 				07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */,
@@ -402,6 +406,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8745433929B0203F00F60C0C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8745433A29B0203F00F60C0C /* Model.xcdatamodel */,
+			);
+			currentVersion = 8745433A29B0203F00F60C0C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 07CA9FE329A6C1330008D07C /* Project object */;
 }

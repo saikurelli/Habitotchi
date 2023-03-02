@@ -5,6 +5,7 @@
 
 
 import UIKit
+import CoreData
 
 
 public var tempProfile = Profile(name: "Test")
