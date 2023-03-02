@@ -12,35 +12,30 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
-                                <rect key="frame" x="-2" y="101" width="394" height="350"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
-                                <rect key="frame" x="-2" y="449" width="394" height="350"/>
+                                <rect key="frame" x="0.0" y="449" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
                                 </connections>
                             </containerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-Kr-csG">
-                                <rect key="frame" x="-2" y="103" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <navigationBarAppearance key="standardAppearance"/>
-                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
+                                <rect key="frame" x="0.0" y="97" width="394" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="T2F-qj-e38"/>
+                    <navigationItem key="navigationItem" customizationIdentifier="navbar" id="T2F-qj-e38"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +62,7 @@
         <!--Sprite Kit View Controller-->
         <scene sceneID="nVC-F9-HN5">
             <objects>
-                <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWs-e2-qtm">
                         <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +79,7 @@
                                 </buttonConfiguration>
                             </button>
                             <skView opaque="NO" contentMode="scaleToFill" id="53C-bh-7SM">
-                                <rect key="frame" x="0.0" y="59" width="394" height="257"/>
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
@@ -104,7 +99,7 @@
         <!--Table View Controller-->
         <scene sceneID="qKz-E8-rDP">
             <objects>
-                <viewController id="yI6-Kv-0fT" customClass="TableViewController" customModule="Habitochi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yI6-Kv-0fT" customClass="TableViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="trj-gI-i99">
                         <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +109,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="a40-nx-uLo" userLabel="TextCell" customClass="HabitCell" customModule="Habitochi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="a40-nx-uLo" userLabel="TextCell" customClass="HabitCell" customModule="Habitotchi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a40-nx-uLo" id="ZCy-BR-IBy">

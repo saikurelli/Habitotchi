@@ -42,6 +42,7 @@ class SpriteKitViewController: UIViewController {
         
         
         loadSprites(profile: tempProfile, scene: scene)
+        scene.backgroundColor = DARK_GREEN
         skView.presentScene(scene)
         
     
@@ -67,7 +68,7 @@ class SpriteKitViewController: UIViewController {
             pos += offset
         }
         
-        createProfileButton(scene : scene)
+        //createProfileButton(scene : scene)
     }
     
     func presentAnimalStatus(animal : Animal){

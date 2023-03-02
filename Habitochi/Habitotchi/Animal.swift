@@ -27,7 +27,7 @@ class Animal {
         level = 1
         health = maxHealth
         xpts = 0
-        sprite = AnimalSprite(imageName: "spriteTest", name: "dummy")
+        sprite = AnimalSprite(imageName: "SpriteTest", name: "dummy")
     }
     
     init(AnimalName name : String, spriteName spriteString : String) {

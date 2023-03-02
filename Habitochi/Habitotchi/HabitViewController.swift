@@ -19,21 +19,22 @@ class HabitViewController: UIViewController {
         temp.text = fetchedHabit.name
         temp2.text = String(fetchedHabit.daysCompleted)
 
+
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configureNavBar()
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
         fetchedHabit.habitCircleChecked()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    private func configureNavBar(){
+        let navController = self.navigationController
+        navController?.navigationBar.backgroundColor = .white
+        navController?.navigationBar.tintColor = DARK_GREEN
+        navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:DARK_GREEN]
+        }
 }
