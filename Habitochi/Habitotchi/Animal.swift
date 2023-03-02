@@ -1,6 +1,6 @@
 //
 //  Animal.swift
-//  Habitochi
+//  Habitotchi
 //
 //  Created by Cole Harper on 2/28/23.
 //

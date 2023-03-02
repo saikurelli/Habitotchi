@@ -1,6 +1,6 @@
 //
 //  SpriteButton.swift
-//  Habitochi
+//  Habitotchi
 //
 //  Created by Cole Harper on 3/1/23.
 //

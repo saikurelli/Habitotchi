@@ -1,4 +1,4 @@
-// Project: Habitochi
+// Project: Habitotchi
 //  
 //  EID: sk49777
 //  Course: CS371L

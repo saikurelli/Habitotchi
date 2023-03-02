@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07CA9FEB29A6C1330008D07C /* Habitochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CA9FEB29A6C1330008D07C /* Habitotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA9FEE29A6C1330008D07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CA9FF029A6C1330008D07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07CA9FF229A6C1330008D07C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		07CA9FE229A6C1330008D07C = {
 			isa = PBXGroup;
 			children = (
-				07CA9FED29A6C1330008D07C /* Habitochi */,
+				07CA9FED29A6C1330008D07C /* Habitotchi */,
 				07CA9FEC29A6C1330008D07C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,12 +76,12 @@
 		07CA9FEC29A6C1330008D07C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07CA9FEB29A6C1330008D07C /* Habitochi.app */,
+				07CA9FEB29A6C1330008D07C /* Habitotchi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07CA9FED29A6C1330008D07C /* Habitochi */ = {
+		07CA9FED29A6C1330008D07C /* Habitotchi */ = {
 			isa = PBXGroup;
 			children = (
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
@@ -106,15 +106,15 @@
 				07CA9FF929A6C1350008D07C /* LaunchScreen.storyboard */,
 				07CA9FFC29A6C1350008D07C /* Info.plist */,
 			);
-			path = Habitochi;
+			path = Habitotchi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07CA9FEA29A6C1330008D07C /* Habitochi */ = {
+		07CA9FEA29A6C1330008D07C /* Habitotchi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07CA9FFF29A6C1350008D07C /* Build configuration list for PBXNativeTarget "Habitochi" */;
+			buildConfigurationList = 07CA9FFF29A6C1350008D07C /* Build configuration list for PBXNativeTarget "Habitotchi" */;
 			buildPhases = (
 				07CA9FE729A6C1330008D07C /* Sources */,
 				07CA9FE829A6C1330008D07C /* Frameworks */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = Habitochi;
+			name = Habitotchi;
 			productName = Habitochi;
-			productReference = 07CA9FEB29A6C1330008D07C /* Habitochi.app */;
+			productReference = 07CA9FEB29A6C1330008D07C /* Habitotchi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07CA9FE629A6C1330008D07C /* Build configuration list for PBXProject "Habitochi" */;
+			buildConfigurationList = 07CA9FE629A6C1330008D07C /* Build configuration list for PBXProject "Habitotchi" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07CA9FEA29A6C1330008D07C /* Habitochi */,
+				07CA9FEA29A6C1330008D07C /* Habitotchi */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58G3FFSYS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Habitochi/Info.plist;
+				INFOPLIST_FILE = Habitotchi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -348,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitochi;
+				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -365,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58G3FFSYS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Habitochi/Info.plist;
+				INFOPLIST_FILE = Habitotchi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -376,7 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitochi;
+				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -387,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07CA9FE629A6C1330008D07C /* Build configuration list for PBXProject "Habitochi" */ = {
+		07CA9FE629A6C1330008D07C /* Build configuration list for PBXProject "Habitotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CA9FFD29A6C1350008D07C /* Debug */,
@@ -396,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07CA9FFF29A6C1350008D07C /* Build configuration list for PBXNativeTarget "Habitochi" */ = {
+		07CA9FFF29A6C1350008D07C /* Build configuration list for PBXNativeTarget "Habitotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CAA00029A6C1350008D07C /* Debug */,
