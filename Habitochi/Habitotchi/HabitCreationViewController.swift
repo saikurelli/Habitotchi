@@ -26,7 +26,7 @@ class HabitCreationViewController: UIViewController {
     var sender = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -41,7 +41,7 @@ class HabitCreationViewController: UIViewController {
         
         // get the name of habit, cannot be empty
         let habitNameEntered = habitNameField.text
-        if habitNameEntered == nil {
+        if habitNameEntered == "" {
             let controller = UIAlertController(title: errorTitle, message: "Habit Name Field empty", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
             present(controller, animated: true)

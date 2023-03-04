@@ -18,24 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
-                                <rect key="frame" x="-1" y="446" width="393" height="351"/>
+                                <rect key="frame" x="-1" y="444" width="393" height="351"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
-                                <rect key="frame" x="-1" y="95" width="393" height="350"/>
+                                <rect key="frame" x="0.0" y="93" width="393" height="351"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UK-c7-Ce9">
+                                <rect key="frame" x="16" y="796" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="oeX-RZ-OCR" kind="show" id="Vt4-Ll-7Mp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" customizationIdentifier="navbar" id="T2F-qj-e38"/>
+                    <connections>
+                        <outlet property="addHabitButton" destination="3UK-c7-Ce9" id="NuR-1n-Faa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +76,7 @@
             <objects>
                 <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWs-e2-qtm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="351"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ez-Vr2">
@@ -142,27 +154,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0D-AA-Np8">
-                                <rect key="frame" x="20" y="315" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
-                                <connections>
-                                    <segue destination="oeX-RZ-OCR" kind="show" identifier="habitCreationSegueIdentifier" id="PBq-iC-8wK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SFw-f4-BRE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="addHabitButton" destination="X0D-AA-Np8" id="HsW-zW-jiD"/>
                         <outlet property="tableView" destination="QOJ-ZL-38Q" id="w7b-tV-Plg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fk3-Hr-8Fk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925.1908396946565" y="195.77464788732397"/>
+            <point key="canvasLocation" x="1924.4274809160304" y="195.42253521126761"/>
         </scene>
         <!--HabitStatsViewStoryboard-->
         <scene sceneID="f21-cW-zck">
@@ -190,7 +192,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJs-fY-bhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="417"/>
+            <point key="canvasLocation" x="1637" y="459"/>
         </scene>
     </scenes>
     <resources>

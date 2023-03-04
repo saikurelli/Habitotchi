@@ -23,15 +23,18 @@ extension UIColor {
 class HomeViewController: UIViewController {
     
 
+    @IBOutlet weak var addHabitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "Playground"
+        addHabitButton.tintColor = DARK_GREEN
     }
     
     override func viewWillAppear(_ animated: Bool) {
         configureNavBar()
+        configureTabBar()
     }
     
     
@@ -50,6 +53,12 @@ class HomeViewController: UIViewController {
         nav.rightBarButtonItem = profileButton
         
         }
+    
+    private func configureTabBar(){
+        let tabBar = self.tabBarController?.tabBar
+        tabBar?.tintColor = DARK_GREEN
+        let tabBarController = self.tabBarController
+    }
     
     }
 

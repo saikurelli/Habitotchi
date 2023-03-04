@@ -26,18 +26,14 @@ class SpriteKitViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         profileButton.tintColor = .black
         
         self.view = skView
-        let scene = SKScene(size: skView.bounds.size)
+        let scene = BackgroundScene(size: skView.bounds.size, vc: self)
         scene.backgroundColor = UIColor.white
         self.view.bounds = UIScreen.main.bounds
-        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         
-        
-        loadSprites(profile: currentProfile, scene: scene)
-        scene.backgroundColor = DARK_GREEN
         skView.presentScene(scene)
         
     
@@ -48,24 +44,7 @@ class SpriteKitViewController: UIViewController {
     
     
     //loads the sprites that are in the profile habit's arrays
-    func loadSprites(profile : Profile, scene : SKScene){
-        let offset = 100
-        var pos = 0
-        
-        //Move this to a new func
-        for habit in profile.habits{
-            let animal = habit.animal
-            animal.setAnimalSpriteDelegate()
-            animal.delegate = self
-            let animalSprite = animal.sprite
-            animalSprite.position = CGPoint(x: -pos , y: -50)
-            animalSprite.size = CGSize(width: 50.0, height: 50.0)
-            scene.addChild(animalSprite)
-            pos += offset
-        }
-        
-        //createProfileButton(scene : scene)
-    }
+
     
     func presentAnimalStatus(animal : Animal){
         performSegue(withIdentifier: "animalStatusSegueIdentifier", sender: animal)
@@ -85,6 +64,60 @@ class SpriteKitViewController: UIViewController {
             destination.delegate = self
         }
     }
+    
+
+    class BackgroundScene: SKScene {
+        
+        var vc : SpriteKitViewController!
+        
+        init(size: CGSize, vc: SpriteKitViewController) {
+            super.init(size: size)
+            self.vc = vc
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        override func didMove(to view: SKView) {
+            let background = SKSpriteNode(texture: SKTexture(imageNamed: "background"),  size: CGSize(width: 394, height: 346))
+            background.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+            background.position = CGPoint(x: 0.0, y: 0.0)
+            addChild(background)
+            
+            let sunNode = SKSpriteNode(texture: SKTexture(imageNamed: "sun"), size: CGSize(width: 50, height: 50))
+            sunNode.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+            sunNode.position = CGPoint(x: 25.0, y: 295.0)
+            addChild(sunNode)
+            loadSprites()
+            
+           
+            
+
+        }
+        
+        public func loadSprites(){
+            let offset = 200
+            var pos = 25
+            //Move this to a new func
+            for habit in currentProfile.habits{
+                let animal = habit.animal
+                animal.setAnimalSpriteDelegate()
+                animal.delegate = vc
+                let animalSprite = animal.sprite
+                animalSprite.position = CGPoint(x: pos , y: 100)
+                animalSprite.size = CGSize(width: 50.0, height: 50.0)
+                addChild(animalSprite)
+                pos += offset
+            }
+            
+            //createProfileButton(scene : scene)
+        }
+        
+        
+
+    }
+
     
 }
 

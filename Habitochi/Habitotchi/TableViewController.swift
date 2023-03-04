@@ -60,7 +60,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
-        addHabitButton.tintColor = DARK_GREEN
+        
 
         // Do any additional setup after loading the view.
     }
@@ -73,15 +73,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.fetchedHabit = currentProfile.habits[habit]
             destination.delegate = self
         }
-        
-        if segue.identifier == habitCreationSegueIdentifier,
-           let destination = segue.destination as? HabitCreationViewController {
-            
-        }
-        
-        
-        
-        
     }
     
 
