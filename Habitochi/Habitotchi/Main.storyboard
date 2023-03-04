@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1925.1908396946565" y="195.77464788732397"/>
         </scene>
-        <!--HabitViewStoryboard-->
+        <!--HabitStatsViewStoryboard-->
         <scene sceneID="f21-cW-zck">
             <objects>
-                <viewControllerPlaceholder storyboardName="HabitView" referencedIdentifier="HabitViewStoryboard" id="3KG-zW-zv9" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HabitStatsView" referencedIdentifier="HabitStatsViewStoryboard" id="3KG-zW-zv9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dXP-at-oKp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHW-zc-BVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

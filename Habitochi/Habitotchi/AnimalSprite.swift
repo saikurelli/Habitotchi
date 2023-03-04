@@ -11,12 +11,19 @@ import SpriteKit
 class AnimalSprite : SKSpriteNode{
     
     var animal : Animal!
+    var animalTexture: SKTexture!
     //need a way to tell parent viewController to segue to another scene
     init(imageName: String, name: String){
-        let texture = SKTexture(imageNamed: imageName)
-        super.init(texture: texture, color: .clear, size: texture.size())
+        animalTexture = SKTexture(imageNamed: imageName)
+        
+        super.init(texture: animalTexture, color: .clear, size: animalTexture.size())
         self.name = name
         self.isUserInteractionEnabled = true
+    }
+    
+    
+    func createSprite (size: CGSize) -> SKSpriteNode{
+        return SKSpriteNode(texture: animalTexture, color: .clear, size: size)
     }
     
     

@@ -68,7 +68,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == tableSegueIdentifier,
-           let destination = segue.destination as? HabitViewController,
+           let destination = segue.destination as? HabitStatsViewController,
            let habit = tableView.indexPathForSelectedRow?.row {
             destination.fetchedHabit = currentProfile.habits[habit]
             destination.delegate = self
