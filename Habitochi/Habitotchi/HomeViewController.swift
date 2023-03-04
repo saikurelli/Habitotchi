@@ -34,12 +34,10 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureNavBar()
-        configureTabBar()
     }
     
     
     private func configureNavBar(){
-        
         
         let navController = self.navigationController
         self.navigationItem.hidesBackButton = true
@@ -47,17 +45,25 @@ class HomeViewController: UIViewController {
         navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let nav = self.navigationItem
         //need to change this to segue to profile page
-        let profileButton = UIBarButtonItem(title: "profileButton", style: UIBarButtonItem.Style.done, target: self, action: nil)
-        profileButton.image = currentProfile.profileImage
-        profileButton.tintColor = .white
-        nav.rightBarButtonItem = profileButton
         
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        profileImageView.image = currentProfile.profileImage
+        profileImageView.tintColor = !currentProfile.customProfilePic ? .black : .clear
+        profileImageView.contentMode = .scaleAspectFit
+        profileImageView.layer.cornerRadius = 20
+        profileImageView.layer.masksToBounds = true
+        customView.addSubview(profileImageView)
+        
+        customView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonClicked))
+        customView.addGestureRecognizer(tapGesture)
+        
+        nav.rightBarButtonItem = UIBarButtonItem(customView: customView)
         }
     
-    private func configureTabBar(){
-        let tabBar = self.tabBarController?.tabBar
-        tabBar?.tintColor = DARK_GREEN
-        let tabBarController = self.tabBarController
+    @objc func buttonClicked(){
+        print("profile Button Pressed")
     }
     
     }

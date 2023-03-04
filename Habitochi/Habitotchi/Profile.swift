@@ -16,6 +16,7 @@ public class Profile : NSObject {
     var name : String
     var profileImage : UIImage
     var habits : [Habit]
+    var customProfilePic = false
     
     init(name: String) {
         self.name = name
