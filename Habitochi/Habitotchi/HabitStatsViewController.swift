@@ -9,13 +9,17 @@ import UIKit
 import SwiftUI
 import SpriteKit
 
-class HabitStatsViewController: UIViewController {
+class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
 
     @IBOutlet weak var animalSprite: SKView!
     
     @IBOutlet weak var goalStatViewMode: UIPickerView!
+    var pickerData: [String] = [String]()
+    
     @IBOutlet weak var habitLabel: UILabel!
     var fetchedHabit = Habit(name: "", goal: "")
+    
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var goalLabel: UILabel!
     var delegate : UIViewController!
@@ -39,14 +43,14 @@ class HabitStatsViewController: UIViewController {
         currentStreak.text = String(fetchedHabit.daysCompleted)
         goalLabel.text = fetchedHabit.goal
         longestStreak.text = String(0)
+        progressView.progress = Float(currentStreak.text!)! / 365
         
-        setUpPicker()
+        
+        self.goalStatViewMode.delegate = self
+        self.goalStatViewMode.dataSource = self
+        pickerData = ["Weekly", "Monthly"]
         
         // Do any additional setup after loading the view.
-    }
-    
-    func setUpPicker(){
-        goalStatViewMode.dataSource
     }
     
     
@@ -65,5 +69,22 @@ class HabitStatsViewController: UIViewController {
         editStatScreen.image = UIImage(systemName: "pencil.and.outline")
         editStatScreen.tintColor = DARK_GREEN
         nav.rightBarButtonItem = editStatScreen
-        }
+    }
+    // picker methods
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    // Capture the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+        print(pickerData[row])
+    }
 }
