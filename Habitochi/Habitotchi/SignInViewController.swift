@@ -12,9 +12,13 @@ class SignInViewController: UIViewController {
     let segueIdentifier = "accountCreateHabitSegueIdentifier"
     @IBOutlet weak var profilePictureButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var appleSignInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createButton.tintColor = DARK_GREEN
+        appleSignInButton.tintColor = .black
 
         // Do any additional setup after loading the view.
         
@@ -30,7 +34,15 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func buttonPressed(_ sender: Any) {
-        if nameTextField.text != ""{
+        let errorTitle = "Missing Field"
+        
+        
+        if nameTextField.text == ""{
+            let controller = UIAlertController(title: errorTitle, message: "Please enter your name", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+            present(controller, animated: true)
+
+        }else{
             currentProfile = Profile(name: nameTextField.text!)
             print("\(nameTextField.text!)")
         let storyboard = UIStoryboard(name: "HabitCreation", bundle: nil)
@@ -39,8 +51,6 @@ class SignInViewController: UIViewController {
             vc.sender = segueIdentifier
         
             self.navigationController?.pushViewController(vc, animated: true)
-        }else{
-            print("error")
         }
     }
     

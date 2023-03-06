@@ -69,6 +69,8 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         editStatScreen.image = UIImage(systemName: "pencil.and.outline")
         editStatScreen.tintColor = DARK_GREEN
         nav.rightBarButtonItem = editStatScreen
+        nav.rightBarButtonItem?.action = #selector(buttonPressed)
+        nav.rightBarButtonItem?.target = self
     }
     // picker methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -86,5 +88,9 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         print(pickerData[row])
+    }
+    
+    @objc func buttonPressed(){
+        print("Edit button has been pressed")
     }
 }

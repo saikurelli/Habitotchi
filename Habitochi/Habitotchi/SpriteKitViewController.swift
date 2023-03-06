@@ -57,7 +57,7 @@ class SpriteKitViewController: UIViewController {
         if segue.identifier == "animalStatusSegueIdentifier",
            let destination = segue.destination as? AnimalStatusViewController{
             if let sheet = destination.sheetPresentationController{
-                sheet.detents = [.medium(),.large()]
+                sheet.detents = [.medium(), .large()]
             }
             
             destination.clickedAnimal = (sender as! Animal)
@@ -87,7 +87,7 @@ class SpriteKitViewController: UIViewController {
             
             let sunNode = SKSpriteNode(texture: SKTexture(imageNamed: "sun"), size: CGSize(width: 50, height: 50))
             sunNode.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-            sunNode.position = CGPoint(x: 25.0, y: 295.0)
+            sunNode.position = CGPoint(x: 325.0, y: 295.0)
             addChild(sunNode)
             loadSprites()
             
