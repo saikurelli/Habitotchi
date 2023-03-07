@@ -12,7 +12,7 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HabitCreation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HabitCreationViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -22,8 +22,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uq-I3-kWc">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uq-I3-kWc">
                                 <rect key="frame" x="307" y="89" width="61" height="34.333333333333343"/>
+                                <color key="tintColor" red="0.47651817229999999" green="0.72066002900000004" blue="0.36780145180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
@@ -64,41 +65,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhK-DP-leQ">
-                                <rect key="frame" x="18" y="376.66666666666669" width="357" height="28"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhK-DP-leQ">
+                                <rect key="frame" x="18" y="376.66666666666669" width="357.33333333333331" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upw-0a-g4q">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Sun" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgB-Kh-lab">
-                                        <rect key="frame" x="51" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="50.999999999999986" y="0.0" width="51" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Mon" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdF-aw-mHa">
-                                        <rect key="frame" x="102" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="101.99999999999999" y="0.0" width="51.000000000000014" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Tue" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-EP-r6x">
-                                        <rect key="frame" x="153" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="153" y="0.0" width="51.333333333333343" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Wed" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-tb-uR0">
-                                        <rect key="frame" x="204" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="204.33333333333331" y="0.0" width="51" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Thu" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cPF-rK-i6r">
-                                        <rect key="frame" x="255" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="255.33333333333331" y="0.0" width="51" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Fri" buttonSize="small"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-iC-igv">
-                                        <rect key="frame" x="306" y="0.0" width="51" height="28"/>
+                                        <rect key="frame" x="306.33333333333331" y="0.0" width="51" height="28"/>
+                                        <color key="tintColor" red="0.46360362840000002" green="0.70112877900000004" blue="0.3578333367" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Sat" buttonSize="small"/>
                                     </button>
@@ -111,11 +119,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7GG-yb-Lqm">
-                                <rect key="frame" x="14" y="460" width="101" height="34"/>
+                                <rect key="frame" x="14" y="460" width="101" height="34.333333333333314"/>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-2j-0Fs">
+                                <rect key="frame" x="25" y="519.33333333333337" width="74.333333333333329" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHm-uG-HOt">
+                                <rect key="frame" x="25" y="549.66666666666663" width="320" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="qRh-CY-0Rz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVn-BX-SmL">
+                                <rect key="frame" x="135" y="618" width="100" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddb-87-7No">
+                                <rect key="frame" x="110" y="726" width="151" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Choose Your Pet"/>
+                                <connections>
+                                    <segue destination="dhA-Gh-kCy" kind="presentation" identifier="ChoosePetSegueIdentifier" id="23Z-oD-05C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.47651817229999999" green="0.72066002900000004" blue="0.36780145180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="kaK-Et-EaQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="0yB-sA-jdM"/>
                             <constraint firstItem="5uq-I3-kWc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="1UK-9X-mA7"/>
@@ -125,28 +159,41 @@
                             <constraint firstItem="aZK-vf-yM8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="FJv-6e-aN3"/>
                             <constraint firstItem="Qjm-PB-WLJ" firstAttribute="top" secondItem="kaK-Et-EaQ" secondAttribute="bottom" constant="10" id="GEq-Qb-Op4"/>
                             <constraint firstItem="6Kt-IV-uWm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Ihv-bT-Iu0"/>
+                            <constraint firstItem="Zi5-2j-0Fs" firstAttribute="leading" secondItem="MHm-uG-HOt" secondAttribute="leading" id="JdL-Gu-YyO"/>
+                            <constraint firstItem="zVn-BX-SmL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NNL-G8-5gs"/>
                             <constraint firstItem="2XF-7A-s5k" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Nuc-lC-ddc"/>
                             <constraint firstItem="V6L-tm-0OJ" firstAttribute="top" secondItem="Qjm-PB-WLJ" secondAttribute="bottom" constant="25" id="O0O-od-YJD"/>
+                            <constraint firstItem="ddb-87-7No" firstAttribute="top" secondItem="zVn-BX-SmL" secondAttribute="bottom" constant="10" id="O2H-cR-peU"/>
                             <constraint firstItem="7GG-yb-Lqm" firstAttribute="top" secondItem="cfQ-4g-3sW" secondAttribute="bottom" constant="10" id="PXV-fv-MBa"/>
                             <constraint firstItem="RhK-DP-leQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tgh-Ww-Wvr"/>
+                            <constraint firstItem="zVn-BX-SmL" firstAttribute="top" secondItem="MHm-uG-HOt" secondAttribute="bottom" constant="34" id="UwM-aU-bbw"/>
+                            <constraint firstItem="Zi5-2j-0Fs" firstAttribute="top" secondItem="7GG-yb-Lqm" secondAttribute="bottom" constant="25" id="YbU-qe-XDi"/>
                             <constraint firstItem="2XF-7A-s5k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Zf0-aN-903"/>
                             <constraint firstItem="aZK-vf-yM8" firstAttribute="top" secondItem="2XF-7A-s5k" secondAttribute="bottom" constant="50" id="ctH-dd-a3G"/>
+                            <constraint firstItem="MHm-uG-HOt" firstAttribute="top" secondItem="Zi5-2j-0Fs" secondAttribute="bottom" constant="10" id="fLe-Ke-liA"/>
                             <constraint firstItem="kaK-Et-EaQ" firstAttribute="top" secondItem="6Kt-IV-uWm" secondAttribute="bottom" constant="25" id="kHg-9C-L9d"/>
                             <constraint firstItem="RhK-DP-leQ" firstAttribute="top" secondItem="V6L-tm-0OJ" secondAttribute="bottom" constant="10" id="lPD-fD-FXG"/>
                             <constraint firstItem="7GG-yb-Lqm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="m4a-Tv-QPt"/>
+                            <constraint firstItem="Zi5-2j-0Fs" firstAttribute="leading" secondItem="cfQ-4g-3sW" secondAttribute="leading" id="nQJ-sx-QHJ"/>
+                            <constraint firstItem="MHm-uG-HOt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="o2X-X6-fYs"/>
                             <constraint firstItem="cfQ-4g-3sW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="q17-mB-XNU"/>
                             <constraint firstItem="Qjm-PB-WLJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="r5c-aV-MAs"/>
+                            <constraint firstItem="zVn-BX-SmL" firstAttribute="top" secondItem="MHm-uG-HOt" secondAttribute="bottom" constant="34" id="tj9-fp-gFi"/>
                             <constraint firstItem="V6L-tm-0OJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="vG1-tI-Yen"/>
+                            <constraint firstItem="ddb-87-7No" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vcj-nV-opL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="AnimalView" destination="zVn-BX-SmL" id="oyM-Qu-SBm"/>
                         <outlet property="daysOfTheWeekStack" destination="RhK-DP-leQ" id="cua-sU-N9q"/>
                         <outlet property="fridayButton" destination="cPF-rK-i6r" id="FcS-vX-4hD"/>
                         <outlet property="habitDescriptionField" destination="Qjm-PB-WLJ" id="zbT-u3-Kg5"/>
                         <outlet property="habitNameField" destination="6Kt-IV-uWm" id="ghT-eG-7pc"/>
                         <outlet property="mondayButton" destination="LgB-Kh-lab" id="y0s-60-tmo"/>
                         <outlet property="notificationTimeField" destination="7GG-yb-Lqm" id="EZr-3q-7HZ"/>
+                        <outlet property="petNameField" destination="MHm-uG-HOt" id="rzk-NO-nHg"/>
                         <outlet property="saturdayButton" destination="gRh-iC-igv" id="ixq-yO-F0N"/>
+                        <outlet property="saveButton" destination="5uq-I3-kWc" id="0M5-cd-d4p"/>
                         <outlet property="sundayButton" destination="upw-0a-g4q" id="6yB-Ua-Bfb"/>
                         <outlet property="thursdayButton" destination="Yc6-tb-uR0" id="xas-KA-IKn"/>
                         <outlet property="tuesdayButton" destination="LdF-aw-mHa" id="Pck-8G-TDW"/>
@@ -156,6 +203,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.351145038167935" y="-2.1126760563380285"/>
+        </scene>
+        <!--ChoosePet-->
+        <scene sceneID="I8d-AP-AdT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ChoosePet" storyboardName="ChoosePet" referencedIdentifier="ChoosePet" id="dhA-Gh-kCy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwR-Nb-1vo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="180"/>
         </scene>
     </scenes>
     <resources>

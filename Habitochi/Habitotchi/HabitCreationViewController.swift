@@ -7,8 +7,13 @@
 
 import UIKit
 
-class HabitCreationViewController: UIViewController {
+protocol AnimalChanger {
+    func changeAnimal(newAnimal: UIImage)
+}
 
+class HabitCreationViewController: UIViewController, AnimalChanger {
+
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var habitNameField: UITextField!
     @IBOutlet weak var habitDescriptionField: UITextField!
     @IBOutlet weak var daysOfTheWeekStack: UIStackView!
@@ -22,17 +27,50 @@ class HabitCreationViewController: UIViewController {
     @IBOutlet weak var fridayButton: UIButton!
     @IBOutlet weak var saturdayButton: UIButton!
     
+    @IBOutlet weak var petNameField: UITextField!
+    @IBOutlet weak var AnimalView: UIImageView!
+    
     private let createAccountSegueIdentifier = "accountCreateHabitSegueIdentifier"
     var sender = ""
+    var choseAnimal = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        saveButton.isEnabled = false
+        
+        habitNameField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
+        habitDescriptionField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
+        petNameField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
+        
+        sundayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        mondayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        tuesdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        wednesdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        thursdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        fridayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        saturdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         configureNavBar()
     }
+    
+    @objc func fieldDidChange(_ sender: UITextField) {
+            if habitNameField.text != "" && habitDescriptionField.text != "" &&
+                (sundayButton.isSelected ||
+                  mondayButton.isSelected ||
+                  tuesdayButton.isSelected ||
+                  wednesdayButton.isSelected ||
+                  thursdayButton.isSelected ||
+                  fridayButton.isSelected ||
+                  saturdayButton.isSelected) &&
+                petNameField.text != "" &&
+                choseAnimal {
+                saveButton.isEnabled = true;
+            } else{
+                 saveButton.isEnabled = false;
+            }
+        }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
         
@@ -59,15 +97,26 @@ class HabitCreationViewController: UIViewController {
             
         }
         
+        // get the name of the pet, cannot be empty
+        let petNameEntered = petNameField.text
+        if petNameEntered == nil {
+            let controller = UIAlertController(title: errorTitle, message: "Pet Name Field empty", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+            present(controller, animated: true)
+        }
+        
+        let animalImageChosen = AnimalView.image
+        
+        
         // get time selected from time wheel
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm a"
         let timeEntered = dateFormatter.string(from: notificationTimeField.date)
         
         let habitCreated = Habit(name: habitNameEntered!, goal: habitDescriptionEntered!)
-        
-        
     }
+    
+
     
     // helper methods of reading which buttons were selected
     func getDaysOfTheWeek() -> [String]{
@@ -110,7 +159,23 @@ class HabitCreationViewController: UIViewController {
             navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:DARK_GREEN]
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChoosePetSegueIdentifier",
+           let destination = segue.destination as? ChoosePetViewController{
+            if let sheet = destination.sheetPresentationController{
+                sheet.detents = [.medium()]
+            }
+            destination.delegate = self
         }
+    }
+    
+    func changeAnimal(newAnimal: UIImage) {
+        AnimalView.image = newAnimal
+        choseAnimal = true
+        fieldDidChange(habitNameField)
+    }
     
     
 //MARK: - Used this function to test the signin screen

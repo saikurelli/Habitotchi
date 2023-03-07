@@ -28,6 +28,9 @@
 		877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5729AEAAAB00DEE93C /* Animal.swift */; };
 		87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EDAE6429B14FAC003A2466 /* Signin.storyboard */; };
 		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
+		D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */; };
+		D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */; };
+		D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154A29B6FD6500A81504 /* AnimalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		877ECA5729AEAAAB00DEE93C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		87EDAE6429B14FAC003A2466 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePet.storyboard; sourceTree = "<group>"; };
+		D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetViewController.swift; sourceTree = "<group>"; };
+		D0AC154A29B6FD6500A81504 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				877ECA3F29AE5A1D00DEE93C /* TableViewController.swift */,
 				8745431229B00BD700F60C0C /* HabitCreationViewController.swift */,
 				8745431029B00BB600F60C0C /* HabitCreation.storyboard */,
+				D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */,
+				D0AC154A29B6FD6500A81504 /* AnimalCell.swift */,
+				D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */,
 				877ECA4729AE70A100DEE93C /* AnimalSprite.swift */,
 				877ECA5329AEAA9700DEE93C /* Profile.swift */,
 				877ECA5529AEAAA000DEE93C /* Habit.swift */,
@@ -183,6 +192,7 @@
 				87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */,
 				877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
+				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
 			);
@@ -208,7 +218,9 @@
 				877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */,
 				877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */,
 				877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */,
+				D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */,
 				07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */,
+				D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
