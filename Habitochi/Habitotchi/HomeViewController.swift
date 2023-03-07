@@ -22,8 +22,9 @@ extension UIColor {
 
 class HomeViewController: UIViewController {
     
-
+    @IBOutlet weak var spriteKitView: UIView!
     @IBOutlet weak var addHabitButton: UIButton!
+    @IBOutlet weak var tableView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +48,7 @@ class HomeViewController: UIViewController {
         //need to change this to segue to profile page
         
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        let profileButton = UIButton(type: .system)
-        profileButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        let profileButton = RoundButton(frame: customView.frame)
         profileButton.setBackgroundImage(currentProfile.profileImage, for: .normal)
         profileButton.tintColor = !currentProfile.customProfilePic ? .black : .clear
         profileButton.contentMode = .scaleAspectFit
@@ -61,7 +61,9 @@ class HomeViewController: UIViewController {
         }
     
     @objc func buttonClicked(){
-        print("profile Button Pressed")
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     }

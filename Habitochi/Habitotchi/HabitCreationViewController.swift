@@ -154,7 +154,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         if sender == createAccountSegueIdentifier{
             self.navigationItem.hidesBackButton = true
         }else{
-            navController?.navigationBar.backgroundColor = .white
+            navController?.navigationBar.backgroundColor = .clear
             navController?.navigationBar.tintColor = DARK_GREEN
             navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:DARK_GREEN]
         }

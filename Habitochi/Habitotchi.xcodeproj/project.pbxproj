@@ -15,6 +15,10 @@
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
+		87744F6229B7B3000067CFCF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87744F6129B7B3000067CFCF /* Profile.storyboard */; };
+		87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6329B7B3420067CFCF /* ProfileViewController.swift */; };
+		87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6529B7D5930067CFCF /* CircularImageViewController.swift */; };
+		87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6729B7DAA50067CFCF /* RoundButton.swift */; };
 		877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */; };
 		877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA3F29AE5A1D00DEE93C /* TableViewController.swift */; };
 		877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877ECA4329AE646D00DEE93C /* HabitStatsView.storyboard */; };
@@ -26,6 +30,7 @@
 		877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5329AEAA9700DEE93C /* Profile.swift */; };
 		877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5529AEAAA000DEE93C /* Habit.swift */; };
 		877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5729AEAAAB00DEE93C /* Animal.swift */; };
+		87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5397129B6EF8300835991 /* ImagePickerViewController.swift */; };
 		87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EDAE6429B14FAC003A2466 /* Signin.storyboard */; };
 		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
 		D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */; };
@@ -44,6 +49,10 @@
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		87744F6129B7B3000067CFCF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		87744F6329B7B3420067CFCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		87744F6529B7D5930067CFCF /* CircularImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageViewController.swift; sourceTree = "<group>"; };
+		87744F6729B7DAA50067CFCF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		877ECA3F29AE5A1D00DEE93C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		877ECA4329AE646D00DEE93C /* HabitStatsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitStatsView.storyboard; sourceTree = "<group>"; };
@@ -55,6 +64,7 @@
 		877ECA5329AEAA9700DEE93C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		877ECA5529AEAAA000DEE93C /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		877ECA5729AEAAAB00DEE93C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		87E5397129B6EF8300835991 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		87EDAE6429B14FAC003A2466 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePet.storyboard; sourceTree = "<group>"; };
@@ -97,7 +107,9 @@
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
 				87EDAE6429B14FAC003A2466 /* Signin.storyboard */,
 				87EDAE6629B14FB8003A2466 /* SignInViewController.swift */,
+				87E5397129B6EF8300835991 /* ImagePickerViewController.swift */,
 				07CA9FF229A6C1330008D07C /* HomeViewController.swift */,
+				87744F6729B7DAA50067CFCF /* RoundButton.swift */,
 				877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */,
 				877ECA4929AE740F00DEE93C /* AnimalStatus.storyboard */,
 				877ECA4B29AE741E00DEE93C /* AnimalStatusViewController.swift */,
@@ -114,6 +126,9 @@
 				877ECA4F29AE8A1A00DEE93C /* Main.storyboard */,
 				877ECA4329AE646D00DEE93C /* HabitStatsView.storyboard */,
 				877ECA4529AE647E00DEE93C /* HabitStatsViewController.swift */,
+				87744F6129B7B3000067CFCF /* Profile.storyboard */,
+				87744F6329B7B3420067CFCF /* ProfileViewController.swift */,
+				87744F6529B7D5930067CFCF /* CircularImageViewController.swift */,
 				07CA9FF729A6C1350008D07C /* Assets.xcassets */,
 				07CA9FF929A6C1350008D07C /* LaunchScreen.storyboard */,
 				07CA9FFC29A6C1350008D07C /* Info.plist */,
@@ -193,6 +208,7 @@
 				877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
 				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
+				87744F6229B7B3000067CFCF /* Profile.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
 			);
@@ -211,13 +227,17 @@
 				8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */,
 				877ECA4629AE647E00DEE93C /* HabitStatsViewController.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
+				87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */,
+				87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */,
 				07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */,
 				877ECA4829AE70A100DEE93C /* AnimalSprite.swift in Sources */,
 				87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */,
+				87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */,
 				877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */,
 				877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */,
 				877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */,
 				877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */,
+				87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */,
 				D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */,
 				07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */,
 				D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */,
@@ -359,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58G3FFSYS9;
+				DEVELOPMENT_TEAM = Q25924BF25;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Habitotchi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -372,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitotchi;
+				PRODUCT_BUNDLE_IDENTIFIER = Habitotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -387,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58G3FFSYS9;
+				DEVELOPMENT_TEAM = Q25924BF25;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Habitotchi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -400,7 +420,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = utcs.Habitotchi;
+				PRODUCT_BUNDLE_IDENTIFIER = Habitotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

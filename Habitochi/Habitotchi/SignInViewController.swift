@@ -7,7 +7,8 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, saveImage {
+    
 
     let segueIdentifier = "accountCreateHabitSegueIdentifier"
     @IBOutlet weak var nameTextField: UITextField!
@@ -15,6 +16,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var appleSignInButton: UIButton!
     var profileImage = UIImage(systemName: "person.crop.circle")
     var profileButton:UIButton!
+    var profileButtonChanged = false
     override func viewDidLoad() {
         super.viewDidLoad()
         createButton.tintColor = DARK_GREEN
@@ -27,6 +29,20 @@ class SignInViewController: UIViewController {
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if profileButtonChanged {
+            updateProfileButton()
+        }
+    }
+    
+    func changeImage(image: UIImage) {
+        profileImage = image
+        profileButtonChanged = true
+    }
+    
+    
+    
     
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -52,11 +68,12 @@ class SignInViewController: UIViewController {
     }
     
     func createProfileButton(){
-        let profileButton = UIButton(type: .system)
-        profileButton.frame = CGRect(x: 160, y: 188, width: 88, height: 88)
+        let profileButton = RoundButton(frame: CGRect(x: 145, y: 150, width: 132, height: 132))
+
         //profileButton.backgroundColor = .black
         profileButton.setBackgroundImage(UIImage(systemName: "person.crop.circle"), for: .normal)
         profileButton.tintColor = .black
+       // profileButton.contentMode = .center
         profileButton.isUserInteractionEnabled = true
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
         self.profileButton = profileButton
@@ -65,6 +82,34 @@ class SignInViewController: UIViewController {
     }
     
     @objc func profileButtonPressed(){
-        print("selected")
+        let view = ImagePickerViewController()
+        view.signInDelegate = self
+        let controller = UIAlertController()
+        controller.addAction(UIAlertAction(title: "Take Photo", style: .default){_ in
+            view.modalPresentationStyle = .fullScreen
+            view.cameraMode = true
+            view.signin = true
+            self.present(view, animated: true)
+        })
+        controller.addAction(UIAlertAction(title: "Chose a Photo", style: .default){_ in
+            view.cameraMode = false
+            view.signin = true
+            view.modalPresentationStyle = .fullScreen
+            self.present(view, animated: false)
+        })
+        
+        controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(controller, animated: true)
     }
+    
+    func updateProfileButton(){
+        profileButton.setBackgroundImage(profileImage, for: .normal)
+    }
+    
+        
+    }
+
+public protocol saveImage{
+    func changeImage(image: UIImage)
 }
+
