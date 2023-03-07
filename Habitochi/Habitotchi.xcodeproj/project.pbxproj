@@ -89,7 +89,6 @@
 				87EDAE6329B142E4003A2466 /* CoreData */,
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
-				8745433929B0203F00F60C0C /* Model.xcdatamodeld */,
 				87EDAE6429B14FAC003A2466 /* Signin.storyboard */,
 				87EDAE6629B14FB8003A2466 /* SignInViewController.swift */,
 				07CA9FF229A6C1330008D07C /* HomeViewController.swift */,
@@ -116,6 +115,7 @@
 		87EDAE6329B142E4003A2466 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				8745433929B0203F00F60C0C /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";

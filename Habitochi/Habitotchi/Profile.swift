@@ -25,14 +25,10 @@ public class Profile : NSObject {
     }
     
     //Function to set profile picture
-    func setProfilePic() {
-        
+    func setProfilePic(image: UIImage) {
+        profileImage = image
     }
     
-    //Func that will call initial habit creation VC?
-    func setInitialHabit(){
-        
-    }
     
     func hardcode(){
        // currentProfile = Profile(name: "Test")
@@ -40,6 +36,7 @@ public class Profile : NSObject {
         let animal = Animal(AnimalName: "john", spriteName: "SpriteTest2")
         let habit2 = Habit(name: "Read", goal: "Read for an hour everyday")
         let animal2 = Animal(AnimalName: "jerry", spriteName: "SpriteTest")
+        profileImage = UIImage(named: "testProfilePic")!
         habit1.animal = animal
         habit2.animal = animal2
         self.habits.append(habit1)
