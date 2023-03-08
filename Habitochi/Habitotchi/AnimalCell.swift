@@ -10,4 +10,6 @@ import UIKit
 class AnimalCell: UICollectionViewCell {
 
     @IBOutlet weak var animalImageView: UIImageView!
+    var imageFileName: String = ""
+
 }

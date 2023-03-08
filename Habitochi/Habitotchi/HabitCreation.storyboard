@@ -28,6 +28,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
+                                    <action selector="saveButton:" destination="Muj-MJ-dUq" eventType="touchUpInside" id="R8Z-uG-h1y"/>
                                     <action selector="saveButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aNB-tm-FYX"/>
                                 </connections>
                             </button>
@@ -201,6 +202,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Muj-MJ-dUq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="34.351145038167935" y="-2.1126760563380285"/>
         </scene>
@@ -210,7 +212,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="ChoosePet" storyboardName="ChoosePet" referencedIdentifier="ChoosePet" id="dhA-Gh-kCy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwR-Nb-1vo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="180"/>
+            <point key="canvasLocation" x="588" y="101"/>
         </scene>
     </scenes>
     <resources>

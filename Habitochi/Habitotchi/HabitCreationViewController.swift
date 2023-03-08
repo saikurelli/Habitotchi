@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AnimalChanger {
-    func changeAnimal(newAnimal: UIImage)
+    func changeAnimal(newAnimal: UIImage, newAnimalFileName: String)
 }
 
 class HabitCreationViewController: UIViewController, AnimalChanger {
@@ -32,7 +32,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
     
     private let createAccountSegueIdentifier = "accountCreateHabitSegueIdentifier"
     var sender = ""
-    var choseAnimal = false
+    var animalFileName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +65,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
                   fridayButton.isSelected ||
                   saturdayButton.isSelected) &&
                 petNameField.text != "" &&
-                choseAnimal {
+                animalFileName != "" {
                 saveButton.isEnabled = true;
             } else{
                  saveButton.isEnabled = false;
@@ -86,7 +86,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         }
         
         // get habit description
-        let habitDescriptionEntered = habitDescriptionField.text
+        let habitDescriptionEntered = habitDescriptionField.text ?? ""
         
         // get days of the week selected from buttons
         let daysOfTheWeekSelected = getDaysOfTheWeek()
@@ -113,11 +113,19 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         dateFormatter.dateFormat =  "HH:mm a"
         let timeEntered = dateFormatter.string(from: notificationTimeField.date)
         
-        let habitCreated = Habit(name: habitNameEntered!, goal: habitDescriptionEntered!)
+        let animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName)
+        
+        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: dateFormatter, animal: animalCreated)
+        
+        currentProfile.addHabit(newHabit: habitCreated)
+        
+        // #DEBUG#
+        currentProfile.printHabits()
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
 
-    
     // helper methods of reading which buttons were selected
     func getDaysOfTheWeek() -> [String]{
         let daysOfWeek = Calendar.current.weekdaySymbols
@@ -153,12 +161,12 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         
         if sender == createAccountSegueIdentifier{
             self.navigationItem.hidesBackButton = true
-        }else{
+        } else {
             navController?.navigationBar.backgroundColor = .white
             navController?.navigationBar.tintColor = DARK_GREEN
             navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:DARK_GREEN]
         }
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -171,9 +179,9 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         }
     }
     
-    func changeAnimal(newAnimal: UIImage) {
+    func changeAnimal(newAnimal: UIImage, newAnimalFileName: String) {
         AnimalView.image = newAnimal
-        choseAnimal = true
+        animalFileName = newAnimalFileName
         fieldDidChange(habitNameField)
     }
     

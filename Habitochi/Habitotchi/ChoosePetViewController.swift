@@ -21,7 +21,6 @@ class ChoosePetViewController: UIViewController {
         animalCollectionView.dataSource = self
         
     }
-    
 }
 
 extension ChoosePetViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -37,6 +36,7 @@ extension ChoosePetViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = animalCollectionView.dequeueReusableCell(withReuseIdentifier: "animalCell", for: indexPath) as! AnimalCell
             
         cell.animalImageView.image = UIImage(named: animals[indexPath.row])
+        cell.imageFileName = animals[indexPath.row]
             
             return cell
     }
@@ -44,7 +44,7 @@ extension ChoosePetViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         let otherVC = delegate as! AnimalChanger
         let selectedImage = collectionView.cellForItem(at: indexPath) as! AnimalCell
-        otherVC.changeAnimal(newAnimal: selectedImage.animalImageView.image!)
+        otherVC.changeAnimal(newAnimal: selectedImage.animalImageView.image!, newAnimalFileName: selectedImage.imageFileName)
         self.dismiss(animated: true)
     }
 

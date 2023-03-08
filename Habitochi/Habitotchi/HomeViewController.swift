@@ -7,8 +7,6 @@
 import UIKit
 import CoreData
 
-
-
 public let DARK_GREEN = UIColor(r: 74, g: 116, b: 21, a: 74)
 public let GREEN = UIColor(r: 167, g: 193, b: 129, a: 60)
 
@@ -18,7 +16,6 @@ extension UIColor {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: a/100)
     }
 }
-
 
 class HomeViewController: UIViewController {
     
@@ -64,7 +61,9 @@ class HomeViewController: UIViewController {
         print("profile Button Pressed")
     }
     
-    }
+}
+
+
 
 
 

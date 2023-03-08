@@ -14,25 +14,28 @@ import Foundation
 class Habit : NSObject{
     
     var name : String
-    var goal : String
+    var desc : String
+    var reminderDays : [String]
+    var reminderTime: DateFormatter
     var animal : Animal
     var daysCompleted : Int
     var streak : Int
     var HabitCreationDate : Date
     var habitCompleted = false
     
-    init(name: String, goal: String) {
+    init(name: String,
+         desc: String,
+         reminderDays : [String],
+         reminderTime: DateFormatter,
+         animal: Animal) {
         self.name = name
-        self.goal = goal
-        self.animal = Animal()
+        self.desc = desc
+        self.reminderDays = reminderDays
+        self.reminderTime = reminderTime
+        self.animal = animal
         self.daysCompleted = 0
         self.streak = 0
         self.HabitCreationDate = Date()
-    }
-    
-    //func to set to custom animal
-    func setAnimal(){
-        
     }
     
     func habitCircleChecked(){

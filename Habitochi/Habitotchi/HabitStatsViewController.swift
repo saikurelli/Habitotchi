@@ -14,14 +14,14 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     @IBOutlet weak var animalSprite: SKView!
     
-    @IBOutlet weak var goalStatViewMode: UIPickerView!
+    @IBOutlet weak var descStatViewMode: UIPickerView!
     var pickerData: [String] = [String]()
     
     @IBOutlet weak var habitLabel: UILabel!
-    var fetchedHabit = Habit(name: "", goal: "")
+    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal())
     
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     var delegate : UIViewController!
     
     @IBOutlet weak var longestStreak: UILabel!
@@ -41,13 +41,13 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // set up labels
         habitLabel.text = fetchedHabit.name
         currentStreak.text = String(fetchedHabit.daysCompleted)
-        goalLabel.text = fetchedHabit.goal
+        descLabel.text = fetchedHabit.desc
         longestStreak.text = String(0)
         progressView.progress = Float(currentStreak.text!)! / 365
         
         
-        self.goalStatViewMode.delegate = self
-        self.goalStatViewMode.dataSource = self
+        self.descStatViewMode.delegate = self
+        self.descStatViewMode.dataSource = self
         pickerData = ["Weekly", "Monthly"]
         
         // Do any additional setup after loading the view.

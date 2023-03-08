@@ -29,13 +29,28 @@ public class Profile : NSObject {
         profileImage = image
     }
     
+    func addHabit(newHabit: Habit) {
+        habits.append(newHabit)
+    }
+    
+    // #DEBUG# purposes
+    func printHabits() {
+        print("#DEBUG#\n")
+        for habit in habits {
+            print("Habit name: " + habit.name + " | Pet assigned: " + habit.animal.name)
+            print("\n")
+        }
+    }
+    
     
     func hardcode(){
        // currentProfile = Profile(name: "Test")
-        let habit1 = Habit(name: "Exercise", goal: "I want to run 2 miles a day")
         let animal = Animal(AnimalName: "john", spriteName: "SpriteTest2")
-        let habit2 = Habit(name: "Read", goal: "Read for an hour everyday")
+        let habit1 = Habit(name: "Exercise", desc: "I want to run 2 miles a day", reminderDays: [], reminderTime: DateFormatter(), animal: animal)
+        
         let animal2 = Animal(AnimalName: "jerry", spriteName: "SpriteTest")
+        let habit2 =  Habit(name: "Read", desc: "Read for an hour every day", reminderDays: [], reminderTime: DateFormatter(), animal: animal2)
+
         profileImage = UIImage(named: "testProfilePic")!
         habit1.animal = animal
         habit2.animal = animal2
