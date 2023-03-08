@@ -28,8 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var vc : UIViewController
         
         //MARK: - comment out below two lines if you want to test the account creation screen
-        currentProfile = Profile(name: "Test")
-        currentProfile.hardcode()
+//        currentProfile = Profile(name: "Test")
+//        currentProfile.hardcode()
         if currentProfile == nil {
             storyboard = UIStoryboard(name: "Signin", bundle: nil)
             vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")

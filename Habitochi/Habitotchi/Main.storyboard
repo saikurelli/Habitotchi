@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
-                                <rect key="frame" x="-2" y="443" width="393" height="351"/>
+                                <rect key="frame" x="-2" y="443" width="392" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
-                                <rect key="frame" x="-1" y="93" width="393" height="350"/>
+                                <rect key="frame" x="-2" y="93" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
@@ -47,6 +47,8 @@
                     <navigationItem key="navigationItem" customizationIdentifier="navbar" id="T2F-qj-e38"/>
                     <connections>
                         <outlet property="addHabitButton" destination="3UK-c7-Ce9" id="NuR-1n-Faa"/>
+                        <outlet property="spriteKitView" destination="94n-JO-0HY" id="fND-Jc-Xda"/>
+                        <outlet property="tableView" destination="0cO-wF-PMR" id="BNa-zp-ZxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -76,7 +78,7 @@
             <objects>
                 <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWs-e2-qtm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ez-Vr2">
@@ -113,7 +115,7 @@
             <objects>
                 <viewController id="yI6-Kv-0fT" customClass="TableViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="trj-gI-i99">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="351"/>
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-ZL-38Q">

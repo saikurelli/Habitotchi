@@ -60,7 +60,7 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     private func configureNavBar(){
         let navController = self.navigationController
-        navController?.navigationBar.backgroundColor = .white
+        navController?.navigationBar.backgroundColor = .clear
         navController?.navigationBar.tintColor = DARK_GREEN
         navController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:DARK_GREEN]
         // edit button at nav top right

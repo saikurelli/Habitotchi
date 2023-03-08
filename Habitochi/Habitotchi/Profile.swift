@@ -26,9 +26,11 @@ public class Profile : NSObject {
     
     //Function to set profile picture
     func setProfilePic(image: UIImage) {
+        customProfilePic = true
         profileImage = image
     }
     
+
     func addHabit(newHabit: Habit) {
         habits.append(newHabit)
     }
@@ -40,6 +42,10 @@ public class Profile : NSObject {
             print("Habit name: " + habit.name + " | Pet assigned: " + habit.animal.name)
             print("\n")
         }
+    }
+
+    func setName(name: String) {
+        self.name = name
     }
     
     
@@ -57,5 +63,6 @@ public class Profile : NSObject {
         self.habits.append(habit1)
         self.habits.append(habit2)
     }
+    
     
 }
