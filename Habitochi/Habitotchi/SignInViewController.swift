@@ -97,7 +97,7 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
             view.view.backgroundColor = .clear
             self.present(view, animated: true)
         })
-        controller.addAction(UIAlertAction(title: "Chose a Photo", style: .default){_ in
+        controller.addAction(UIAlertAction(title: "Choose a Photo", style: .default){_ in
             view.cameraMode = false
             view.signin = true
             view.modalPresentationStyle = .fullScreen
@@ -130,9 +130,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         
     }
 
-public protocol saveImage{
-    func changeImage(image: UIImage)
-}
 
 
 

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol AnimalChanger {
-    func changeAnimal(newAnimal: UIImage, newAnimalFileName: String)
-}
-
 class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldDelegate {
 
     @IBOutlet weak var saveButton: UIButton!

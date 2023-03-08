@@ -1,32 +1,33 @@
 
 Contributions:
 
-Peter Ma (20%)
+Peter Ma (25%)
     Part of the Habit Creation Screen
     Animal Creation Screen
     Modified backend code
+    Creating Habit Flow
     
-Vincent Cacciatore (20%)
+Vincent Cacciatore (15%)
     Part of the Habit Creation Screen
     Animal Status Screen
     Modified backend code
 
-Sairaja Kurelli (15%)
-    Habit Status Screen
+Sairaja Kurelli (10%)
+    Some of the Habit Status Screen
     Modified backend code
 
-Cole Harper (45%)
-    Majority of the Home Screen
+Cole Harper (50%)
+    Home Screen
     TableView 
     majority of the set up of backend data structures
     SpriteKit View
     Profile Screen
     Sign-in Screen
-    Camera/Photo Library 
+    Camera & Photo Library 
     
 
 Deviations:
-    Haven't gotten to the settings screen since we don't beleive we've implemented enough changable field of the app to merit it yet.
+    Haven't gotten to the settings screen since we don't beleive we've implemented enough changable fields of the app to merit it yet.
     
 
 

@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController, saveImage {
             vc.signin = false
             self.present(vc, animated: false)
         })
-        controller.addAction(UIAlertAction(title: "Chose a Photo", style: .default){ _ in
+        controller.addAction(UIAlertAction(title: "Choose a Photo", style: .default){ _ in
             let vc = ImagePickerViewController()
             vc.profileEditDelegate = self
             vc.cameraMode = false
