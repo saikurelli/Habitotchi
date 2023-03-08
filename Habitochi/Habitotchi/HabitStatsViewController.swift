@@ -18,10 +18,11 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var pickerData: [String] = [String]()
     
     @IBOutlet weak var habitLabel: UILabel!
+    
+    @IBOutlet weak var descLabel: UILabel!
     var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal())
     
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var descLabel: UILabel!
     var delegate : UIViewController!
     
     @IBOutlet weak var longestStreak: UILabel!

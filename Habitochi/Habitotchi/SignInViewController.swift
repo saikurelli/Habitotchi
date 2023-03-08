@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController, saveImage {
+class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
     
 
     let segueIdentifier = "accountCreateHabitSegueIdentifier"
@@ -24,6 +24,7 @@ class SignInViewController: UIViewController, saveImage {
         createProfileButton()
         createButton.isEnabled = false
         nameTextField.addTarget(self, action: #selector(validateNameField), for: .editingChanged)
+        nameTextField.delegate = self
 
         // Do any additional setup after loading the view.
         
@@ -47,7 +48,9 @@ class SignInViewController: UIViewController, saveImage {
     
     @IBAction func buttonPressed(_ sender: Any) {
             currentProfile = Profile(name: nameTextField.text!)
-        currentProfile.setProfilePic(image: profileImage!)
+            if profileButtonChanged {
+                currentProfile.setProfilePic(image: profileImage!)
+            }
         
             print("\(nameTextField.text!)")
         let storyboard = UIStoryboard(name: "HabitCreation", bundle: nil)
@@ -73,7 +76,7 @@ class SignInViewController: UIViewController, saveImage {
         //profileButton.backgroundColor = .black
         profileButton.setBackgroundImage(UIImage(systemName: "person.crop.circle"), for: .normal)
         profileButton.tintColor = .black
-       // profileButton.contentMode = .center
+        profileButton.contentMode = .scaleAspectFill
         profileButton.isUserInteractionEnabled = true
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
         self.profileButton = profileButton
@@ -87,14 +90,20 @@ class SignInViewController: UIViewController, saveImage {
         let controller = UIAlertController()
         controller.addAction(UIAlertAction(title: "Take Photo", style: .default){_ in
             view.modalPresentationStyle = .fullScreen
+            view.isModalInPresentation = true
             view.cameraMode = true
             view.signin = true
+            view.view.isOpaque = false
+            view.view.backgroundColor = .clear
             self.present(view, animated: true)
         })
         controller.addAction(UIAlertAction(title: "Chose a Photo", style: .default){_ in
             view.cameraMode = false
             view.signin = true
             view.modalPresentationStyle = .fullScreen
+            view.isModalInPresentation = true
+            view.view.isOpaque = false
+            view.view.backgroundColor = .clear
             self.present(view, animated: false)
         })
         
@@ -104,6 +113,18 @@ class SignInViewController: UIViewController, saveImage {
     
     func updateProfileButton(){
         profileButton.setBackgroundImage(profileImage, for: .normal)
+        profileButton.imageView!.contentMode = .scaleAspectFill
+    }
+    
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user clicks on the view outside of the UITextField
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
         
@@ -112,4 +133,6 @@ class SignInViewController: UIViewController, saveImage {
 public protocol saveImage{
     func changeImage(image: UIImage)
 }
+
+
 

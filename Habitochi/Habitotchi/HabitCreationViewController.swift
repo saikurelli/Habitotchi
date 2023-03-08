@@ -11,7 +11,7 @@ protocol AnimalChanger {
     func changeAnimal(newAnimal: UIImage, newAnimalFileName: String)
 }
 
-class HabitCreationViewController: UIViewController, AnimalChanger {
+class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldDelegate {
 
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var habitNameField: UITextField!
@@ -42,6 +42,10 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         habitDescriptionField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
         petNameField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
         
+        habitNameField.delegate = self
+        habitDescriptionField.delegate = self
+        petNameField.delegate = self
+        
         sundayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
         mondayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
         tuesdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
@@ -49,6 +53,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         thursdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
         fridayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
         saturdayButton.addTarget(self, action: #selector(fieldDidChange(_:)), for: .touchUpInside)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,7 +127,19 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         // #DEBUG#
         currentProfile.printHabits()
         
-        self.navigationController?.popViewController(animated: true)
+        
+        if self.sender == createAccountSegueIdentifier {
+            navigateToHomeScreen()
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func navigateToHomeScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
@@ -185,15 +202,16 @@ class HabitCreationViewController: UIViewController, AnimalChanger {
         fieldDidChange(habitNameField)
     }
     
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
-//MARK: - Used this function to test the signin screen
-//    @IBAction func saveButtonPressed(_ sender: Any) {
-//        currentProfile.hardcode()
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-//        vc.modalPresentationStyle = .fullScreen
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
+    // Called when the user clicks on the view outside of the UITextField
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
 
 }

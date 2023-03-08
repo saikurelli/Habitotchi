@@ -13,7 +13,7 @@ class CircularImageView : UIImageView {
             super.layoutSubviews()
             layer.borderWidth = 1
             layer.masksToBounds = false
-            layer.borderColor = GREEN.cgColor
+            layer.borderColor = UIColor.clear.cgColor
             layer.cornerRadius = self.frame.height / 2
             clipsToBounds = true
         }

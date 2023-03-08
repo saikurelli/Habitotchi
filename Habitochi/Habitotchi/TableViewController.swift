@@ -28,7 +28,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let fetchedHabit = currentProfile.habits[row]
         cell.delegate = self
         cell.indexPath = indexPath
-        cell.habitCompletionButton.tintColor = GREEN
+        if cell.completed{
+            cell.habitCompletionButton.tintColor = DARK_GREEN
+        }else{
+            cell.habitCompletionButton.tintColor = GREEN
+        }
         cell.tableCellLabel.text = fetchedHabit.name
         return cell
     }
@@ -48,25 +52,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    
-    
-    
-        
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
         
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitStatsViewController,
            let habit = tableView.indexPathForSelectedRow?.row {

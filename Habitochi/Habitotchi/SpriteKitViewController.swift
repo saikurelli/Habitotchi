@@ -17,6 +17,7 @@ class SpriteKitViewController: UIViewController {
     
     @IBOutlet weak var skView: SKView!
     @IBOutlet var profileButton: UIButton!
+    var scene : BackgroundScene!
     
     
     
@@ -25,11 +26,12 @@ class SpriteKitViewController: UIViewController {
 
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         profileButton.tintColor = .black
         
         self.view = skView
-        let scene = BackgroundScene(size: skView.bounds.size, vc: self)
+        scene = BackgroundScene(size: skView.bounds.size, vc: self)
         scene.backgroundColor = UIColor.white
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
@@ -42,8 +44,13 @@ class SpriteKitViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    //loads the sprites that are in the profile habit's arrays
+    override func viewWillAppear(_ animated: Bool) {
+        if currentProfile.addedHabit {
+            scene.addedNewSprite()
+            currentProfile.addedHabit = false
+            
+        }
+    }
 
     
     func presentAnimalStatus(animal : Animal){
@@ -57,7 +64,7 @@ class SpriteKitViewController: UIViewController {
         if segue.identifier == "animalStatusSegueIdentifier",
            let destination = segue.destination as? AnimalStatusViewController{
             if let sheet = destination.sheetPresentationController{
-                sheet.detents = [.medium(), .large()]
+                sheet.detents = [.medium()]
             }
             
             destination.clickedAnimal = (sender as! Animal)
@@ -89,6 +96,7 @@ class SpriteKitViewController: UIViewController {
             sunNode.anchorPoint = CGPoint(x: 0.0, y: 0.0)
             sunNode.position = CGPoint(x: 325.0, y: 295.0)
             addChild(sunNode)
+            
             loadSprites()
             
            
@@ -97,8 +105,8 @@ class SpriteKitViewController: UIViewController {
         }
         
         public func loadSprites(){
-            let offset = 200
-            var pos = 25
+            let offset = 50
+            var pos = Int(vc.view.frame.midX) - 100
             //Move this to a new func
             for habit in currentProfile.habits{
                 let animal = habit.animal
@@ -114,8 +122,12 @@ class SpriteKitViewController: UIViewController {
             //createProfileButton(scene : scene)
         }
         
-        
-
+        func addedNewSprite(){
+            for children in self.children{
+                children.removeFromParent()
+            }
+            didMove(to: vc.skView)
+        }
     }
 
     

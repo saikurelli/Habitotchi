@@ -35,6 +35,8 @@ class HomeViewController: UIViewController {
     }
     
     
+    
+    
     private func configureNavBar(){
         
         let navController = self.navigationController

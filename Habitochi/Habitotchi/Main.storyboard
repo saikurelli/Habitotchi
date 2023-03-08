@@ -17,22 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
-                                <rect key="frame" x="-2" y="443" width="392" height="350"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-wF-PMR">
+                                <rect key="frame" x="0.0" y="445" width="393" height="350"/>
                                 <connections>
                                     <segue destination="yI6-Kv-0fT" kind="embed" id="rTx-IJ-zWF"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
-                                <rect key="frame" x="-2" y="93" width="394" height="350"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94n-JO-0HY">
+                                <rect key="frame" x="-2" y="99" width="397" height="345"/>
                                 <connections>
                                     <segue destination="CfC-aL-aki" kind="embed" id="zNg-6g-pqm"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UK-c7-Ce9">
-                                <rect key="frame" x="16" y="796" width="50" height="35"/>
+                                <rect key="frame" x="16" y="783" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
@@ -43,6 +41,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="94n-JO-0HY" secondAttribute="bottom" constant="374" id="CsH-Jw-PKo"/>
+                            <constraint firstItem="0cO-wF-PMR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="342" id="P8m-Hk-i4Q"/>
+                            <constraint firstItem="0cO-wF-PMR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VqX-Um-vpX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0cO-wF-PMR" secondAttribute="bottom" constant="23" id="YrE-yl-jq7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="0cO-wF-PMR" secondAttribute="leading" id="bdQ-sZ-nqv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="94n-JO-0HY" secondAttribute="leading" constant="2" id="fdr-QD-BcJ"/>
+                            <constraint firstItem="94n-JO-0HY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ioN-Pj-HqV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="94n-JO-0HY" secondAttribute="top" constant="4" id="zs9-Gd-QRz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" customizationIdentifier="navbar" id="T2F-qj-e38"/>
                     <connections>
@@ -78,7 +86,7 @@
             <objects>
                 <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWs-e2-qtm">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="397" height="345"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ez-Vr2">
@@ -93,7 +101,7 @@
                                 </buttonConfiguration>
                             </button>
                             <skView opaque="NO" contentMode="scaleToFill" id="53C-bh-7SM">
-                                <rect key="frame" x="0.0" y="0.0" width="394" height="350"/>
+                                <rect key="frame" x="1" y="0.0" width="394" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
@@ -115,7 +123,7 @@
             <objects>
                 <viewController id="yI6-Kv-0fT" customClass="TableViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="trj-gI-i99">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-ZL-38Q">

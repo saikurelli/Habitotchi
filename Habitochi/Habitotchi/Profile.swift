@@ -17,12 +17,16 @@ public class Profile : NSObject {
     var profileImage : UIImage
     var habits : [Habit]
     var customProfilePic = false
+    var addedHabit = false
+
     
     init(name: String) {
         self.name = name
         self.profileImage = UIImage(systemName: "person.circle.fill")!
         self.habits = []
     }
+    
+    
     
     //Function to set profile picture
     func setProfilePic(image: UIImage) {
@@ -33,6 +37,7 @@ public class Profile : NSObject {
 
     func addHabit(newHabit: Habit) {
         habits.append(newHabit)
+        addedHabit = true
     }
     
     // #DEBUG# purposes

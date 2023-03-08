@@ -55,6 +55,10 @@ class ProfileViewController: UIViewController, saveImage {
     func setUpViews(){
         let profilePicture = CircularImageView(frame: CGRect(x: 94, y: 130, width: 200, height: 200))
         profilePicture.image = currentProfile.profileImage
+        if !currentProfile.customProfilePic{
+            profilePicture.tintColor = .black
+        }
+        profilePicture.contentMode = .scaleAspectFill
         self.view.addSubview(profilePicture)
         nameLabel.text = currentProfile.name
     }

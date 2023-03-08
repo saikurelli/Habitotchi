@@ -77,8 +77,8 @@
                     <connections>
                         <outlet property="animalSprite" destination="ywD-Ri-RVG" id="eM6-Mb-NVV"/>
                         <outlet property="currentStreak" destination="Agy-eW-PU0" id="BqJ-Wi-U8O"/>
-                        <outlet property="goalLabel" destination="TWQ-Kl-mon" id="Xf6-Wz-6Yt"/>
-                        <outlet property="goalStatViewMode" destination="RWF-Co-YZk" id="mVc-jN-wNQ"/>
+                        <outlet property="descLabel" destination="TWQ-Kl-mon" id="weV-HV-kwA"/>
+                        <outlet property="descStatViewMode" destination="RWF-Co-YZk" id="t1p-j4-ewc"/>
                         <outlet property="habitLabel" destination="UOz-KG-jqh" id="7f0-uc-hzI"/>
                         <outlet property="longestStreak" destination="yE6-V5-clN" id="MRH-8H-gPZ"/>
                         <outlet property="progressView" destination="QhY-Da-4Ib" id="wp0-B7-LE4"/>

@@ -17,15 +17,17 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
     var signin : Bool!
     var cameraMode : Bool!
     var finished = false
+    var cancel = false
    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if !finished{
+        view.backgroundColor = .clear
+        view.isOpaque = false
+        if !finished && !cancel{
             if cameraMode{
                 openCamera()
             }else{
@@ -72,7 +74,18 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         dismiss(animated: false)
     }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        cancel = true
+        picker.dismiss(animated: true)
+        dismiss(animated: false)
+    }
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        if results.isEmpty {
+            cancel = true
+            picker.dismiss(animated: true)
+            self.dismiss(animated: false)
+        }
         for result in results {
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
                 if let image = object as? UIImage {
@@ -82,8 +95,8 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
                         }else{
                             self.profileEditDelegate.changeImage(image: image)
                         }
-                        picker.dismiss(animated: false)
-                        self.dismiss(animated: true)
+                        picker.dismiss(animated: true)
+                        self.dismiss(animated: false)
                     }
                 }
                 
@@ -91,22 +104,7 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         }
     }
     
-    func configureProfilePicture(width: Int, height: Int, newImage : UIImage) -> UIImage{
-        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        //let radius = CGRectGetWidth(view.frame) / 2
-        view.layer.borderWidth = 1
-            view.layer.masksToBounds = false
-            view.layer.borderColor = UIColor.white.cgColor
-            view.layer.cornerRadius = view.frame.height/2
-            view.clipsToBounds = true
-        
-        view.image = newImage
-        
-        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
-        let newImage = renderer.image { ctx in
-            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-        }
-        
-        return newImage
-        }
+    
+    
+
 }
