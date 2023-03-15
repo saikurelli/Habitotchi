@@ -11,7 +11,6 @@ import SpriteKit
 
 class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-
     @IBOutlet weak var animalSprite: SKView!
     
     @IBOutlet weak var descStatViewMode: UIPickerView!
@@ -22,7 +21,6 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var descLabel: UILabel!
     var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal())
     
-    @IBOutlet weak var progressView: UIProgressView!
     var delegate : UIViewController!
     
     @IBOutlet weak var longestStreak: UILabel!
@@ -32,7 +30,6 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         // setting up Sprite Animal
         let scene = SKScene(size: animalSprite.bounds.size)
-        scene.backgroundColor = UIColor.white
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
@@ -44,7 +41,6 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         currentStreak.text = String(fetchedHabit.daysCompleted)
         descLabel.text = fetchedHabit.desc
         longestStreak.text = String(0)
-        progressView.progress = Float(currentStreak.text!)! / 365
         
         
         self.descStatViewMode.delegate = self
@@ -52,6 +48,26 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         pickerData = ["Weekly", "Monthly"]
         
         // Do any additional setup after loading the view.
+        renderSwiftUIComponent()
+    }
+    
+    func renderSwiftUIComponent() {
+         
+        let vc = UIHostingController(rootView: CircularProgressBar(count: fetchedHabit.daysCompleted))
+        let switftUIView = vc.view!
+        // add Views to hierarchy
+        switftUIView.translatesAutoresizingMaskIntoConstraints = false
+        addChild(vc)
+        view.addSubview(switftUIView)
+        
+        let constraints = [
+            switftUIView.topAnchor.constraint(equalTo: currentStreak.topAnchor, constant: 60),
+            switftUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
+        ]
+        // add constraints
+        NSLayoutConstraint.activate(constraints)
+        vc.didMove(toParent: self)
     }
     
     
@@ -59,7 +75,7 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         configureNavBar()
     }
     
-    private func configureNavBar(){
+    private func configureNavBar() {
         let navController = self.navigationController
         navController?.navigationBar.backgroundColor = .clear
         navController?.navigationBar.tintColor = DARK_GREEN
