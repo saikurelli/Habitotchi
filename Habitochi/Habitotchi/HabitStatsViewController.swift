@@ -29,11 +29,11 @@ class HabitStatsViewController: UIViewController{
         
         // setting up Sprite Animal
         let scene = SKScene(size: animalSprite.bounds.size)
+        scene.backgroundColor = UIColor.clear
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
         animalSprite.presentScene(scene)
-        
         
         // set up labels
         habitLabel.text = fetchedHabit.name
@@ -49,6 +49,7 @@ class HabitStatsViewController: UIViewController{
         // Do any additional setup after loading the view.
         renderSwiftCircularProgressBar()
         renderSwiftMenu()
+        
         
     }
     
@@ -90,10 +91,9 @@ class HabitStatsViewController: UIViewController{
         vc.didMove(toParent: self)
     }
     
-    
-    func renderSwiftCalendar(weekMode: Bool) {
-        let vc = UIHostingController(rootView: CalendarElem(weekMode: weekMode)
-            .frame(width: 400.0))
+    func clearCalendarBox() {
+        let vc = UIHostingController(rootView: Rectangle().foregroundColor(.clear)
+            .frame(width: 600, height: 170))
         
         let switftUIView = vc.view!
         // add Views to hierarchy
@@ -102,8 +102,29 @@ class HabitStatsViewController: UIViewController{
         view.addSubview(switftUIView)
         
         let constraints = [
-            switftUIView.centerYAnchor.constraint(equalTo: descLabel.centerYAnchor, constant: 40),
-            switftUIView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -140)
+            switftUIView.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 10),
+            switftUIView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -150)
+
+        ]
+        // add constraints
+        NSLayoutConstraint.activate(constraints)
+        vc.didMove(toParent: self)
+    }
+    
+    
+    func renderSwiftCalendar(weekMode: Bool) {
+        let vc = UIHostingController(rootView: CalendarElem(weekMode: weekMode)
+            .frame(width: 400.0).foregroundColor(.blue))
+        
+        let switftUIView = vc.view!
+        // add Views to hierarchy
+        switftUIView.translatesAutoresizingMaskIntoConstraints = false
+        addChild(vc)
+        view.addSubview(switftUIView)
+        
+        let constraints = [
+            switftUIView.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 10),
+            switftUIView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -150)
 
         ]
         // add constraints
