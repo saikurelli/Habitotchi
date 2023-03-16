@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import SpriteKit
 
-class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class HabitStatsViewController: UIViewController{
     
     @IBOutlet weak var animalSprite: SKView!
     
@@ -73,7 +73,7 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func renderSwiftMenu() {
          
-        let vc = UIHostingController(rootView: MenuBar())
+        let vc = UIHostingController(rootView: MenuBar(delegate: self))
         let switftUIView = vc.view!
         // add Views to hierarchy
         switftUIView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,6 +90,26 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         vc.didMove(toParent: self)
     }
     
+    
+    func renderSwiftCalendar(weekMode: Bool) {
+        let vc = UIHostingController(rootView: CalendarElem(weekMode: weekMode)
+            .frame(width: 400.0))
+        
+        let switftUIView = vc.view!
+        // add Views to hierarchy
+        switftUIView.translatesAutoresizingMaskIntoConstraints = false
+        addChild(vc)
+        view.addSubview(switftUIView)
+        
+        let constraints = [
+            switftUIView.centerYAnchor.constraint(equalTo: descLabel.centerYAnchor, constant: 40),
+            switftUIView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -140)
+
+        ]
+        // add constraints
+        NSLayoutConstraint.activate(constraints)
+        vc.didMove(toParent: self)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         configureNavBar()
@@ -108,23 +128,6 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         nav.rightBarButtonItem = editStatScreen
         nav.rightBarButtonItem?.action = #selector(buttonPressed)
         nav.rightBarButtonItem?.target = self
-    }
-    // picker methods
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    // Capture the picker view selection
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        print(pickerData[row])
     }
     
     @objc func buttonPressed(){
