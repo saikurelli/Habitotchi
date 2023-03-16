@@ -13,7 +13,6 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBOutlet weak var animalSprite: SKView!
     
-    @IBOutlet weak var descStatViewMode: UIPickerView!
     var pickerData: [String] = [String]()
     
     @IBOutlet weak var habitLabel: UILabel!
@@ -43,15 +42,17 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         longestStreak.text = String(0)
         
         
-        self.descStatViewMode.delegate = self
-        self.descStatViewMode.dataSource = self
-        pickerData = ["Weekly", "Monthly"]
+//        self.descStatViewMode.delegate = self
+//        self.descStatViewMode.dataSource = self
+//        pickerData = ["Weekly", "Monthly"]
         
         // Do any additional setup after loading the view.
-        renderSwiftUIComponent()
+        renderSwiftCircularProgressBar()
+        renderSwiftMenu()
+        
     }
     
-    func renderSwiftUIComponent() {
+    func renderSwiftCircularProgressBar() {
          
         let vc = UIHostingController(rootView: CircularProgressBar(count: fetchedHabit.daysCompleted))
         let switftUIView = vc.view!
@@ -63,6 +64,25 @@ class HabitStatsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let constraints = [
             switftUIView.topAnchor.constraint(equalTo: currentStreak.topAnchor, constant: 60),
             switftUIView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
+        ]
+        // add constraints
+        NSLayoutConstraint.activate(constraints)
+        vc.didMove(toParent: self)
+    }
+    
+    func renderSwiftMenu() {
+         
+        let vc = UIHostingController(rootView: MenuBar())
+        let switftUIView = vc.view!
+        // add Views to hierarchy
+        switftUIView.translatesAutoresizingMaskIntoConstraints = false
+        addChild(vc)
+        view.addSubview(switftUIView)
+        
+        let constraints = [
+            switftUIView.topAnchor.constraint(equalTo:  habitLabel.topAnchor),
+            switftUIView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 50)
             
         ]
         // add constraints
