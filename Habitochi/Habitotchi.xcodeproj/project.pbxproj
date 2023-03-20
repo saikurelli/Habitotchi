@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0725814829BAB246005A7685 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725814729BAB246005A7685 /* CircularProgressBar.swift */; };
+		078B5CA329C3D5990074DAA3 /* CalendarElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B5CA229C3D5990074DAA3 /* CalendarElem.swift */; };
+		078F3E2929C2C73300CC4B4D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078F3E2829C2C73300CC4B4D /* MenuBar.swift */; };
+		07C34F0829C20DE500C9B8D7 /* CircularProgress in Frameworks */ = {isa = PBXBuildFile; productRef = 07C34F0729C20DE500C9B8D7 /* CircularProgress */; };
 		07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FEE29A6C1330008D07C /* AppDelegate.swift */; };
 		07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF029A6C1330008D07C /* SceneDelegate.swift */; };
 		07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF229A6C1330008D07C /* HomeViewController.swift */; };
@@ -41,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0725814729BAB246005A7685 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		078B5CA229C3D5990074DAA3 /* CalendarElem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarElem.swift; sourceTree = "<group>"; };
+		078F3E2829C2C73300CC4B4D /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		07CA9FEB29A6C1330008D07C /* Habitotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA9FEE29A6C1330008D07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CA9FF029A6C1330008D07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C34F0829C20DE500C9B8D7 /* CircularProgress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +116,9 @@
 			children = (
 				87EDAE6329B142E4003A2466 /* CoreData */,
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
+				078B5CA229C3D5990074DAA3 /* CalendarElem.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
+				0725814729BAB246005A7685 /* CircularProgressBar.swift */,
 				87744F9229B83A130067CFCF /* SaveImage.swift */,
 				87744F9029B839B10067CFCF /* AnimalChanger.swift */,
 				87EDAE6429B14FAC003A2466 /* Signin.storyboard */,
@@ -116,6 +126,7 @@
 				87E5397129B6EF8300835991 /* ImagePickerViewController.swift */,
 				07CA9FF229A6C1330008D07C /* HomeViewController.swift */,
 				87744F6729B7DAA50067CFCF /* RoundButton.swift */,
+				078F3E2829C2C73300CC4B4D /* MenuBar.swift */,
 				877ECA3D29AE5A0000DEE93C /* SpriteKitViewController.swift */,
 				877ECA4929AE740F00DEE93C /* AnimalStatus.storyboard */,
 				877ECA4B29AE741E00DEE93C /* AnimalStatusViewController.swift */,
@@ -166,6 +177,9 @@
 			dependencies = (
 			);
 			name = Habitotchi;
+			packageProductDependencies = (
+				07C34F0729C20DE500C9B8D7 /* CircularProgress */,
+			);
 			productName = Habitochi;
 			productReference = 07CA9FEB29A6C1330008D07C /* Habitotchi.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 07CA9FE229A6C1330008D07C;
+			packageReferences = (
+				07C34F0629C20DE500C9B8D7 /* XCRemoteSwiftPackageReference "CircularProgressSwiftUI" */,
+			);
 			productRefGroup = 07CA9FEC29A6C1330008D07C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,9 +246,11 @@
 			files = (
 				877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */,
 				877ECA4C29AE741E00DEE93C /* AnimalStatusViewController.swift in Sources */,
+				078F3E2929C2C73300CC4B4D /* MenuBar.swift in Sources */,
 				07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */,
 				8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */,
 				877ECA4629AE647E00DEE93C /* HabitStatsViewController.swift in Sources */,
+				078B5CA329C3D5990074DAA3 /* CalendarElem.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
 				87744F9329B83A130067CFCF /* SaveImage.swift in Sources */,
 				87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */,
@@ -240,6 +259,7 @@
 				877ECA4829AE70A100DEE93C /* AnimalSprite.swift in Sources */,
 				87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */,
 				87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */,
+				0725814829BAB246005A7685 /* CircularProgressBar.swift in Sources */,
 				877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */,
 				877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */,
 				877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */,
@@ -458,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07C34F0629C20DE500C9B8D7 /* XCRemoteSwiftPackageReference "CircularProgressSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArnavMotwani/CircularProgressSwiftUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07C34F0729C20DE500C9B8D7 /* CircularProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07C34F0629C20DE500C9B8D7 /* XCRemoteSwiftPackageReference "CircularProgressSwiftUI" */;
+			productName = CircularProgress;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8745433929B0203F00F60C0C /* Model.xcdatamodeld */ = {
