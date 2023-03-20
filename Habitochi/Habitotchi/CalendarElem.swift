@@ -22,8 +22,7 @@ struct CalendarElem: View {
             // offSet to center Success View Calendar for a week display
             let offSetY = self.weekMode ? CGFloat(40) : CGFloat(0)
         
-            generateHeader(offSetY: offSetY)
-            
+            generateHeader(offSetY: offSetY) 
             
             ForEach(0..<sizeColors, id: \.self) {
                 let colIndex = $0/7
@@ -61,7 +60,6 @@ func BoxImg (status : Bool) -> some View {
     }
 }
 
-
 struct EmptyBox : View {
     var body: some View {
         ZStack {
@@ -77,7 +75,6 @@ struct CheckBoxImg : View {
         ZStack {
             Image(uiImage: UIImage(named: "checkBox")!)
                 .frame(width: boxSize, height: boxSize)
-                
         }
     }
 }

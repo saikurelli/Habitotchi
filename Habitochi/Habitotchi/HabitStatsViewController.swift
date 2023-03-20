@@ -34,6 +34,7 @@ class HabitStatsViewController: UIViewController{
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
         animalSprite.presentScene(scene)
+        animalSprite.backgroundColor = UIColor.clear
         
         // set up labels
         habitLabel.text = fetchedHabit.name
