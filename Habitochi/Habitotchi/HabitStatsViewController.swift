@@ -41,8 +41,6 @@ class HabitStatsViewController: UIViewController{
         currentStreak.text = String(fetchedHabit.daysCompleted)
         descLabel.text = fetchedHabit.desc
         longestStreak.text = String(0)
-        
-        
 //        self.descStatViewMode.delegate = self
 //        self.descStatViewMode.dataSource = self
 //        pickerData = ["Weekly", "Monthly"]
@@ -118,6 +116,7 @@ class HabitStatsViewController: UIViewController{
             .frame(width: 400.0).foregroundColor(.blue))
         
         let switftUIView = vc.view!
+        switftUIView.backgroundColor = .clear
         // add Views to hierarchy
         switftUIView.translatesAutoresizingMaskIntoConstraints = false
         addChild(vc)
