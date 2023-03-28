@@ -52,6 +52,18 @@ class Habit : NSObject{
         //need to decrement animal data
     }
     
+    func dailyHabitCheck(){
+        
+        if !habitCompleted{
+            streak = 0
+            animal.failedToCompleteHabit()
+        }
+        
+        habitCompleted = false
+        
+        
+    }
+    
     
     
     

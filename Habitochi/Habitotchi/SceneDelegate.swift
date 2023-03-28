@@ -28,12 +28,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var vc : UIViewController
         
         //MARK: - comment out below two lines if you want to test the account creation screen
-//        currentProfile = Profile(name: "Test")
-//        currentProfile.hardcode()
+        currentProfile = Profile(name: "Test")
+        currentProfile.hardcode()
         if currentProfile == nil {
             storyboard = UIStoryboard(name: "Signin", bundle: nil)
             vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
         }else{
+            guard let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
+                return
+            }
+            print("Retrieved Date from User Defaults \(lastOpened)")
+            
+            currentProfile.checkDates(lastOpened: lastOpened)
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             vc = storyboard.instantiateViewController(identifier: "HomeViewController")
         }
@@ -57,6 +63,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        guard let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
+            return 
+        }
+        currentProfile.checkDates(lastOpened: lastOpened)
+        print("Retrieved Date from User Defaults \(lastOpened)")
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -73,6 +84,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        UserDefaults.standard.set(Date(), forKey: "lastOpened")
+        print("Adding to user defaults \(UserDefaults.standard.object(forKey: "lastOpened") as! Date)")
     }
 
 

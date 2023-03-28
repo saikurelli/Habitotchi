@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //MARK: - Check to see if prior profile has been stored
+        //currentProfile.checkDates(lastOpened: lastOpened)
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -31,6 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        UserDefaults.standard.set(Date(), forKey: "lastOpened")
+        print("Adding to user defaults \(UserDefaults.standard.object(forKey: "lastOpened") as! Date)")
+    }
+    
+
+    
     
     // MARK: - Core Data stack
 

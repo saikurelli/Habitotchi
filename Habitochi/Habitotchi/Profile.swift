@@ -20,6 +20,7 @@ public class Profile : NSObject {
     var addedHabit = false
 
     
+    
     init(name: String) {
         self.name = name
         self.profileImage = UIImage(systemName: "person.circle.fill")!
@@ -51,6 +52,22 @@ public class Profile : NSObject {
 
     func setName(name: String) {
         self.name = name
+    }
+    
+    func checkDates(lastOpened: Date){
+        
+        if !Calendar.current.isDate(lastOpened, inSameDayAs: Date()){
+            resetHabits()
+        }
+    
+        
+    }
+    
+    func resetHabits(){
+        //Go through each habit and reset them
+        for habit in habits {
+            habit.dailyHabitCheck()
+        }
     }
     
     

@@ -15,7 +15,11 @@ class Animal : NSObject{
     
     var name : String
     var level : Int
-    var health : Int
+    var health : Int {
+        didSet{
+            //checkAnimalsStatus
+        }
+    }
     var maxHealth = 10
     var xpts : Int
     var xptsNeeded = 100
@@ -56,6 +60,10 @@ class Animal : NSObject{
     //MARK: need to add further functionality
     func levelUp(){
         level += 1
+    }
+    
+    func failedToCompleteHabit(){
+        health -= 1
     }
     
     func setAnimalSpriteDelegate(){
