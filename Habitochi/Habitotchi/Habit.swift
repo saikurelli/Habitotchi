@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 //MARK: basic data structure for a habit, profile will probably have an array of habits.
 
@@ -16,7 +17,7 @@ class Habit : NSObject{
     var name : String
     var desc : String
     var reminderDays : [String]
-    var reminderTime: DateFormatter
+    var reminderTime: String
     var animal : Animal
     var daysCompleted : Int
     var streak : Int
@@ -26,7 +27,7 @@ class Habit : NSObject{
     init(name: String,
          desc: String,
          reminderDays : [String],
-         reminderTime: DateFormatter,
+         reminderTime: String,
          animal: Animal) {
         self.name = name
         self.desc = desc
@@ -36,6 +37,7 @@ class Habit : NSObject{
         self.daysCompleted = 0
         self.streak = 0
         self.HabitCreationDate = Date()
+        
     }
     
     func habitCircleChecked(){
@@ -63,7 +65,6 @@ class Habit : NSObject{
         
         
     }
-    
     
     
     

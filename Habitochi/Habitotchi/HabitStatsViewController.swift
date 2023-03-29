@@ -18,7 +18,7 @@ class HabitStatsViewController: UIViewController{
     @IBOutlet weak var habitLabel: UILabel!
     
     @IBOutlet weak var descLabel: UILabel!
-    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal())
+    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: "", animal: Animal())
     
     var delegate : UIViewController!
     

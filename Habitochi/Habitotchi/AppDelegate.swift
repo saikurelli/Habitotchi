@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //MARK: - Check to see if prior profile has been stored
-        //currentProfile.checkDates(lastOpened: lastOpened)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) {
+            granted,error in
+            if granted {
+                print("Notifications enabled")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
     

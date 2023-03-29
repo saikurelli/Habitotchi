@@ -113,15 +113,15 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm a"
         let timeEntered = dateFormatter.string(from: notificationTimeField.date)
-        
+                
         let animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName)
         
-        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: dateFormatter, animal: animalCreated)
+        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
         
+        createNotificationScheme(habit: habitCreated)
         currentProfile.addHabit(newHabit: habitCreated)
         
         // #DEBUG#
-        currentProfile.printHabits()
         
         
         if self.sender == createAccountSegueIdentifier {
@@ -129,6 +129,8 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         }else{
             self.navigationController?.popViewController(animated: true)
         }
+        
+        
     }
     
     func navigateToHomeScreen() {
@@ -208,6 +210,77 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func createNotificationScheme(habit : Habit){
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget to complete \(habit.name)!"
+        content.subtitle = ""
+        content.sound = .default
+        
+        let notifcationCenter = UNUserNotificationCenter.current()
+        
+        print(habit.reminderTime)
+      
+        var dateComp = DateComponents()
+        let (hour, minute) = checkHour(time: habit.reminderTime)
+        dateComp.calendar = Calendar.current
+        for day in habit.reminderDays {
+            switch day {
+            case "Sunday":
+                dateComp.weekday = 0
+            case "Monday":
+                dateComp.weekday = 1
+            case "Tuesday":
+                dateComp.weekday = 2
+            case "Wednesday":
+                dateComp.weekday = 3
+            case "Thursday":
+                dateComp.weekday = 4
+            case "Friday":
+                dateComp.weekday = 5
+            default:
+                dateComp.weekday = 6
+            }
+
+            dateComp.hour = hour
+            dateComp.minute = minute
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: true)
+            let request = UNNotificationRequest(identifier: "\(habit.name) - \(dateComp.weekday!)", content: content, trigger: trigger)
+            notifcationCenter.add(request){ (error) in
+                if error != nil {
+                    print("Error adding reminder")
+                }
+                
+            }
+                
+
+        }
+    }
+    
+    func checkHour(time : String) -> (Int, Int){
+        
+        let timeComps = time.components(separatedBy: " ")
+        let time = timeComps[0].components(separatedBy: ":")
+        
+        if(timeComps[1] == "AM" && time[0] == "12"){
+            let minutes = Int(time[1])
+            return (0, minutes!)
+        }
+        if(timeComps[1] == "PM"){
+            let offset = 12
+            var hour = Int(time[0])!
+            hour += offset
+            let minutes = Int(time[1])!
+            return (hour, minutes)
+        }
+        else{
+            var hour = Int(time[0])!
+            let minutes = Int(time[1])!
+            return (hour, minutes)
+        }
+    }
+    
+    
     
 
 }
