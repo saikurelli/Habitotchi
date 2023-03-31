@@ -38,16 +38,14 @@ class SpriteKitViewController: UIViewController {
         
         skView.presentScene(scene)
         
-    
-        
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if currentProfile.addedHabit {
+        
+        if currentProfile.addedOrEditedHabit {
             scene.addedNewSprite()
-            currentProfile.addedHabit = false
+            currentProfile.addedOrEditedHabit = false
             
         }
     }

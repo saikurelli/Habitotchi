@@ -29,9 +29,53 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
     private let createAccountSegueIdentifier = "accountCreateHabitSegueIdentifier"
     var sender = ""
     var animalFileName = ""
+    var fetchedHabit: Habit? = nil
+    var savedAnimal: Animal? = nil
+
+
+    func setUpEditHabit() {
+        // use fetchedHabit to set the fields
+        habitNameField.text = fetchedHabit?.name
+        habitDescriptionField.text = fetchedHabit?.desc
+        petNameField.text = fetchedHabit?.animal.name
+        savedAnimal = fetchedHabit?.animal
+        saveButton.setTitle("Update", for: .normal)
+
+
+        // parse out date from time string - 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm a"
+        let date = dateFormatter.date(from: fetchedHabit!.reminderTime)
+        notificationTimeField.date = date!
+        
+        for day in fetchedHabit!.reminderDays {
+            switch day {
+            case "Sunday":
+                sundayButton.isSelected = true
+            case "Monday":
+                mondayButton.isSelected = true
+            case "Tuesday":
+                tuesdayButton.isSelected = true
+            case "Wednesday":
+                wednesdayButton.isSelected = true
+            case "Thursday":
+                thursdayButton.isSelected = true
+            case "Friday":
+                fridayButton.isSelected = true
+            case "Saturday":
+                saturdayButton.isSelected = true
+            default:
+                print("Error: day not found")
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // if fetchedHabit is not nil, want to set the fields to the habit's values
+        if fetchedHabit != nil {
+            setUpEditHabit()
+        }
         saveButton.isEnabled = false
         
         habitNameField.addTarget(self, action: #selector(fieldDidChange(_:)), for: .editingChanged)
@@ -66,7 +110,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
                   fridayButton.isSelected ||
                   saturdayButton.isSelected) &&
                 petNameField.text != "" &&
-                animalFileName != "" {
+                (animalFileName != "" || savedAnimal != nil) {
                 saveButton.isEnabled = true;
             } else{
                  saveButton.isEnabled = false;
@@ -106,20 +150,28 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
             present(controller, animated: true)
         }
         
-        let animalImageChosen = AnimalView.image
+        var animalCreated: Animal
+        if savedAnimal == nil || AnimalView.image != nil  {
+            let animalImageChosen = AnimalView.image
+            animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName)
+        } else {
+            animalCreated = savedAnimal!
+            animalCreated.name = petNameEntered!
+        }
         
         
         // get time selected from time wheel
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm a"
         let timeEntered = dateFormatter.string(from: notificationTimeField.date)
-                
-        let animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName)
         
-        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
-        
-        createNotificationScheme(habit: habitCreated)
-        currentProfile.addHabit(newHabit: habitCreated)
+        if let fetchedHabit {
+            fetchedHabit.updateHabit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
+        } else {
+            let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
+            createNotificationScheme(habit: habitCreated)
+            currentProfile.addHabit(newHabit: habitCreated)
+        }
         
         // #DEBUG#
         

@@ -27,29 +27,9 @@ class HabitStatsViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setting up Sprite Animal
-        let scene = SKScene(size: animalSprite.bounds.size)
-        scene.backgroundColor = UIColor.clear
-        self.view.bounds = UIScreen.main.bounds
-        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
-        animalSprite.presentScene(scene)
-        animalSprite.backgroundColor = UIColor.clear
-        
-        // set up labels
-        habitLabel.text = fetchedHabit.name
-        currentStreak.text = String(fetchedHabit.daysCompleted)
-        descLabel.text = fetchedHabit.desc
-        longestStreak.text = String(0)
-//        self.descStatViewMode.delegate = self
-//        self.descStatViewMode.dataSource = self
-//        pickerData = ["Weekly", "Monthly"]
-        
         // Do any additional setup after loading the view.
         renderSwiftCircularProgressBar()
         renderSwiftMenu()
-        
-        
     }
     
     func renderSwiftCircularProgressBar() {
@@ -134,6 +114,20 @@ class HabitStatsViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         configureNavBar()
+        // setting up Sprite Animal
+        let scene = SKScene(size: animalSprite.bounds.size)
+        scene.backgroundColor = UIColor.clear
+        self.view.bounds = UIScreen.main.bounds
+        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
+        animalSprite.presentScene(scene)
+        animalSprite.backgroundColor = UIColor.clear
+        
+        // set up labels
+        habitLabel.text = fetchedHabit.name
+        currentStreak.text = String(fetchedHabit.daysCompleted)
+        descLabel.text = fetchedHabit.desc
+        longestStreak.text = String(0)
     }
     
     private func configureNavBar() {
@@ -152,6 +146,10 @@ class HabitStatsViewController: UIViewController{
     }
     
     @objc func buttonPressed(){
-        print("Edit button has been pressed")
+        // navigate to create habit screen with habit data
+        let storyboard = UIStoryboard(name: "HabitCreation", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "HabitCreation") as HabitCreationViewController
+        vc.fetchedHabit = fetchedHabit
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

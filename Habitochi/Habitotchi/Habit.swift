@@ -65,6 +65,16 @@ class Habit : NSObject{
         
         
     }
+
+    func updateHabit(name: String, desc: String, reminderDays : [String], reminderTime: String, animal: Animal){
+        self.name = name
+        self.desc = desc
+        self.reminderDays = reminderDays
+        self.reminderTime = reminderTime
+        self.animal = animal
+        // force reload all views
+        currentProfile.addedOrEditedHabit = true
+    }
     
     
     
