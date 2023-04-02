@@ -28,8 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var vc : UIViewController
         
         //MARK: - comment out below two lines if you want to test the account creation screen
-        currentProfile = Profile(name: "Test")
-        currentProfile.hardcode()
+//        currentProfile = Profile(name: "Test")
+//        currentProfile.hardcode()
         if currentProfile == nil {
             storyboard = UIStoryboard(name: "Signin", bundle: nil)
             vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
@@ -66,7 +66,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
             return 
         }
-        currentProfile.checkDates(lastOpened: lastOpened)
+        if currentProfile != nil {
+            currentProfile.checkDates(lastOpened: lastOpened)
+        }
+       
         print("Retrieved Date from User Defaults \(lastOpened)")
     }
 

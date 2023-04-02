@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController, saveImage {
     
     func setUpViews(){
         let profilePicture = CircularImageView(frame: CGRect(x: 94, y: 130, width: 200, height: 200))
-        profilePicture.image = currentProfile.profileImage
+        profilePicture.image = UIImage(data: currentProfile.profileImage!)
         if !currentProfile.customProfilePic{
             profilePicture.tintColor = .black
         }
@@ -97,7 +97,7 @@ class ProfileViewController: UIViewController, saveImage {
             style: .default,
             handler: {
                 (action) in let enteredText = controller.textFields![0].text
-                currentProfile.setName(name: enteredText!)
+                CoreDataManager.dataManager.updateProfile(profile: currentProfile, name: enteredText!)
                 self.setUpViews()
             } ))
                                
@@ -106,7 +106,7 @@ class ProfileViewController: UIViewController, saveImage {
     }
     
     func changeImage(image: UIImage) {
-        currentProfile.setProfilePic(image: image)
+        CoreDataManager.dataManager.updateProfile(profile: currentProfile, image: image)
         setUpViews()
     }
     

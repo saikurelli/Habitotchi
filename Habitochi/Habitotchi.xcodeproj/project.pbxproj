@@ -19,7 +19,6 @@
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
-		87744F6229B7B3000067CFCF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87744F6129B7B3000067CFCF /* Profile.storyboard */; };
 		87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6329B7B3420067CFCF /* ProfileViewController.swift */; };
 		87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6529B7D5930067CFCF /* CircularImageViewController.swift */; };
 		87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6729B7DAA50067CFCF /* RoundButton.swift */; };
@@ -33,15 +32,19 @@
 		877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877ECA4929AE740F00DEE93C /* AnimalStatus.storyboard */; };
 		877ECA4C29AE741E00DEE93C /* AnimalStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA4B29AE741E00DEE93C /* AnimalStatusViewController.swift */; };
 		877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877ECA4F29AE8A1A00DEE93C /* Main.storyboard */; };
-		877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5329AEAA9700DEE93C /* Profile.swift */; };
-		877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5529AEAAA000DEE93C /* Habit.swift */; };
-		877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877ECA5729AEAAAB00DEE93C /* Animal.swift */; };
 		87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5397129B6EF8300835991 /* ImagePickerViewController.swift */; };
 		87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EDAE6429B14FAC003A2466 /* Signin.storyboard */; };
 		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
 		D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */; };
 		D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */; };
 		D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154A29B6FD6500A81504 /* AnimalCell.swift */; };
+		D0B1C99829D9134400EE6552 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1C99729D9134400EE6552 /* CoreDataManager.swift */; };
+		D0C575D129D2A1BD00233A68 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575CB29D2A1BD00233A68 /* Habit+CoreDataClass.swift */; };
+		D0C575D229D2A1BD00233A68 /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575CC29D2A1BD00233A68 /* Habit+CoreDataProperties.swift */; };
+		D0C575D329D2A1BD00233A68 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575CD29D2A1BD00233A68 /* Profile+CoreDataClass.swift */; };
+		D0C575D429D2A1BD00233A68 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575CE29D2A1BD00233A68 /* Profile+CoreDataProperties.swift */; };
+		D0C575D529D2A1BD00233A68 /* Animal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575CF29D2A1BD00233A68 /* Animal+CoreDataClass.swift */; };
+		D0C575D629D2A1BD00233A68 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C575D029D2A1BD00233A68 /* Animal+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +61,6 @@
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		87744F6129B7B3000067CFCF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		87744F6329B7B3420067CFCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		87744F6529B7D5930067CFCF /* CircularImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageViewController.swift; sourceTree = "<group>"; };
 		87744F6729B7DAA50067CFCF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -72,15 +74,19 @@
 		877ECA4929AE740F00DEE93C /* AnimalStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimalStatus.storyboard; sourceTree = "<group>"; };
 		877ECA4B29AE741E00DEE93C /* AnimalStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalStatusViewController.swift; sourceTree = "<group>"; };
 		877ECA4F29AE8A1A00DEE93C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		877ECA5329AEAA9700DEE93C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		877ECA5529AEAAA000DEE93C /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
-		877ECA5729AEAAAB00DEE93C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		87E5397129B6EF8300835991 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		87EDAE6429B14FAC003A2466 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePet.storyboard; sourceTree = "<group>"; };
 		D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetViewController.swift; sourceTree = "<group>"; };
 		D0AC154A29B6FD6500A81504 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		D0B1C99729D9134400EE6552 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D0C575CB29D2A1BD00233A68 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0C575CC29D2A1BD00233A68 /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0C575CD29D2A1BD00233A68 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0C575CE29D2A1BD00233A68 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0C575CF29D2A1BD00233A68 /* Animal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0C575D029D2A1BD00233A68 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,13 @@
 		07CA9FE229A6C1330008D07C = {
 			isa = PBXGroup;
 			children = (
+				D0C575CB29D2A1BD00233A68 /* Habit+CoreDataClass.swift */,
+				D0C575CC29D2A1BD00233A68 /* Habit+CoreDataProperties.swift */,
+				D0C575CD29D2A1BD00233A68 /* Profile+CoreDataClass.swift */,
+				D0C575CE29D2A1BD00233A68 /* Profile+CoreDataProperties.swift */,
+				D0C575CF29D2A1BD00233A68 /* Animal+CoreDataClass.swift */,
+				D0C575D029D2A1BD00233A68 /* Animal+CoreDataProperties.swift */,
+				D0B1C99729D9134400EE6552 /* CoreDataManager.swift */,
 				07CA9FED29A6C1330008D07C /* Habitotchi */,
 				07CA9FEC29A6C1330008D07C /* Products */,
 			);
@@ -137,13 +150,9 @@
 				D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */,
 				D0AC154A29B6FD6500A81504 /* AnimalCell.swift */,
 				877ECA4729AE70A100DEE93C /* AnimalSprite.swift */,
-				877ECA5329AEAA9700DEE93C /* Profile.swift */,
-				877ECA5529AEAAA000DEE93C /* Habit.swift */,
-				877ECA5729AEAAAB00DEE93C /* Animal.swift */,
 				877ECA4F29AE8A1A00DEE93C /* Main.storyboard */,
 				877ECA4329AE646D00DEE93C /* HabitStatsView.storyboard */,
 				877ECA4529AE647E00DEE93C /* HabitStatsViewController.swift */,
-				87744F6129B7B3000067CFCF /* Profile.storyboard */,
 				87744F6329B7B3420067CFCF /* ProfileViewController.swift */,
 				87744F6529B7D5930067CFCF /* CircularImageViewController.swift */,
 				07CA9FF729A6C1350008D07C /* Assets.xcassets */,
@@ -231,7 +240,6 @@
 				877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
 				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
-				87744F6229B7B3000067CFCF /* Profile.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
 			);
@@ -244,29 +252,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				877ECA5829AEAAAB00DEE93C /* Animal.swift in Sources */,
 				877ECA4C29AE741E00DEE93C /* AnimalStatusViewController.swift in Sources */,
 				078F3E2929C2C73300CC4B4D /* MenuBar.swift in Sources */,
 				07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */,
 				8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */,
+				D0C575D229D2A1BD00233A68 /* Habit+CoreDataProperties.swift in Sources */,
 				877ECA4629AE647E00DEE93C /* HabitStatsViewController.swift in Sources */,
 				078B5CA329C3D5990074DAA3 /* CalendarElem.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
 				87744F9329B83A130067CFCF /* SaveImage.swift in Sources */,
 				87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */,
 				87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */,
+				D0C575D629D2A1BD00233A68 /* Animal+CoreDataProperties.swift in Sources */,
+				D0C575D529D2A1BD00233A68 /* Animal+CoreDataClass.swift in Sources */,
 				07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */,
 				877ECA4829AE70A100DEE93C /* AnimalSprite.swift in Sources */,
 				87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */,
 				87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */,
 				0725814829BAB246005A7685 /* CircularProgressBar.swift in Sources */,
 				877ECA3E29AE5A0000DEE93C /* SpriteKitViewController.swift in Sources */,
-				877ECA5629AEAAA000DEE93C /* Habit.swift in Sources */,
 				877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */,
-				877ECA5429AEAA9700DEE93C /* Profile.swift in Sources */,
 				87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */,
 				D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */,
 				07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */,
+				D0C575D329D2A1BD00233A68 /* Profile+CoreDataClass.swift in Sources */,
+				D0C575D429D2A1BD00233A68 /* Profile+CoreDataProperties.swift in Sources */,
+				D0B1C99829D9134400EE6552 /* CoreDataManager.swift in Sources */,
+				D0C575D129D2A1BD00233A68 /* Habit+CoreDataClass.swift in Sources */,
 				87744F9129B839B10067CFCF /* AnimalChanger.swift in Sources */,
 				D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */,
 			);

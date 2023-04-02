@@ -20,8 +20,6 @@ class SpriteKitViewController: UIViewController {
     var scene : BackgroundScene!
     
     
-    
-    
     //view will load check if there is a new habit, then add to Observer obeject?
 
    
@@ -46,7 +44,6 @@ class SpriteKitViewController: UIViewController {
         if currentProfile.addedOrEditedHabit {
             scene.addedNewSprite()
             currentProfile.addedOrEditedHabit = false
-            
         }
     }
 
@@ -74,6 +71,7 @@ class SpriteKitViewController: UIViewController {
     class BackgroundScene: SKScene {
         
         var vc : SpriteKitViewController!
+        let habits: [Habit] = currentProfile.habits!.array as! [Habit]
         
         init(size: CGSize, vc: SpriteKitViewController) {
             super.init(size: size)
@@ -96,21 +94,18 @@ class SpriteKitViewController: UIViewController {
             addChild(sunNode)
             
             loadSprites()
-            
-           
-            
-
         }
         
         public func loadSprites(){
             let offset = 50
             var pos = Int(vc.view.frame.midX) - 100
             //Move this to a new func
-            for habit in currentProfile.habits{
+           
+            for habit in habits{
                 let animal = habit.animal
                 animal.setAnimalSpriteDelegate()
                 animal.delegate = vc
-                let animalSprite = animal.sprite
+                let animalSprite: AnimalSprite = animal.sprite!
                 animalSprite.position = CGPoint(x: pos , y: 100)
                 animalSprite.size = CGSize(width: 50.0, height: 50.0)
                 addChild(animalSprite)

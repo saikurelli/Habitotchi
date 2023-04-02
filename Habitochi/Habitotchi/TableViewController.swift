@@ -13,19 +13,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let textCellIdentifier = "TextCell"
     let tableSegueIdentifier = "HabitTableViewSegueIdentifier"
     let habitCreationSegueIdentifier = "habitCreationSegueIdentifier"
+    
+    let habits = currentProfile.habits
    
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var addHabitButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentProfile.habits.count
+        return habits!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath) as! HabitCell
         
         let row = indexPath.row
-        let fetchedHabit = currentProfile.habits[row]
+        let fetchedHabit: Habit = habits?.object(at: row) as! Habit
         cell.delegate = self
         cell.indexPath = indexPath
         if cell.completed{
@@ -69,8 +71,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitStatsViewController,
-           let habit = tableView.indexPathForSelectedRow?.row {
-            destination.fetchedHabit = currentProfile.habits[habit]
+           let row = tableView.indexPathForSelectedRow?.row {
+            destination.fetchedHabit = habits?.object(at: row) as! Habit
             destination.delegate = self
         }
     }
@@ -93,23 +95,15 @@ class HabitCell : UITableViewCell {
     @IBAction func buttonPressed(_ sender: Any) {
         //need to be able to reset it at beginning of new day
         
+        // fetch all habits related to this profile
+        let habit = NSPredicate(format:"ANY Habit == %@", currentProfile)
         
-        let habit = currentProfile.habits.first { Habit in
-            Habit.name == tableCellLabel.text
-        }
-        
-        
+
         if !completed {
             completed = true
             
             habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
             habitCompletionButton.tintColor = DARK_GREEN
-            
-            if habit != nil {
-                habit!.habitCircleChecked()
-            }else{
-                print("ERROR HABIT CELL")
-            }
             delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: true)
             
         }

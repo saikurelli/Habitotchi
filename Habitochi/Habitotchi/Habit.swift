@@ -21,7 +21,7 @@ class Habit : NSObject{
     var animal : Animal
     var daysCompleted : Int
     var streak : Int
-    var HabitCreationDate : Date
+    var habitCreationDate : Date
     var habitCompleted = false
     
     init(name: String,
@@ -36,8 +36,12 @@ class Habit : NSObject{
         self.animal = animal
         self.daysCompleted = 0
         self.streak = 0
+<<<<<<< Updated upstream
         self.HabitCreationDate = Date()
         
+=======
+        self.habitCreationDate = Date()
+>>>>>>> Stashed changes
     }
     
     func habitCircleChecked(){

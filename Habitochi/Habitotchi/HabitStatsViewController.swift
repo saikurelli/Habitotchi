@@ -11,6 +11,8 @@ import SpriteKit
 
 class HabitStatsViewController: UIViewController{
     
+    var fetchedHabit: Habit!
+    
     @IBOutlet weak var animalSprite: SKView!
     
     var pickerData: [String] = [String]()
@@ -18,7 +20,10 @@ class HabitStatsViewController: UIViewController{
     @IBOutlet weak var habitLabel: UILabel!
     
     @IBOutlet weak var descLabel: UILabel!
-    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: "", animal: Animal())
+//<<<<<<< Updated upstream
+//    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: "", animal: Animal())
+//=======
+//>>>>>>> Stashed changes
     
     var delegate : UIViewController!
     
@@ -26,6 +31,26 @@ class HabitStatsViewController: UIViewController{
     @IBOutlet weak var currentStreak: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal(), context: context)
+        
+        
+        // setting up Sprite Animal
+        let scene = SKScene(size: animalSprite.bounds.size)
+        scene.backgroundColor = UIColor.clear
+        self.view.bounds = UIScreen.main.bounds
+        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size))
+        animalSprite.presentScene(scene)
+        animalSprite.backgroundColor = UIColor.clear
+        
+        // set up labels
+        habitLabel.text = fetchedHabit.name
+        currentStreak.text = String(fetchedHabit.daysCompleted)
+        descLabel.text = fetchedHabit.desc
+        longestStreak.text = String(0)
+//        self.descStatViewMode.delegate = self
+//        self.descStatViewMode.dataSource = self
+//        pickerData = ["Weekly", "Monthly"]
         
         // Do any additional setup after loading the view.
         renderSwiftCircularProgressBar()
@@ -34,7 +59,7 @@ class HabitStatsViewController: UIViewController{
     
     func renderSwiftCircularProgressBar() {
          
-        let vc = UIHostingController(rootView: CircularProgressBar(count: fetchedHabit.daysCompleted))
+        let vc = UIHostingController(rootView: CircularProgressBar(count: Int(fetchedHabit.daysCompleted)))
         let switftUIView = vc.view!
         // add Views to hierarchy
         switftUIView.translatesAutoresizingMaskIntoConstraints = false
@@ -119,7 +144,7 @@ class HabitStatsViewController: UIViewController{
         scene.backgroundColor = UIColor.clear
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scene.addChild(fetchedHabit.animal.sprite.createSprite(size: animalSprite.bounds.size))
+        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size))
         animalSprite.presentScene(scene)
         animalSprite.backgroundColor = UIColor.clear
         

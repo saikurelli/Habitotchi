@@ -35,8 +35,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-    
     private func configureNavBar(){
         
         let navController = self.navigationController
@@ -48,7 +46,7 @@ class HomeViewController: UIViewController {
         
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         let profileButton = RoundButton(frame: customView.frame)
-        profileButton.setBackgroundImage(currentProfile.profileImage, for: .normal)
+        profileButton.setBackgroundImage(UIImage(data:currentProfile.profileImage!), for: .normal)
         profileButton.tintColor = !currentProfile.customProfilePic ? .black : .clear
         profileButton.contentMode = .scaleAspectFit
         profileButton.isUserInteractionEnabled = true

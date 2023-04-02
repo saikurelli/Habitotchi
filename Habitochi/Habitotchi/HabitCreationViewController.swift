@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldDelegate {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var habitNameField: UITextField!
@@ -45,7 +48,8 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         // parse out date from time string - 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm a"
-        let date = dateFormatter.date(from: fetchedHabit!.reminderTime)
+//        let date = dateFormatter.date(from: fetchedHabit!.reminderTime)
+        let date = dateFormatter.date(from: dateFormatter.dateFormat)
         notificationTimeField.date = date!
         
         for day in fetchedHabit!.reminderDays {
@@ -150,39 +154,55 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
             present(controller, animated: true)
         }
         
-        var animalCreated: Animal
-        if savedAnimal == nil || AnimalView.image != nil  {
-            let animalImageChosen = AnimalView.image
-            animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName)
-        } else {
-            animalCreated = savedAnimal!
-            animalCreated.name = petNameEntered!
-        }
-        
-        
         // get time selected from time wheel
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm a"
-        let timeEntered = dateFormatter.string(from: notificationTimeField.date)
+//        let timeEntered: NSDate? = dateFormatter.string(from: notificationTimeField.date as Date)
         
-        if let fetchedHabit {
-            fetchedHabit.updateHabit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
+        let timeEntered = notificationTimeField.date
+        
+        var animalCreated: Animal
+        // CREATE ANIMAL
+        if savedAnimal == nil || AnimalView.image != nil  {
+            let animalImageChosen = AnimalView.image
+            animalCreated = CoreDataManager.dataManager.createAnimal(name: petNameEntered!, spriteName: animalFileName)
+        // UPDATE ANIMAL
         } else {
-            let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
-            createNotificationScheme(habit: habitCreated)
-            currentProfile.addHabit(newHabit: habitCreated)
+            animalCreated = savedAnimal!
+            CoreDataManager.dataManager.updateAnimal(animal: animalCreated, name: petNameEntered!)
         }
         
-        // #DEBUG#
+        // UPDATE HABIT
+        if let fetchedHabit {            
+            // TODO: Can refactor to be more efficient
+            CoreDataManager.dataManager.updateHabit(habit: fetchedHabit, name: habitNameEntered!, desc: habitNameEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered)
+        // CREATE HABIT
+        } else {
+            let habitCreated = CoreDataManager.dataManager.createHabit(profile: currentProfile, name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
+            createNotificationScheme(habit: habitCreated)
+        }
         
+//
+//        let animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName, context: context)
+//
+//        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated, context: context)
+//        animalCreated.habit = habitCreated // set the inverse relationship denoting aninmal <-> habit.
+//
+//        currentProfile.addToHabits(habitCreated) // set the one-to-many relationship denoting profile <-> habit
+//        habitCreated.profile = currentProfile // set the inverse relationship denoting profile <-> habit
+//
+//        do {
+//            try context.save()
+//        } catch {
+//            print("SAVING FAILURE: Habit has failed to be created and saved to core data")
+//        }
+//>>>>>>> Stashed changes
         
         if self.sender == createAccountSegueIdentifier {
             navigateToHomeScreen()
         }else{
             self.navigationController?.popViewController(animated: true)
         }
-        
-        
     }
     
     func navigateToHomeScreen() {
@@ -271,10 +291,12 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         
         let notifcationCenter = UNUserNotificationCenter.current()
         
-        print(habit.reminderTime)
+//        print(habit.reminderTime)
       
         var dateComp = DateComponents()
-        let (hour, minute) = checkHour(time: habit.reminderTime)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm a"
+        let (hour, minute) = checkHour(time: dateFormatter.string(from: habit.reminderTime!))
         dateComp.calendar = Calendar.current
         for day in habit.reminderDays {
             switch day {

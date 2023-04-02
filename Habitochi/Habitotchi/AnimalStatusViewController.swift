@@ -35,7 +35,7 @@ class AnimalStatusViewController: UIViewController {
         scene.backgroundColor = UIColor.white
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        let temp = clickedAnimal.sprite.createSprite(size: animalView.bounds.size)
+        let temp = clickedAnimal.sprite!.createSprite(size: animalView.bounds.size)
         scene.addChild(temp)
         animalView.presentScene(scene)
         
