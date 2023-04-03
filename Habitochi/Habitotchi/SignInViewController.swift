@@ -36,8 +36,8 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         nameTextField.addTarget(self, action: #selector(validateNameField), for: .editingChanged)
         nameTextField.delegate = self
         
-        currentProfile = CoreDataManager.dataManager.fetchProfile()
-        if currentProfile != nil { successfullySignedIn(firstSignIn: false) }
+//        currentProfile = CoreDataManager.dataManager.fetchProfile()
+//        if currentProfile != nil { successfullySignedIn(firstSignIn: false) }
     }
     
     func successfullySignedIn(firstSignIn: Bool) {

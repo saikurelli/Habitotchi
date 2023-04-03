@@ -198,6 +198,8 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
 //        }
 //>>>>>>> Stashed changes
         
+        currentProfile.addedOrEditedHabit = true
+        
         if self.sender == createAccountSegueIdentifier {
             navigateToHomeScreen()
         }else{

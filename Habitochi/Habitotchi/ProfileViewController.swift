@@ -11,6 +11,7 @@ class ProfileViewController: UIViewController, saveImage {
     
     var tempImage : UIImage!
     @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
@@ -58,9 +59,12 @@ class ProfileViewController: UIViewController, saveImage {
         if !currentProfile.customProfilePic{
             profilePicture.tintColor = .black
         }
+        profilePicture.center.x = self.view.bounds.midX
+        profilePicture.center.y = self.view.bounds.maxY / 3
         profilePicture.contentMode = .scaleAspectFill
         self.view.addSubview(profilePicture)
         nameLabel.text = currentProfile.name
+        
     }
     
     func changeProfilePicture(){

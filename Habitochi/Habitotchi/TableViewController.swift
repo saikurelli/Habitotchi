@@ -30,10 +30,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let fetchedHabit: Habit = habits?.object(at: row) as! Habit
         cell.delegate = self
         cell.indexPath = indexPath
-        if cell.completed{
-            cell.habitCompletionButton.tintColor = DARK_GREEN
+        if fetchedHabit.habitCompleted{
+            cell.updateCell(cell: cell)
         }else{
             cell.habitCompletionButton.tintColor = GREEN
+            cell.backgroundColor = .white
         }
         cell.tableCellLabel.text = fetchedHabit.name
         return cell
@@ -41,17 +42,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func changeTableCellBackground(tableView : UITableView, indexPath : IndexPath, checked: Bool){
-        
-        let cell = tableView.cellForRow(at: indexPath)
-        if checked{
-            cell?.backgroundColor = GREEN
-        }
-        else{
-            cell?.backgroundColor = .white
-        }
     }
     
 
@@ -72,7 +62,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == tableSegueIdentifier,
            let destination = segue.destination as? HabitStatsViewController,
            let row = tableView.indexPathForSelectedRow?.row {
-            destination.fetchedHabit = habits?.object(at: row) as! Habit
+            destination.fetchedHabit = habits?.object(at: row) as? Habit
             destination.delegate = self
         }
     }
@@ -96,32 +86,19 @@ class HabitCell : UITableViewCell {
         //need to be able to reset it at beginning of new day
         
         // fetch all habits related to this profile
-        let habit = NSPredicate(format:"ANY Habit == %@", currentProfile)
+        let tappedHabit = currentProfile.habits![indexPath.row] as! Habit
         
-
-        if !completed {
-            completed = true
-            
-            habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
-            habitCompletionButton.tintColor = DARK_GREEN
-            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: true)
-            
+        
+        if !tappedHabit.habitCompleted {
+            CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: completed)
+            updateCell(cell: self)
         }
         
-//        else if completed {
-//            completed = false
-//            habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
-//            habitCompletionButton.tintColor = GREEN
-//            if habit != nil {
-//                habit!.habitCircleUnchecked()
-//            }else{
-//                print("ERROR HABIT CELL")
-//            }
-//            delegate.changeTableCellBackground(tableView: delegate.tableView, indexPath: indexPath, checked: false)
-//
-//
-//        }
-        
+        }
+    func updateCell(cell : HabitCell){
+        habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+        habitCompletionButton.tintColor = DARK_GREEN
+        cell.backgroundColor = GREEN
     }
 }
     

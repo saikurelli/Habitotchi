@@ -71,7 +71,7 @@ class SpriteKitViewController: UIViewController {
     class BackgroundScene: SKScene {
         
         var vc : SpriteKitViewController!
-        let habits: [Habit] = currentProfile.habits!.array as! [Habit]
+        var habits: [Habit] = currentProfile.habits!.array as! [Habit]
         
         init(size: CGSize, vc: SpriteKitViewController) {
             super.init(size: size)
@@ -98,14 +98,15 @@ class SpriteKitViewController: UIViewController {
         
         public func loadSprites(){
             let offset = 50
-            var pos = Int(vc.view.frame.midX) - 100
+            var pos = Int(vc.view.frame.midX) - 150
             //Move this to a new func
            
             for habit in habits{
                 let animal = habit.animal
                 animal.setAnimalSpriteDelegate()
                 animal.delegate = vc
-                let animalSprite: AnimalSprite = animal.sprite!
+                let animalSprite = animal.sprite!
+                animalSprite.isUserInteractionEnabled = true
                 animalSprite.position = CGPoint(x: pos , y: 100)
                 animalSprite.size = CGSize(width: 50.0, height: 50.0)
                 addChild(animalSprite)
@@ -116,6 +117,7 @@ class SpriteKitViewController: UIViewController {
         }
         
         func addedNewSprite(){
+            habits = currentProfile.habits!.array as! [Habit]
             for children in self.children{
                 children.removeFromParent()
             }
