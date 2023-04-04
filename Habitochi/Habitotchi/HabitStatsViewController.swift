@@ -36,10 +36,12 @@ class HabitStatsViewController: UIViewController{
         
         // setting up Sprite Animal
         let scene = SKScene(size: animalSprite.bounds.size)
-        scene.backgroundColor = UIColor.clear
+        scene.backgroundColor = .clear
         self.view.bounds = UIScreen.main.bounds
-        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size))
+        scene.scaleMode = .aspectFit
+        scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        let sprite = fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size, spriteName: fetchedHabit.animal.spriteName!)
+        scene.addChild(sprite)
         animalSprite.presentScene(scene)
         animalSprite.backgroundColor = UIColor.clear
         
@@ -144,7 +146,7 @@ class HabitStatsViewController: UIViewController{
         scene.backgroundColor = UIColor.clear
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size))
+        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size, spriteName: fetchedHabit.animal.spriteName!))
         animalSprite.presentScene(scene)
         animalSprite.backgroundColor = UIColor.clear
         

@@ -24,6 +24,7 @@ extension Animal {
     @NSManaged public var xptsNeeded: Int64
     @NSManaged public var sprite: AnimalSprite?
     @NSManaged public var habit: Habit?
+    @NSManaged public var spriteName : String?
 
     convenience init(name : String,
                      spriteName : String,
@@ -38,6 +39,7 @@ extension Animal {
         xpts = 0
         xptsNeeded = 100
         sprite = AnimalSprite(imageName: spriteName, name: name)
+        self.spriteName = spriteName
     }
 
     func habitCompleted(){

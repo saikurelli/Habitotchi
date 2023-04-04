@@ -20,7 +20,6 @@
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
-		876B603129DB1BBD00408157 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876B603029DB1BBD00408157 /* Profile.storyboard */; };
 		87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6329B7B3420067CFCF /* ProfileViewController.swift */; };
 		87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6529B7D5930067CFCF /* CircularImageViewController.swift */; };
 		87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87744F6729B7DAA50067CFCF /* RoundButton.swift */; };
@@ -64,7 +63,6 @@
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		876B603029DB1BBD00408157 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../Profile.storyboard; sourceTree = "<group>"; };
 		87744F6329B7B3420067CFCF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		87744F6529B7D5930067CFCF /* CircularImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageViewController.swift; sourceTree = "<group>"; };
 		87744F6729B7DAA50067CFCF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
 				078B5CA229C3D5990074DAA3 /* CalendarElem.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
-				876B603029DB1BBD00408157 /* Profile.storyboard */,
 				0725814729BAB246005A7685 /* CircularProgressBar.swift */,
 				87744F9229B83A130067CFCF /* SaveImage.swift */,
 				87744F9029B839B10067CFCF /* AnimalChanger.swift */,
@@ -247,7 +244,6 @@
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
 				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
 				07C9423C29DB27F400C4FE07 /* Profile.storyboard in Resources */,
-				876B603129DB1BBD00408157 /* Profile.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
 			);

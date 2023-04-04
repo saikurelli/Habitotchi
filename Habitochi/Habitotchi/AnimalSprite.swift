@@ -22,8 +22,8 @@ public class AnimalSprite : SKSpriteNode{
     }
     
     
-    func createSprite (size: CGSize) -> SKSpriteNode{
-        return SKSpriteNode(texture: animalTexture, color: .clear, size: size)
+    func createSprite (size: CGSize, spriteName: String) -> SKSpriteNode{
+        return SKSpriteNode(texture: SKTexture(imageNamed: spriteName), color: .clear, size: size)
     }
     
     
