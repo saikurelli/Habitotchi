@@ -303,19 +303,19 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         for day in habit.reminderDays {
             switch day {
             case "Sunday":
-                dateComp.weekday = 0
-            case "Monday":
                 dateComp.weekday = 1
-            case "Tuesday":
+            case "Monday":
                 dateComp.weekday = 2
-            case "Wednesday":
+            case "Tuesday":
                 dateComp.weekday = 3
-            case "Thursday":
+            case "Wednesday":
                 dateComp.weekday = 4
-            case "Friday":
+            case "Thursday":
                 dateComp.weekday = 5
-            default:
+            case "Friday":
                 dateComp.weekday = 6
+            default:
+                dateComp.weekday = 7
             }
 
             dateComp.hour = hour
@@ -338,22 +338,9 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         let timeComps = time.components(separatedBy: " ")
         let time = timeComps[0].components(separatedBy: ":")
         
-        if(timeComps[1] == "AM" && time[0] == "12"){
-            let minutes = Int(time[1])
-            return (0, minutes!)
-        }
-        if(timeComps[1] == "PM"){
-            let offset = 12
-            var hour = Int(time[0])!
-            hour += offset
-            let minutes = Int(time[1])!
-            return (hour, minutes)
-        }
-        else{
-            var hour = Int(time[0])!
-            let minutes = Int(time[1])!
-            return (hour, minutes)
-        }
+        let hour = Int(time[0])
+        let minute = Int(time[1])
+        return(hour!, minute!)
     }
     
     
