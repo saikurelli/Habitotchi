@@ -161,8 +161,9 @@ class CoreDataManager {
     
     // No need for a fetchAnimal. We can access the animal fron the Habit to which it was assigned
     
-    func updateAnimal(animal: Animal, name: String) {
+    func updateAnimal(animal: Animal, name: String, spriteName: String) {
         animal.name = name
+        animal.spriteName = spriteName
         save()
     }
     

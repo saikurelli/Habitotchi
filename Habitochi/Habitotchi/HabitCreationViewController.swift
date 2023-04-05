@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import SpriteKit
 
 class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldDelegate {
     
@@ -163,17 +164,18 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         
         var animalCreated: Animal
         // CREATE ANIMAL
-        if savedAnimal == nil || AnimalView.image != nil  {
+        if savedAnimal == nil && AnimalView.image != nil  {
             let animalImageChosen = AnimalView.image
             animalCreated = CoreDataManager.dataManager.createAnimal(name: petNameEntered!, spriteName: animalFileName)
         // UPDATE ANIMAL
         } else {
             animalCreated = savedAnimal!
-            CoreDataManager.dataManager.updateAnimal(animal: animalCreated, name: petNameEntered!)
+            animalCreated.sprite?.animalTexture = SKTexture(imageNamed: animalFileName)
+            CoreDataManager.dataManager.updateAnimal(animal: animalCreated, name: petNameEntered!, spriteName: animalFileName)
         }
         
         // UPDATE HABIT
-        if let fetchedHabit {            
+        if let fetchedHabit {
             // TODO: Can refactor to be more efficient
             CoreDataManager.dataManager.updateHabit(habit: fetchedHabit, name: habitNameEntered!, desc: habitNameEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered)
         // CREATE HABIT

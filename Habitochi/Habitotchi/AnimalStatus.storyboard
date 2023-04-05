@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL5-oP-bTi">
-                                <rect key="frame" x="50" y="89" width="45" height="21"/>
+                                <rect key="frame" x="50" y="69" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +46,7 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LVL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43c-kg-WSH">
-                                <rect key="frame" x="50" y="115" width="29" height="21"/>
+                                <rect key="frame" x="50" y="95" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,22 +95,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYe-RI-W11">
+                                <rect key="frame" x="50" y="121" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="43c-kg-WSH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="1vP-s6-KeJ"/>
                             <constraint firstItem="fgi-J4-l67" firstAttribute="top" secondItem="PRI-qk-2Ss" secondAttribute="bottom" constant="5" id="6Hj-La-g8H"/>
+                            <constraint firstItem="XYe-RI-W11" firstAttribute="top" secondItem="43c-kg-WSH" secondAttribute="bottom" constant="5" id="8W0-MB-JA2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ViQ-RU-vh3" secondAttribute="trailing" constant="123" id="9gu-5a-df3"/>
+                            <constraint firstItem="43c-kg-WSH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="ALp-8f-b5o"/>
+                            <constraint firstItem="WL5-oP-bTi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="BYq-3s-h8k"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ERc-EG-ESL" secondAttribute="trailing" constant="50" id="CEL-a5-e4Y"/>
                             <constraint firstItem="fgi-J4-l67" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DQk-ov-Vhx"/>
                             <constraint firstItem="ViQ-RU-vh3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="Dmu-bj-XyQ"/>
                             <constraint firstItem="43c-kg-WSH" firstAttribute="top" secondItem="WL5-oP-bTi" secondAttribute="bottom" constant="5" id="FHf-d6-wXb"/>
                             <constraint firstItem="Sxz-MO-LWB" firstAttribute="top" secondItem="i4r-Ow-ex0" secondAttribute="bottom" constant="5" id="I7h-Wn-sZC"/>
-                            <constraint firstItem="WL5-oP-bTi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="P2k-vP-hSw"/>
+                            <constraint firstItem="WL5-oP-bTi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="L7s-Ke-6hc"/>
                             <constraint firstItem="Sk2-hh-hAL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="POW-XQ-3R8"/>
                             <constraint firstItem="ViQ-RU-vh3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="120" id="Rak-Ci-6l1"/>
-                            <constraint firstItem="WL5-oP-bTi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="UEn-xJ-ys2"/>
                             <constraint firstItem="Sxz-MO-LWB" firstAttribute="top" secondItem="ViQ-RU-vh3" secondAttribute="bottom" constant="43" id="VQ5-1O-7jB"/>
                             <constraint firstItem="Sxz-MO-LWB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XFu-pf-6lf"/>
                             <constraint firstItem="Sxz-MO-LWB" firstAttribute="top" secondItem="ERc-EG-ESL" secondAttribute="bottom" constant="5" id="XUa-M2-NgR"/>
@@ -122,6 +130,7 @@
                             <constraint firstItem="OVX-I2-sAf" firstAttribute="top" secondItem="fgi-J4-l67" secondAttribute="bottom" constant="24" id="mgZ-CF-cAI"/>
                             <constraint firstItem="Ep2-Nf-y65" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="pAk-xK-WmI"/>
                             <constraint firstItem="Sxz-MO-LWB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="275" id="pkv-zb-qf6"/>
+                            <constraint firstItem="XYe-RI-W11" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="sBx-KO-w4r"/>
                             <constraint firstItem="fgi-J4-l67" firstAttribute="top" secondItem="Sxz-MO-LWB" secondAttribute="bottom" constant="30" id="xAl-hD-V8a"/>
                         </constraints>
                     </view>
@@ -131,6 +140,7 @@
                         <outlet property="hpLabel" destination="ERc-EG-ESL" id="Azm-0h-FbZ"/>
                         <outlet property="levelLabel" destination="43c-kg-WSH" id="74n-SR-j0A"/>
                         <outlet property="nameLabel" destination="WL5-oP-bTi" id="Vi2-hP-iMC"/>
+                        <outlet property="statusLabel" destination="XYe-RI-W11" id="ka5-dg-PeO"/>
                         <outlet property="xpBar" destination="fgi-J4-l67" id="92N-9Q-2L0"/>
                         <outlet property="xpLabel" destination="PRI-qk-2Ss" id="BWg-Xx-vQ1"/>
                     </connections>

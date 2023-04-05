@@ -105,10 +105,9 @@ class SpriteKitViewController: UIViewController {
                 let animal = habit.animal
                 animal.setAnimalSpriteDelegate()
                 animal.delegate = vc
-                let animalSprite = animal.sprite!
+                var animalSprite = animal.sprite!.createSprite(size: CGSize(width: 50.0, height: 50.0), spriteName: animal.spriteName!)
                 animalSprite.isUserInteractionEnabled = true
                 animalSprite.position = CGPoint(x: pos , y: 100)
-                animalSprite.size = CGSize(width: 50.0, height: 50.0)
                 addChild(animalSprite)
                 pos += offset
             }

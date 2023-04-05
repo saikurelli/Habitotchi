@@ -19,7 +19,11 @@ class AnimalStatusViewController: UIViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var hpLabel: UILabel!
     @IBOutlet weak var xpLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     var temp = ""
+    let healthStatus = ["healthy", "sick"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = clickedAnimal.name
@@ -52,19 +56,11 @@ class AnimalStatusViewController: UIViewController {
         let GOLD = UIColor(r: 255, g: 215, b: 0, a: 255)
         hpBar.tintColor = GOLD
        
+        if(clickedAnimal.health <= (clickedAnimal.maxHealth / 2)){
+            statusLabel.text = "Status \(healthStatus[1])"
+        }else{
+            statusLabel.text = "Status \(healthStatus[0])"
+        }
         
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
