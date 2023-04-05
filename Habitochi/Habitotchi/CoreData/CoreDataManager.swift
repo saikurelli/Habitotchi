@@ -164,6 +164,7 @@ class CoreDataManager {
     func updateAnimal(animal: Animal, name: String, spriteName: String) {
         animal.name = name
         animal.spriteName = spriteName
+        animal.sprite = AnimalSprite(imageName: spriteName, name: name)
         save()
     }
     
