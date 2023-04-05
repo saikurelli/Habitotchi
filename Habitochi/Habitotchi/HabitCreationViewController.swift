@@ -168,16 +168,18 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
             let animalImageChosen = AnimalView.image
             animalCreated = CoreDataManager.dataManager.createAnimal(name: petNameEntered!, spriteName: animalFileName)
         // UPDATE ANIMAL
-        } else {
+        } else if AnimalView.image != nil {
             animalCreated = savedAnimal!
             animalCreated.sprite?.animalTexture = SKTexture(imageNamed: animalFileName)
             CoreDataManager.dataManager.updateAnimal(animal: animalCreated, name: petNameEntered!, spriteName: animalFileName)
+        }else{
+            animalCreated = savedAnimal!
         }
         
         // UPDATE HABIT
         if let fetchedHabit {
             // TODO: Can refactor to be more efficient
-            CoreDataManager.dataManager.updateHabit(habit: fetchedHabit, name: habitNameEntered!, desc: habitNameEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered)
+            CoreDataManager.dataManager.updateHabit(habit: fetchedHabit, name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered)
         // CREATE HABIT
         } else {
             let habitCreated = CoreDataManager.dataManager.createHabit(profile: currentProfile, name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
