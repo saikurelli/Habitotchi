@@ -35,6 +35,7 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         createButton.isEnabled = false
         nameTextField.addTarget(self, action: #selector(validateNameField), for: .editingChanged)
         nameTextField.delegate = self
+        self.navigationItem.hidesBackButton = true
         
 //        currentProfile = CoreDataManager.dataManager.fetchProfile()
 //        if currentProfile != nil { successfullySignedIn(firstSignIn: false) }

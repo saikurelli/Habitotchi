@@ -46,7 +46,15 @@ class ProfileViewController: UIViewController, saveImage {
         controller.addAction(UIAlertAction(title: "Change Name", style: .default) { _ in
             self.changeName()
         })
-        controller.addAction(UIAlertAction(title: "Delete Profile", style: .destructive))
+        
+        controller.addAction(UIAlertAction(title: "Delete Profile", style: .destructive) { _ in
+            
+            CoreDataManager.dataManager.deleteProfile(profile: currentProfile)
+            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
         
         controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         

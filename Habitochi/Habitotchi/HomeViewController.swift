@@ -46,9 +46,11 @@ class HomeViewController: UIViewController {
         
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         let profileButton = RoundButton(frame: customView.frame)
-        profileButton.setBackgroundImage(UIImage(data:currentProfile.profileImage!), for: .normal)
-        profileButton.tintColor = !currentProfile.customProfilePic ? .black : .clear
-        profileButton.contentMode = .scaleAspectFit
+//        profileButton.setBackgroundImage(UIImage(data:currentProfile.profileImage!), for: .normal)
+//        profileButton.tintColor = !currentProfile.customProfilePic ? .black : .clear
+//        profileButton.contentMode = .scaleAspectFit
+        profileButton.setBackgroundImage(UIImage(systemName: "gearshape.fill"), for: .normal)
+        profileButton.tintColor = .black
         profileButton.isUserInteractionEnabled = true
         profileButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         customView.addSubview(profileButton)
@@ -58,9 +60,12 @@ class HomeViewController: UIViewController {
         }
     
     @objc func buttonClicked(){
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut) {
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
