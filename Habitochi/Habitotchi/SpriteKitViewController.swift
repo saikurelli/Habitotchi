@@ -26,6 +26,8 @@ class SpriteKitViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        currentProfile.skvDelegate = self
+        currentProfile.tableDelegate.spkDelegate = self
         profileButton.tintColor = .black
         
         self.view = skView
@@ -50,7 +52,6 @@ class SpriteKitViewController: UIViewController {
     
     func presentAnimalStatus(animal : Animal){
         performSegue(withIdentifier: "animalStatusSegueIdentifier", sender: animal)
-        
     }
     
 

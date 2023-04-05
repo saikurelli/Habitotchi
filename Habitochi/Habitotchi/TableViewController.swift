@@ -18,6 +18,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
    
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var addHabitButton: UIButton!
+    var spkDelegate : SpriteKitViewController!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return habits!.count
@@ -44,9 +45,20 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let habit: Habit = habits?.object(at: indexPath.row) as! Habit
+            habits?.remove(habit)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            CoreDataManager.dataManager.deleteHabit(habit: habit)
+            spkDelegate.scene.addedNewSprite()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentProfile.tableDelegate = self
+        spkDelegate = currentProfile.skvDelegate
         
 
         // Do any additional setup after loading the view.

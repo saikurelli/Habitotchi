@@ -20,7 +20,7 @@ extension Profile {
     @NSManaged public var customProfilePic: Bool
     @NSManaged public var name: String?
     @NSManaged public var profileImage: Data?
-    @NSManaged public var habits: NSOrderedSet?
+    @NSManaged public var habits: NSMutableOrderedSet?
     
     convenience init(name: String,
                      image: UIImage,
