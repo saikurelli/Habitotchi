@@ -8,9 +8,12 @@ import CircularProgress
 
 struct CircularProgressBar: View {
     let count : Int
-    let total = 365
-    init(count: Int) {
+    let total : Int
+    init(count: Int, creationDate: Date) {
         self.count = count
+        // get number of days between total and today
+        let calendarComponents = Calendar.current.dateComponents([.day], from: creationDate, to: Date())
+        self.total = calendarComponents.day! + 1
     }
     var progress: CGFloat {
         return CGFloat(count)/CGFloat(total)

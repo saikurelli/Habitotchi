@@ -116,7 +116,8 @@ class CoreDataManager {
                      reminderDays: [String]? = nil,
                      reminderTime: Date? = nil,
                      doCheckOffHabit: Bool? = nil,
-                     doDailyHabitCheck: Bool? = nil) {
+                     doDailyHabitCheck: Bool? = nil,
+                     longestStreak: Int64? = nil) {
         var edited: Bool = false
         if name != nil {
             habit.name = name!
@@ -138,7 +139,11 @@ class CoreDataManager {
             habit.habitCircleChecked()
             habit.animal.habitCompleted()
             edited = true
-        }        
+        }
+        if longestStreak != nil {
+            habit.longestStreak = longestStreak!
+            edited = true
+        }
         if edited {save()}
     }
     

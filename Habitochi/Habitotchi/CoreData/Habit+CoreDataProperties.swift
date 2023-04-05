@@ -26,6 +26,8 @@ extension Habit {
     @NSManaged public var streak: Int64
     @NSManaged public var animal: Animal
     @NSManaged public var profile: Profile
+    @NSManaged public var habitCompletedDays: [String]
+    @NSManaged public var longestStreak: Int64
     
     convenience init(profile: Profile,
                      name: String,
@@ -46,6 +48,9 @@ extension Habit {
         self.daysCompleted = 0
         self.streak = 0
         self.habitCreationDate = Date()
+        self.habitCompleted = false
+        self.habitCompletedDays = []
+        self.longestStreak = 0
     }
     
     func habitCircleChecked(){
@@ -53,12 +58,24 @@ extension Habit {
         daysCompleted += 1
         streak += 1
         habitCompleted = true
+        if daysCompleted > longestStreak {
+            CoreDataManager.dataManager.updateHabit(habit: self, longestStreak: daysCompleted)
+        }
+        
+        // Append date to array if last element's date does not match - should not be necessary if stuck in on position
+        if habitCompletedDays.count == 0 || Calendar.current.isDateInToday(DateFormatter().date(from: habitCompletedDays.last!)!) == false{
+            habitCompletedDays.append(Date().description)
+        }
+//        print(habitCompletedDays)
 //        animal.habitCompleted() // CoreDataManager now performs this line
     }
 
     func habitCircleUnchecked(){
         daysCompleted -= 1
         streak -= 1
+        if habitCompletedDays.count > 0 && Calendar.current.isDateInToday(DateFormatter().date(from: habitCompletedDays.last!)!) == true{
+            habitCompletedDays.removeLast()
+        }
         //need to decrement animal data
     }
     

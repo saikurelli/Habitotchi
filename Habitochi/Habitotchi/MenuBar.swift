@@ -24,7 +24,7 @@ struct MenuBar: View {
                 value in
                 self.delegate.clearCalendarBox()
                 self.delegate.renderSwiftCalendar(weekMode: value == Mode.weekly)
-                print(value)
+                print("Calendar Mode \(value)")
                 // call to re-render calendar view
             })
         }
