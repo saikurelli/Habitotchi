@@ -63,7 +63,13 @@ extension Animal {
     }
     
     func failedToCompleteHabit(){
-        health -= 1
+        // get last date from completed habit
+        let lastDate = habit!.habitCompletedDays.last!
+        let daysMissed = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
+        if daysMissed > 1 {
+            health -= daysMissed
+        }
+        
     }
 
     func setAnimalSpriteDelegate(){

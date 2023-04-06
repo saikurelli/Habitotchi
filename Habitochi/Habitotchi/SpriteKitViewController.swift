@@ -32,7 +32,7 @@ class SpriteKitViewController: UIViewController {
         
         self.view = skView
         scene = BackgroundScene(size: skView.bounds.size, vc: self)
-        scene.backgroundColor = UIColor.white
+        scene.backgroundColor = UIColor.clear
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         
