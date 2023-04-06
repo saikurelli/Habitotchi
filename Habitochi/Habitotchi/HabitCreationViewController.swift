@@ -49,8 +49,6 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         // parse out date from time string - 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm a"
-//        let date = dateFormatter.date(from: fetchedHabit!.reminderTime)
-        let date = dateFormatter.date(from: dateFormatter.dateFormat)
         notificationTimeField.date = fetchedHabit?.reminderTime ?? dateFormatter.date(from: "2:21 AM")!
         
         for day in fetchedHabit!.reminderDays {

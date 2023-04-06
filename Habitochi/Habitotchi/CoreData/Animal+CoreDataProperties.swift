@@ -64,10 +64,15 @@ extension Animal {
     
     func failedToCompleteHabit(){
         // get last date from completed habit
-        let lastDate = habit!.habitCompletedDays.last!
-        let daysMissed = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
-        if daysMissed > 1 {
-            health -= daysMissed
+        if habit!.habitCompletedDays.count > 0 {
+            let lastDate = habit!.habitCompletedDays.last!
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+            
+            let daysMissed = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: lastDate)!, to: Date()).day!
+            if daysMissed > 1 {
+                health -= Int64(daysMissed)
+            }
         }
         
     }

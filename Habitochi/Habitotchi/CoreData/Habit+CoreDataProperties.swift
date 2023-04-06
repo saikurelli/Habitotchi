@@ -63,7 +63,9 @@ extension Habit {
         }
         
         // Append date to array if last element's date does not match - should not be necessary if stuck in on position
-        if habitCompletedDays.count == 0 || Calendar.current.isDateInToday(DateFormatter().date(from: habitCompletedDays.last!)!) == false{
+        let dFormatter = DateFormatter()
+        dFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        if habitCompletedDays.count == 0 || Calendar.current.isDateInToday(dFormatter.date(from: habitCompletedDays.last!)!) == false{
             habitCompletedDays.append(Date().description)
         }
 //        print(habitCompletedDays)
