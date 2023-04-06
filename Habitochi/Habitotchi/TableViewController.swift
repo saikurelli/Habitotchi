@@ -28,14 +28,15 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath as IndexPath) as! HabitCell
         
         let row = indexPath.row
-        let fetchedHabit: Habit = habits?.object(at: row) as! Habit
+        let fetchedHabit = habits?.object(at: row) as! Habit
         cell.delegate = self
         cell.indexPath = indexPath
         if fetchedHabit.habitCompleted{
             cell.updateCell(cell: cell)
         }else{
             cell.habitCompletionButton.tintColor = GREEN
-            cell.backgroundColor = UIColor.clear
+            cell.backgroundColor = UIColor.white
+            cell.habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
         }
         cell.tableCellLabel.text = fetchedHabit.name
         return cell

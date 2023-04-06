@@ -20,7 +20,7 @@
                                 <rect key="frame" x="14" y="425" width="365" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="lY8-SI-1KD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 1" translatesAutoresizingMaskIntoConstraints="NO" id="lY8-SI-1KD">
                                 <rect key="frame" x="123" y="300" width="147" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -35,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Asset 1" width="887" height="920"/>
         <image name="habitotchi_logo" width="365" height="75"/>
-        <image name="logo2" width="886.66668701171875" height="920"/>
     </resources>
 </document>

@@ -62,26 +62,6 @@ extension Profile {
 //            print("\n")
 //        }
 //    }
-
-//    func setName(name: String) {
-//        self.name = name
-//    }
-
-//
-//    func hardcode(){
-//        // currentProfile = Profile(name: "Test")
-//        let animal = Animal(AnimalName: "john", spriteName: "SpriteTest2")
-//        let habit1 = Habit(name: "Exercise", desc: "I want to run 2 miles a day", reminderDays: [], reminderTime: DateFormatter(), animal: animal)
-//
-//        let animal2 = Animal(AnimalName: "jerry", spriteName: "SpriteTest")
-//        let habit2 =  Habit(name: "Read", desc: "Read for an hour every day", reminderDays: [], reminderTime: DateFormatter(), animal: animal2)
-//
-//        profileImage = UIImage(named: "testProfilePic")!
-//        habit1.animal = animal
-//        habit2.animal = animal2
-//        self.habits.append(habit1)
-//        self.habits.append(habit2)
-//    }
     
 
 }
