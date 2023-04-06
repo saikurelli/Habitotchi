@@ -18,6 +18,8 @@
 		07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF729A6C1350008D07C /* Assets.xcassets */; };
 		07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF929A6C1350008D07C /* LaunchScreen.storyboard */; };
 		870E3F5029DF7564009AE368 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E3F4F29DF7564009AE368 /* HabitCell.swift */; };
+		870E3F5229DF7E3A009AE368 /* EmptyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E3F5129DF7E3A009AE368 /* EmptyBox.swift */; };
+		870E3F5429DF7E47009AE368 /* CheckBoxImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E3F5329DF7E47009AE368 /* CheckBoxImg.swift */; };
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
@@ -62,6 +64,8 @@
 		07CA9FFA29A6C1350008D07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07CA9FFC29A6C1350008D07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870E3F4F29DF7564009AE368 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
+		870E3F5129DF7E3A009AE368 /* EmptyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyBox.swift; sourceTree = "<group>"; };
+		870E3F5329DF7E47009AE368 /* CheckBoxImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxImg.swift; sourceTree = "<group>"; };
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
 				870E3F4F29DF7564009AE368 /* HabitCell.swift */,
 				078B5CA229C3D5990074DAA3 /* CalendarElem.swift */,
+				870E3F5329DF7E47009AE368 /* CheckBoxImg.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
 				0725814729BAB246005A7685 /* CircularProgressBar.swift */,
 				87744F9229B83A130067CFCF /* SaveImage.swift */,
@@ -148,6 +153,7 @@
 				D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */,
 				D0AC154A29B6FD6500A81504 /* AnimalCell.swift */,
 				877ECA4729AE70A100DEE93C /* AnimalSprite.swift */,
+				870E3F5129DF7E3A009AE368 /* EmptyBox.swift */,
 				877ECA4F29AE8A1A00DEE93C /* Main.storyboard */,
 				877ECA4329AE646D00DEE93C /* HabitStatsView.storyboard */,
 				877ECA4529AE647E00DEE93C /* HabitStatsViewController.swift */,
@@ -275,6 +281,7 @@
 				D0C575D529D2A1BD00233A68 /* Animal+CoreDataClass.swift in Sources */,
 				07CA9FEF29A6C1330008D07C /* AppDelegate.swift in Sources */,
 				877ECA4829AE70A100DEE93C /* AnimalSprite.swift in Sources */,
+				870E3F5429DF7E47009AE368 /* CheckBoxImg.swift in Sources */,
 				87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */,
 				87744F6629B7D5930067CFCF /* CircularImageViewController.swift in Sources */,
 				0725814829BAB246005A7685 /* CircularProgressBar.swift in Sources */,
@@ -282,6 +289,7 @@
 				877ECA4029AE5A1D00DEE93C /* TableViewController.swift in Sources */,
 				87744F6829B7DAA50067CFCF /* RoundButton.swift in Sources */,
 				D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */,
+				870E3F5229DF7E3A009AE368 /* EmptyBox.swift in Sources */,
 				07CA9FF129A6C1330008D07C /* SceneDelegate.swift in Sources */,
 				D0C575D329D2A1BD00233A68 /* Profile+CoreDataClass.swift in Sources */,
 				D0C575D429D2A1BD00233A68 /* Profile+CoreDataProperties.swift in Sources */,
