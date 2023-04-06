@@ -45,8 +45,12 @@ Other:
 
 Deviations:
     Sounds - We did not get to sounds just quite yet, Core Data took longer then expected but we're hoping to add sounds in the final stage
+
+    Advanced Rewards - We will be implementing feeding in the next phase.
     
     Vincent - Vincent has been extremely busy with his Plan 2 thesis and it took most of his attention from the project. That being said he has finished his full draft and has much more time to dedicate to the project.
+
+
     
 
 
