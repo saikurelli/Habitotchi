@@ -35,7 +35,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.updateCell(cell: cell)
         }else{
             cell.habitCompletionButton.tintColor = GREEN
-            cell.backgroundColor = UIColor.white
+            cell.backgroundColor = UIColor.clear
             cell.habitCompletionButton.setImage(UIImage(systemName: "circle"), for: .normal)
         }
         cell.tableCellLabel.text = fetchedHabit.name
