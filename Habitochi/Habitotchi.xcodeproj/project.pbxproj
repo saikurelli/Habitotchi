@@ -17,6 +17,7 @@
 		07CA9FF329A6C1330008D07C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA9FF229A6C1330008D07C /* HomeViewController.swift */; };
 		07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF729A6C1350008D07C /* Assets.xcassets */; };
 		07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CA9FF929A6C1350008D07C /* LaunchScreen.storyboard */; };
+		870E3F5029DF7564009AE368 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E3F4F29DF7564009AE368 /* HabitCell.swift */; };
 		8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8745431029B00BB600F60C0C /* HabitCreation.storyboard */; };
 		8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745431229B00BD700F60C0C /* HabitCreationViewController.swift */; };
 		8745433B29B0203F00F60C0C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8745433929B0203F00F60C0C /* Model.xcdatamodeld */; };
@@ -60,6 +61,7 @@
 		07CA9FF729A6C1350008D07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07CA9FFA29A6C1350008D07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07CA9FFC29A6C1350008D07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870E3F4F29DF7564009AE368 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		8745431029B00BB600F60C0C /* HabitCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitCreation.storyboard; sourceTree = "<group>"; };
 		8745431229B00BD700F60C0C /* HabitCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreationViewController.swift; sourceTree = "<group>"; };
 		8745433A29B0203F00F60C0C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				87EDAE6329B142E4003A2466 /* CoreData */,
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
+				870E3F4F29DF7564009AE368 /* HabitCell.swift */,
 				078B5CA229C3D5990074DAA3 /* CalendarElem.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
 				0725814729BAB246005A7685 /* CircularProgressBar.swift */,
@@ -264,6 +267,7 @@
 				877ECA4629AE647E00DEE93C /* HabitStatsViewController.swift in Sources */,
 				078B5CA329C3D5990074DAA3 /* CalendarElem.swift in Sources */,
 				8745431329B00BD700F60C0C /* HabitCreationViewController.swift in Sources */,
+				870E3F5029DF7564009AE368 /* HabitCell.swift in Sources */,
 				87744F9329B83A130067CFCF /* SaveImage.swift in Sources */,
 				87744F6429B7B3420067CFCF /* ProfileViewController.swift in Sources */,
 				87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */,
