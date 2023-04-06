@@ -58,8 +58,8 @@ extension Habit {
         daysCompleted += 1
         streak += 1
         habitCompleted = true
-        if daysCompleted > longestStreak {
-            CoreDataManager.dataManager.updateHabit(habit: self, longestStreak: daysCompleted)
+        if streak > longestStreak {
+            CoreDataManager.dataManager.updateHabit(habit: self, longestStreak: streak)
         }
         
         // Append date to array if last element's date does not match - should not be necessary if stuck in on position
@@ -71,7 +71,7 @@ extension Habit {
 //        print(habitCompletedDays)
 //        animal.habitCompleted() // CoreDataManager now performs this line
     }
-
+    // Not called - Removed functionality to uncheck box
     func habitCircleUnchecked(){
         daysCompleted -= 1
         streak -= 1

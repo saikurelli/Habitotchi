@@ -99,6 +99,8 @@ class HabitStatsViewController: UIViewController{
     // MARK: - Get dates in last K days for Calendar Data
     func getDatesInLastKDays(completedDays: [String], K: Int) -> [Bool] {
         // create array of size K bool values
+//        print(completedDays)
+//        print(Date())
         var returnDates = [Bool](repeating: false, count: K)
         // start from back of completedDays and set date difference to true if less than K days, else break
         for i in stride(from: completedDays.count - 1, through: 0, by: -1) {
@@ -169,7 +171,7 @@ class HabitStatsViewController: UIViewController{
         
         // set up labels
         habitLabel.text = fetchedHabit.name
-        currentStreak.text = String(fetchedHabit.daysCompleted)
+        currentStreak.text = String(fetchedHabit.streak)
         descLabel.text = fetchedHabit.desc
         longestStreak.text = String(fetchedHabit.longestStreak)
     }
