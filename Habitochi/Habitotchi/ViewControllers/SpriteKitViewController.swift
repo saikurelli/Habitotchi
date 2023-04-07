@@ -11,12 +11,14 @@
 
 import UIKit
 import SpriteKit
+import AVKit
 
 class SpriteKitViewController: UIViewController {
     
     @IBOutlet weak var skView: SKView!
     @IBOutlet var profileButton: UIButton!
     var scene : BackgroundScene!
+    var audioPlayer: AVAudioPlayer!
     
     //view will load check if there is a new habit, then add to Observer obeject?
 
@@ -45,20 +47,36 @@ class SpriteKitViewController: UIViewController {
     }
 
     func presentAnimalStatus(animal : Animal){
+        setSound(animal: animal)
         performSegue(withIdentifier: "animalStatusSegueIdentifier", sender: animal)
+    }
+    
+    func setSound(animal: Animal){
+        var url:URL = Bundle.main.url(forResource: "meow", withExtension: ".mp3")!
+        if animal.spriteName!.contains("dog"){
+           url = Bundle.main.url(forResource: "bark", withExtension: ".mp3")!
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch{}
+    }
+    
+    func playSound(){
+        audioPlayer?.play()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "animalStatusSegueIdentifier",
            let destination = segue.destination as? AnimalStatusViewController{
+            playSound()
             if let sheet = destination.sheetPresentationController{
                 sheet.detents = [.medium()]
             }
-            
             destination.clickedAnimal = (sender as! Animal)
             destination.delegate = self
         }
     }
+    
 
     class BackgroundScene: SKScene {
         

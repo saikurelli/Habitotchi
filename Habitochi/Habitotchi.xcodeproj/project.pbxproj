@@ -39,6 +39,8 @@
 		87E5397229B6EF8400835991 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5397129B6EF8300835991 /* ImagePickerViewController.swift */; };
 		87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EDAE6429B14FAC003A2466 /* Signin.storyboard */; };
 		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
+		CA0981A629DFB83600562430 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA0981A529DFB83600562430 /* meow.mp3 */; };
+		CA0981A829DFB8AC00562430 /* bark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA0981A729DFB8AC00562430 /* bark.mp3 */; };
 		D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */; };
 		D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */; };
 		D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154A29B6FD6500A81504 /* AnimalCell.swift */; };
@@ -85,6 +87,8 @@
 		87E5397129B6EF8300835991 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		87EDAE6429B14FAC003A2466 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CA0981A529DFB83600562430 /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
+		CA0981A729DFB8AC00562430 /* bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bark.mp3; sourceTree = "<group>"; };
 		D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePet.storyboard; sourceTree = "<group>"; };
 		D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetViewController.swift; sourceTree = "<group>"; };
 		D0AC154A29B6FD6500A81504 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				870E3F5729DF7F6F009AE368 /* Protocols */,
 				870E3F5629DF7F49009AE368 /* ViewControllers */,
 				870E3F5529DF7F22009AE368 /* Storyboards */,
+				CA0981A429DFB80100562430 /* Sounds */,
 				07CA9FF729A6C1350008D07C /* Assets.xcassets */,
 				07CA9FFC29A6C1350008D07C /* Info.plist */,
 			);
@@ -214,6 +219,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		CA0981A429DFB80100562430 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CA0981A729DFB8AC00562430 /* bark.mp3 */,
+				CA0981A529DFB83600562430 /* meow.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,8 +296,10 @@
 				07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */,
 				87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */,
 				877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */,
+				CA0981A829DFB8AC00562430 /* bark.mp3 in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
 				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
+				CA0981A629DFB83600562430 /* meow.mp3 in Resources */,
 				07C9423C29DB27F400C4FE07 /* Profile.storyboard in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
