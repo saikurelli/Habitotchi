@@ -121,9 +121,4 @@ class ProfileViewController: UIViewController, saveImage {
         CoreDataManager.dataManager.updateProfile(profile: currentProfile, image: image)
         setUpViews()
     }
-    
-    
-
-    
-    
 }

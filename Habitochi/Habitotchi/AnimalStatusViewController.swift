@@ -30,11 +30,7 @@ class AnimalStatusViewController: UIViewController {
         levelLabel.text = "LVL \(clickedAnimal.level)"
         
         setUpBars()
-        
-        
-        
-        
-        
+    
         let scene = SKScene(size: animalView.bounds.size)
         scene.backgroundColor = UIColor.systemBackground
         self.view.bounds = UIScreen.main.bounds

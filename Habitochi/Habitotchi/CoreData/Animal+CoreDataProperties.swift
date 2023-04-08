@@ -85,7 +85,7 @@ extension Animal {
 
     //should only be called when the associated sprite is touched
     func spriteTouched(){
-        print("\(self.name) - can see that the animal sprite has been touched in animal class")
+        print("\(String(describing: self.name)) - can see that the animal sprite has been touched in animal class")
         self.delegate.presentAnimalStatus(animal: self)
     }
 }

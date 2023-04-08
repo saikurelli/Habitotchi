@@ -14,15 +14,12 @@ import SpriteKit
 
 class SpriteKitViewController: UIViewController {
     
-    
     @IBOutlet weak var skView: SKView!
     @IBOutlet var profileButton: UIButton!
     var scene : BackgroundScene!
     
-    
     //view will load check if there is a new habit, then add to Observer obeject?
 
-   
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -37,8 +34,6 @@ class SpriteKitViewController: UIViewController {
         scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         
         skView.presentScene(scene)
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,12 +44,9 @@ class SpriteKitViewController: UIViewController {
         }
     }
 
-    
     func presentAnimalStatus(animal : Animal){
         performSegue(withIdentifier: "animalStatusSegueIdentifier", sender: animal)
     }
-    
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "animalStatusSegueIdentifier",
@@ -67,7 +59,6 @@ class SpriteKitViewController: UIViewController {
             destination.delegate = self
         }
     }
-    
 
     class BackgroundScene: SKScene {
         
@@ -126,11 +117,4 @@ class SpriteKitViewController: UIViewController {
         }
     }
 
-    
 }
-
-
-
-    
-
-    

@@ -21,11 +21,9 @@ public class AnimalSprite : SKSpriteNode{
         self.isUserInteractionEnabled = true
     }
     
-    
     func createSprite (size: CGSize, spriteName: String) -> SKSpriteNode{
         return SKSpriteNode(texture: SKTexture(imageNamed: spriteName), color: .clear, size: size)
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

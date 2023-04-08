@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     let textCellIdentifier = "TextCell"
@@ -60,7 +59,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         currentProfile.tableDelegate = self
         spkDelegate = currentProfile.skvDelegate
-        
 
         // Do any additional setup after loading the view.
     }
@@ -79,11 +77,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             destination.delegate = self
         }
     }
-    
-
-
-   
-
 }
 
 class HabitCell : UITableViewCell {
@@ -114,5 +107,3 @@ class HabitCell : UITableViewCell {
         cell.backgroundColor = GREEN
     }
 }
-    
-

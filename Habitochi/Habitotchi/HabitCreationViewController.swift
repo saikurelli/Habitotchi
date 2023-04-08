@@ -45,7 +45,6 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         savedAnimal = fetchedHabit?.animal
         saveButton.setTitle("Update", for: .normal)
 
-
         // parse out date from time string - 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm a"
@@ -152,18 +151,12 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
             controller.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
             present(controller, animated: true)
         }
-        
-        // get time selected from time wheel
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "HH:mm a"
-//        let timeEntered: NSDate? = dateFormatter.string(from: notificationTimeField.date as Date)
-        
+                
         let timeEntered = notificationTimeField.date
         
         var animalCreated: Animal
         // CREATE ANIMAL
         if savedAnimal == nil && AnimalView.image != nil  {
-            let animalImageChosen = AnimalView.image
             animalCreated = CoreDataManager.dataManager.createAnimal(name: petNameEntered!, spriteName: animalFileName)
         // UPDATE ANIMAL
         } else if AnimalView.image != nil {
@@ -183,22 +176,6 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
             let habitCreated = CoreDataManager.dataManager.createHabit(profile: currentProfile, name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated)
             createNotificationScheme(habit: habitCreated)
         }
-        
-//
-//        let animalCreated = Animal(AnimalName: petNameEntered!, spriteName: animalFileName, context: context)
-//
-//        let habitCreated = Habit(name: habitNameEntered!, desc: habitDescriptionEntered, reminderDays: daysOfTheWeekSelected, reminderTime: timeEntered, animal: animalCreated, context: context)
-//        animalCreated.habit = habitCreated // set the inverse relationship denoting aninmal <-> habit.
-//
-//        currentProfile.addToHabits(habitCreated) // set the one-to-many relationship denoting profile <-> habit
-//        habitCreated.profile = currentProfile // set the inverse relationship denoting profile <-> habit
-//
-//        do {
-//            try context.save()
-//        } catch {
-//            print("SAVING FAILURE: Habit has failed to be created and saved to core data")
-//        }
-//>>>>>>> Stashed changes
         
         currentProfile.addedOrEditedHabit = true
         
@@ -328,10 +305,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
                 if error != nil {
                     print("Error adding reminder")
                 }
-                
             }
-                
-
         }
     }
     
@@ -344,8 +318,4 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         let minute = Int(time[1])
         return(hour!, minute!)
     }
-    
-    
-    
-
 }

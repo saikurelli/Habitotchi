@@ -9,12 +9,12 @@ import UIKit
 
 @IBDesignable
 class CircularImageView : UIImageView {
-        override func layoutSubviews() {
-            super.layoutSubviews()
-            layer.borderWidth = 1
-            layer.masksToBounds = false
-            layer.borderColor = UIColor.clear.cgColor
-            layer.cornerRadius = self.frame.height / 2
-            clipsToBounds = true
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.borderWidth = 1
+        layer.masksToBounds = false
+        layer.borderColor = UIColor.clear.cgColor
+        layer.cornerRadius = self.frame.height / 2
+        clipsToBounds = true
     }
+}

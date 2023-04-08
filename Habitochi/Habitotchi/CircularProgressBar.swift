@@ -20,7 +20,7 @@ struct CircularProgressBar: View {
     }
     var body: some View {
         VStack {
-            // Render circular progress view with
+            // Render circular progress view with values stored in struct
             CircularProgressView(count: count, total: total, progress: progress, fill: LinearGradient(gradient: Gradient(colors: [Color(DARK_GREEN), Color(GREEN)]), startPoint: .leading, endPoint: .trailing), showText: false)
                 .frame(width: 300, height: 300)
             

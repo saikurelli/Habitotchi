@@ -48,13 +48,6 @@ extension Profile {
         }
     }
 
-    //Function to set profile picture
-//    func setProfilePic(image: UIImage) {
-//        customProfilePic = true
-//        profileImage = image.jpegData(compressionQuality: 0.0)
-//    }
-
-
 //    // #DEBUG# purposes
 //    func printHabits() {
 //        print("#DEBUG#\n")
@@ -63,8 +56,6 @@ extension Profile {
 //            print("\n")
 //        }
 //    }
-    
-
 }
 
 // MARK: Generated accessors for habits

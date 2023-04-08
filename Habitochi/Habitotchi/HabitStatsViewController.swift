@@ -20,10 +20,6 @@ class HabitStatsViewController: UIViewController{
     @IBOutlet weak var habitLabel: UILabel!
     
     @IBOutlet weak var descLabel: UILabel!
-//<<<<<<< Updated upstream
-//    var fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: "", animal: Animal())
-//=======
-//>>>>>>> Stashed changes
     
     var delegate : UIViewController!
     
@@ -31,7 +27,6 @@ class HabitStatsViewController: UIViewController{
     @IBOutlet weak var currentStreak: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        fetchedHabit = Habit(name: "", desc: "", reminderDays: [], reminderTime: DateFormatter(), animal: Animal(), context: context)
         
         // Do any additional setup after loading the view.
         renderSwiftCircularProgressBar()
@@ -98,9 +93,6 @@ class HabitStatsViewController: UIViewController{
     
     // MARK: - Get dates in last K days for Calendar Data
     func getDatesInLastKDays(completedDays: [String], K: Int) -> [Bool] {
-        // create array of size K bool values
-//        print(completedDays)
-//        print(Date())
         var returnDates = [Bool](repeating: false, count: K)
         // start from back of completedDays and set date difference to true if less than K days, else break
         for i in stride(from: completedDays.count - 1, through: 0, by: -1) {

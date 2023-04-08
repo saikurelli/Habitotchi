@@ -11,7 +11,6 @@ import Photos
 
 class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPickerViewControllerDelegate {
     
-    
     var signInDelegate : SignInViewController!
     var profileEditDelegate : ProfileViewController!
     var signin : Bool!
@@ -103,8 +102,4 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
             })
         }
     }
-    
-    
-    
-
 }

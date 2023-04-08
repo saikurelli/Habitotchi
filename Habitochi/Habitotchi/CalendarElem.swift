@@ -45,11 +45,6 @@ struct CalendarElem: View {
         }
     }
 }
-
-
-
-
-
 // General Wrapper that gets a View element based on status variable
 func BoxImg (status : Bool) -> some View {
     if status {
@@ -60,25 +55,6 @@ func BoxImg (status : Bool) -> some View {
     } else {
         return ZStack {
             AnyView(EmptyBox())
-        }
-    }
-}
-
-struct EmptyBox : View {
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.clear)
-                .frame(width: boxSize, height: (boxSize - 10))
-        }
-    }
-}
-
-struct CheckBoxImg : View {
-    var body: some View {
-        ZStack {
-            Image(uiImage: UIImage(named: "checkBox")!)
-                .frame(width: boxSize, height: boxSize)
         }
     }
 }

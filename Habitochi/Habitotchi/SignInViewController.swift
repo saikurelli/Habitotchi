@@ -36,9 +36,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         nameTextField.addTarget(self, action: #selector(validateNameField), for: .editingChanged)
         nameTextField.delegate = self
         self.navigationItem.hidesBackButton = true
-        
-//        currentProfile = CoreDataManager.dataManager.fetchProfile()
-//        if currentProfile != nil { successfullySignedIn(firstSignIn: false) }
     }
     
     func successfullySignedIn(firstSignIn: Bool) {
@@ -59,7 +56,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         if profileButtonChanged {
             updateProfileButton()
@@ -70,7 +66,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         profileImage = image
         profileButtonChanged = true
     }
-    
     
     @IBAction func buttonPressed(_ sender: Any) {
         currentProfile = CoreDataManager.dataManager.createProfile(name: nameTextField.text!)
@@ -86,7 +81,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         controller.addAction(UIAlertAction(title: "Dismiss", style: .default))
         present(controller, animated: true)
     }
-    
     
     @objc func validateNameField(){
         createButton.isEnabled = nameTextField.text != "" ? true : false
@@ -150,7 +144,3 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
     }
     
 }
-
-
-
-
