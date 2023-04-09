@@ -37,7 +37,7 @@ extension Profile {
     func checkDates(lastOpened: Date){
         if !Calendar.current.isDate(lastOpened, inSameDayAs: Date()) {
             resetHabits()
-            tableDelegate.tableView.reloadData()
+            tableDelegate?.tableView?.reloadData()
         }
     }
     
