@@ -47,7 +47,6 @@ extension Animal {
         xptsNeeded = 100
         sprite = AnimalSprite(animal: self, imageName: spriteName, name: name)
         xptsNeeded = 10
-
         self.spriteName = spriteName
     }
 
