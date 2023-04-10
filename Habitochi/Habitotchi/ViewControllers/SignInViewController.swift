@@ -17,7 +17,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
     let newUserSignedInSegue = "accountCreateHabitSegueIdentifier"
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var createButton: UIButton!
-    @IBOutlet weak var appleSignInButton: UIButton!
     var profileImage = UIImage(systemName: "person.crop.circle")
     var profileButton:UIButton!
     var profileButtonChanged = false
@@ -30,7 +29,6 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
         
         super.viewDidLoad()
         createButton.tintColor = DARK_GREEN
-        appleSignInButton.tintColor = .black
         createProfileButton()
         createButton.isEnabled = false
         nameTextField.addTarget(self, action: #selector(validateNameField), for: .editingChanged)

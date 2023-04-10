@@ -37,7 +37,7 @@ extension Animal {
         maxHealth = 10
         health = maxHealth
         xpts = 0
-        xptsNeeded = 100
+        xptsNeeded = 10
         sprite = AnimalSprite(imageName: spriteName, name: name)
         self.spriteName = spriteName
     }
@@ -46,7 +46,7 @@ extension Animal {
         if health != maxHealth{
             health += 1
         }else{
-            xpts += 1
+            xpts += 1 + Int64((habit?.streak)! / 3)
             checkLevelUp()
         }
     }
@@ -60,6 +60,7 @@ extension Animal {
     //MARK: need to add further functionality
     private func levelUp(){
         level += 1
+        xptsNeeded = Int64(Double(xptsNeeded) * 1.15)
     }
     
     func failedToCompleteHabit(){
@@ -74,6 +75,8 @@ extension Animal {
                 health -= Int64(daysMissed)
             }
         }
+        
+        //Need to check if the animal is dead
         
     }
 
