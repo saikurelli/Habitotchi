@@ -46,11 +46,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="94n-JO-0HY" secondAttribute="bottom" constant="374" id="CsH-Jw-PKo"/>
                             <constraint firstItem="0cO-wF-PMR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="342" id="P8m-Hk-i4Q"/>
                             <constraint firstItem="0cO-wF-PMR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VqX-Um-vpX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="94n-JO-0HY" secondAttribute="top" constant="4" id="Wq7-6X-R6F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0cO-wF-PMR" secondAttribute="bottom" constant="23" id="YrE-yl-jq7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="0cO-wF-PMR" secondAttribute="leading" id="bdQ-sZ-nqv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="94n-JO-0HY" secondAttribute="leading" constant="2" id="fdr-QD-BcJ"/>
                             <constraint firstItem="94n-JO-0HY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ioN-Pj-HqV"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="94n-JO-0HY" secondAttribute="top" constant="4" id="zs9-Gd-QRz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" customizationIdentifier="navbar" id="T2F-qj-e38"/>
@@ -87,7 +87,7 @@
             <objects>
                 <viewController id="CfC-aL-aki" customClass="SpriteKitViewController" customModule="Habitotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWs-e2-qtm">
-                        <rect key="frame" x="0.0" y="0.0" width="397" height="345"/>
+                        <rect key="frame" x="0.0" y="0.0" width="397" height="341"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ez-Vr2">
