@@ -161,7 +161,7 @@ class HabitCreationViewController: UIViewController, AnimalChanger, UITextFieldD
         // UPDATE ANIMAL
         } else if AnimalView.image != nil {
             animalCreated = savedAnimal!
-            animalCreated.sprite?.animalTexture = SKTexture(imageNamed: animalFileName)
+//            animalCreated.sprite?.animalTexture = SKTexture(imageNamed: animalFileName)
             CoreDataManager.dataManager.updateAnimal(animal: animalCreated, name: petNameEntered!, spriteName: animalFileName)
         }else{
             animalCreated = savedAnimal!

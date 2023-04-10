@@ -157,7 +157,12 @@ class HabitStatsViewController: UIViewController{
         scene.backgroundColor = UIColor.clear
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        scene.addChild(fetchedHabit.animal.sprite!.createSprite(size: animalSprite.bounds.size, spriteName: fetchedHabit.animal.spriteName!))
+        var spriteNode = AnimalSprite(animal: fetchedHabit.animal,
+                                      imageName: fetchedHabit.animal.spriteName,
+                                      name: fetchedHabit.animal.name!,
+                                      scale: 1.5)
+        spriteNode.changeAnimationTo(animalState: fetchedHabit.animal.getAnimalState())
+        scene.addChild(spriteNode)
         animalSprite.presentScene(scene)
         animalSprite.backgroundColor = UIColor.clear
         

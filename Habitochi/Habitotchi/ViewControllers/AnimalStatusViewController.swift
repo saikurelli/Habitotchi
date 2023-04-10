@@ -21,8 +21,8 @@ class AnimalStatusViewController: UIViewController {
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
-    var temp = ""
-    let healthStatus = ["healthy", "sick"]
+//    var temp = ""
+//    let healthStatus = ["healthy", "sick"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +32,18 @@ class AnimalStatusViewController: UIViewController {
         setUpBars()
     
         let scene = SKScene(size: animalView.bounds.size)
-        scene.backgroundColor = UIColor.systemBackground
+        scene.backgroundColor = UIColor.white
         self.view.bounds = UIScreen.main.bounds
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        let temp = clickedAnimal.sprite!.createSprite(size: animalView.bounds.size, spriteName: clickedAnimal.spriteName!)
-        scene.addChild(temp)
+        var spriteNode = AnimalSprite(animal: clickedAnimal,
+                                      imageName: clickedAnimal.spriteName,
+                                      name: clickedAnimal.name!,
+                                      scale: 4.0)
+
+        spriteNode.changeAnimationTo(animalState: clickedAnimal.getAnimalState())
+        scene.addChild(spriteNode)
         animalView.presentScene(scene)
+        
         
     }
     
@@ -51,12 +57,13 @@ class AnimalStatusViewController: UIViewController {
         xpLabel.text = "\(clickedAnimal.xpts)/\(clickedAnimal.xptsNeeded)"
         let GOLD = UIColor(r: 255, g: 215, b: 0, a: 255)
         hpBar.tintColor = GOLD
-       
-        if(clickedAnimal.health <= (clickedAnimal.maxHealth / 2)){
-            statusLabel.text = "Status \(healthStatus[1])"
-        }else{
-            statusLabel.text = "Status \(healthStatus[0])"
-        }
+        
+        statusLabel.text = "Status: \(clickedAnimal.getAnimalState())"
+//        if(clickedAnimal.health <= (clickedAnimal.maxHealth / 2)){
+//            statusLabel.text = "Status \(healthStatus[1])"
+//        }else{
+//            statusLabel.text = "Status \(healthStatus[0])"
+//        }
         
     }
 }

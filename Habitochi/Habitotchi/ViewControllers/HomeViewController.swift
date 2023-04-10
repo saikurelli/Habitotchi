@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Playground"
         addHabitButton.tintColor = DARK_GREEN
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

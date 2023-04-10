@@ -23,6 +23,7 @@ class SpriteKitViewController: UIViewController {
     //view will load check if there is a new habit, then add to Observer obeject?
 
     override func viewDidLoad() {
+//        CoreDataManager.dataManager.destroyAllCoreData()
         
         super.viewDidLoad()
         currentProfile.skvDelegate = self
@@ -36,6 +37,8 @@ class SpriteKitViewController: UIViewController {
         scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         
         skView.presentScene(scene)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +56,7 @@ class SpriteKitViewController: UIViewController {
     
     func setSound(animal: Animal){
         var url:URL = Bundle.main.url(forResource: "meow", withExtension: ".mp3")!
-        if animal.spriteName!.contains("dog"){
+        if animal.spriteName.contains("dog"){
            url = Bundle.main.url(forResource: "bark", withExtension: ".mp3")!
         }
         do {
@@ -107,18 +110,22 @@ class SpriteKitViewController: UIViewController {
         }
         
         public func loadSprites(){
-            let offset = 50
+            let offset = 75
             var pos = Int(vc.view.frame.midX) - 150
-            //Move this to a new func
            
             for habit in habits{
                 let animal = habit.animal
                 animal.setAnimalSpriteDelegate()
                 animal.delegate = vc
-                var animalSprite = animal.sprite!
-                animalSprite.size = CGSize(width: 50.0, height: 50.0)
+                var animalSprite = AnimalSprite(animal: animal,
+                                                imageName: animal.spriteName,
+                                                name: animal.name!,
+                                                scale: 2.0)
                 animalSprite.isUserInteractionEnabled = true
-                animalSprite.position = CGPoint(x: pos , y: 100)
+                animalSprite.position = CGPoint(x: pos , y: 110)
+                animalSprite.changeAnimationTo(animalState: animal.getAnimalState())
+//                animalSprite.changeAnimationTo(animalState: AnimalState.unhealthy)
+             
                 addChild(animalSprite)
                 pos += offset
             }

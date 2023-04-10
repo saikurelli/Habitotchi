@@ -9,6 +9,13 @@
 import Foundation
 import CoreData
 
+public enum AnimalState: String {
+    case ill = "ill",
+         unhealthy = "unhealthy",
+         healthy = "healthy",
+         aboutToLevelUp = "healthy, almost ready to level up!",
+         leveledUp = "leveled up"
+}
 
 extension Animal {
 
@@ -24,7 +31,7 @@ extension Animal {
     @NSManaged public var xptsNeeded: Int64
     @NSManaged public var sprite: AnimalSprite?
     @NSManaged public var habit: Habit?
-    @NSManaged public var spriteName : String?
+    @NSManaged public var spriteName : String
 
     convenience init(name : String,
                      spriteName : String,
@@ -38,7 +45,7 @@ extension Animal {
         health = maxHealth
         xpts = 0
         xptsNeeded = 100
-        sprite = AnimalSprite(imageName: spriteName, name: name)
+        sprite = AnimalSprite(animal: self, imageName: spriteName, name: name)
         self.spriteName = spriteName
     }
 
@@ -87,6 +94,22 @@ extension Animal {
     func spriteTouched(){
         print("\(String(describing: self.name)) - can see that the animal sprite has been touched in animal class")
         self.delegate.presentAnimalStatus(animal: self)
+    }
+    
+    func getAnimalState() -> AnimalState{
+        let firstThreshold = maxHealth / 4
+        let secondThreshold = maxHealth / 4 * 3
+        
+        if health == 0 {
+            return AnimalState.ill
+        }
+        else if health < firstThreshold {
+            return AnimalState.unhealthy
+        }
+        else if (xpts == xptsNeeded - 2 && health > secondThreshold) {
+            return AnimalState.aboutToLevelUp
+        }
+        return AnimalState.healthy
     }
 }
 

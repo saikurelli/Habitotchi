@@ -41,6 +41,76 @@
 		87EDAE6729B14FB8003A2466 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDAE6629B14FB8003A2466 /* SignInViewController.swift */; };
 		CA0981A629DFB83600562430 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA0981A529DFB83600562430 /* meow.mp3 */; };
 		CA0981A829DFB8AC00562430 /* bark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA0981A729DFB8AC00562430 /* bark.mp3 */; };
+		D0292E9129E38B2D00CDE1F0 /* base_dog_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4129E38B2C00CDE1F0 /* base_dog_standing.atlas */; };
+		D0292E9229E38B2D00CDE1F0 /* base_dog_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4229E38B2C00CDE1F0 /* base_dog_dead.atlas */; };
+		D0292E9329E38B2D00CDE1F0 /* base_dog_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4329E38B2C00CDE1F0 /* base_dog_playing.atlas */; };
+		D0292E9429E38B2D00CDE1F0 /* base_dog_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4429E38B2C00CDE1F0 /* base_dog_lying.atlas */; };
+		D0292E9529E38B2D00CDE1F0 /* base_dog_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4529E38B2C00CDE1F0 /* base_dog_sitting.atlas */; };
+		D0292E9629E38B2D00CDE1F0 /* base_dog_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4629E38B2C00CDE1F0 /* base_dog_dying.atlas */; };
+		D0292E9729E38B2D00CDE1F0 /* base_dog_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4729E38B2C00CDE1F0 /* base_dog_acting.atlas */; };
+		D0292E9829E38B2D00CDE1F0 /* brown_dog_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4929E38B2C00CDE1F0 /* brown_dog_lying.atlas */; };
+		D0292E9929E38B2D00CDE1F0 /* brown_dog_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4A29E38B2C00CDE1F0 /* brown_dog_dead.atlas */; };
+		D0292E9A29E38B2D00CDE1F0 /* brown_dog_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4B29E38B2C00CDE1F0 /* brown_dog_sitting.atlas */; };
+		D0292E9B29E38B2D00CDE1F0 /* brown_dog_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4C29E38B2C00CDE1F0 /* brown_dog_standing.atlas */; };
+		D0292E9C29E38B2D00CDE1F0 /* brown_dog_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4D29E38B2C00CDE1F0 /* brown_dog_acting.atlas */; };
+		D0292E9D29E38B2D00CDE1F0 /* brown_dog_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4E29E38B2C00CDE1F0 /* brown_dog_playing.atlas */; };
+		D0292E9E29E38B2D00CDE1F0 /* brown_dog_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E4F29E38B2C00CDE1F0 /* brown_dog_dying.atlas */; };
+		D0292E9F29E38B2D00CDE1F0 /* b&w_dog_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5129E38B2C00CDE1F0 /* b&w_dog_dying.atlas */; };
+		D0292EA029E38B2D00CDE1F0 /* b&w_dog_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5229E38B2C00CDE1F0 /* b&w_dog_standing.atlas */; };
+		D0292EA129E38B2D00CDE1F0 /* b&w_dog_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5329E38B2C00CDE1F0 /* b&w_dog_acting.atlas */; };
+		D0292EA229E38B2D00CDE1F0 /* b&w_dog_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5429E38B2C00CDE1F0 /* b&w_dog_sitting.atlas */; };
+		D0292EA329E38B2D00CDE1F0 /* b&w_dog_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5529E38B2C00CDE1F0 /* b&w_dog_lying.atlas */; };
+		D0292EA429E38B2D00CDE1F0 /* b&w_dog_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5629E38B2C00CDE1F0 /* b&w_dog_playing.atlas */; };
+		D0292EA529E38B2D00CDE1F0 /* b&w_dog_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5729E38B2C00CDE1F0 /* b&w_dog_dead.atlas */; };
+		D0292EA629E38B2D00CDE1F0 /* black_dog_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5929E38B2C00CDE1F0 /* black_dog_dying.atlas */; };
+		D0292EA729E38B2D00CDE1F0 /* black_dog_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5A29E38B2C00CDE1F0 /* black_dog_playing.atlas */; };
+		D0292EA829E38B2D00CDE1F0 /* black_dog_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5B29E38B2C00CDE1F0 /* black_dog_sitting.atlas */; };
+		D0292EA929E38B2D00CDE1F0 /* black_dog_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5C29E38B2C00CDE1F0 /* black_dog_dead.atlas */; };
+		D0292EAA29E38B2D00CDE1F0 /* black_dog_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5D29E38B2C00CDE1F0 /* black_dog_acting.atlas */; };
+		D0292EAB29E38B2D00CDE1F0 /* black_dog_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5E29E38B2C00CDE1F0 /* black_dog_standing.atlas */; };
+		D0292EAC29E38B2D00CDE1F0 /* black_dog_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E5F29E38B2C00CDE1F0 /* black_dog_lying.atlas */; };
+		D0292EAD29E38B2D00CDE1F0 /* exotic_dog_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6129E38B2C00CDE1F0 /* exotic_dog_lying.atlas */; };
+		D0292EAE29E38B2D00CDE1F0 /* exotic_dog_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6229E38B2C00CDE1F0 /* exotic_dog_dead.atlas */; };
+		D0292EAF29E38B2D00CDE1F0 /* exotic_dog_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6329E38B2C00CDE1F0 /* exotic_dog_sitting.atlas */; };
+		D0292EB029E38B2D00CDE1F0 /* exotic_dog_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6429E38B2C00CDE1F0 /* exotic_dog_playing.atlas */; };
+		D0292EB129E38B2D00CDE1F0 /* exotic_dog_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6529E38B2C00CDE1F0 /* exotic_dog_acting.atlas */; };
+		D0292EB229E38B2D00CDE1F0 /* exotic_dog_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6629E38B2C00CDE1F0 /* exotic_dog_dying.atlas */; };
+		D0292EB329E38B2D00CDE1F0 /* exotic_dog_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292E6729E38B2C00CDE1F0 /* exotic_dog_standing.atlas */; };
+		D0292F0729E38DDC00CDE1F0 /* grey_cat_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE129E38DDC00CDE1F0 /* grey_cat_sitting.atlas */; };
+		D0292F0829E38DDC00CDE1F0 /* grey_cat_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE229E38DDC00CDE1F0 /* grey_cat_dead.atlas */; };
+		D0292F0929E38DDC00CDE1F0 /* grey_cat_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE329E38DDC00CDE1F0 /* grey_cat_standing.atlas */; };
+		D0292F0A29E38DDC00CDE1F0 /* grey_cat_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE429E38DDC00CDE1F0 /* grey_cat_playing.atlas */; };
+		D0292F0B29E38DDC00CDE1F0 /* grey_cat_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE529E38DDC00CDE1F0 /* grey_cat_dying.atlas */; };
+		D0292F0C29E38DDC00CDE1F0 /* grey_cat_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE629E38DDC00CDE1F0 /* grey_cat_acting.atlas */; };
+		D0292F0D29E38DDC00CDE1F0 /* grey_cat.lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE729E38DDC00CDE1F0 /* grey_cat.lying.atlas */; };
+		D0292F0E29E38DDC00CDE1F0 /* pink_cat_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EE929E38DDC00CDE1F0 /* pink_cat_sitting.atlas */; };
+		D0292F0F29E38DDC00CDE1F0 /* pink_cat_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EEA29E38DDC00CDE1F0 /* pink_cat_playing.atlas */; };
+		D0292F1029E38DDC00CDE1F0 /* pink_cat_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EEB29E38DDC00CDE1F0 /* pink_cat_dying.atlas */; };
+		D0292F1129E38DDC00CDE1F0 /* pink_cat_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EEC29E38DDC00CDE1F0 /* pink_cat_standing.atlas */; };
+		D0292F1229E38DDC00CDE1F0 /* pink_cat_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EED29E38DDC00CDE1F0 /* pink_cat_dead.atlas */; };
+		D0292F1329E38DDC00CDE1F0 /* pink_cat_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EEE29E38DDC00CDE1F0 /* pink_cat_lying.atlas */; };
+		D0292F1429E38DDC00CDE1F0 /* pink_cat_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EEF29E38DDC00CDE1F0 /* pink_cat_acting.atlas */; };
+		D0292F1529E38DDC00CDE1F0 /* black_cat_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF129E38DDC00CDE1F0 /* black_cat_lying.atlas */; };
+		D0292F1629E38DDC00CDE1F0 /* black_cat_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF229E38DDC00CDE1F0 /* black_cat_playing.atlas */; };
+		D0292F1729E38DDC00CDE1F0 /* black_cat_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF329E38DDC00CDE1F0 /* black_cat_acting.atlas */; };
+		D0292F1829E38DDC00CDE1F0 /* black_cat_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF429E38DDC00CDE1F0 /* black_cat_dead.atlas */; };
+		D0292F1929E38DDC00CDE1F0 /* black_cat_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF529E38DDC00CDE1F0 /* black_cat_dying.atlas */; };
+		D0292F1A29E38DDC00CDE1F0 /* black_cat_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF629E38DDC00CDE1F0 /* black_cat_standing.atlas */; };
+		D0292F1B29E38DDC00CDE1F0 /* black_cat_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF729E38DDC00CDE1F0 /* black_cat_sitting.atlas */; };
+		D0292F1C29E38DDC00CDE1F0 /* siamese_cat_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EF929E38DDC00CDE1F0 /* siamese_cat_lying.atlas */; };
+		D0292F1D29E38DDC00CDE1F0 /* siamese_cat_standing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFA29E38DDC00CDE1F0 /* siamese_cat_standing.atlas */; };
+		D0292F1E29E38DDC00CDE1F0 /* siamese_cat_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFB29E38DDC00CDE1F0 /* siamese_cat_dead.atlas */; };
+		D0292F1F29E38DDC00CDE1F0 /* siamese_cat_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFC29E38DDC00CDE1F0 /* siamese_cat_dying.atlas */; };
+		D0292F2029E38DDC00CDE1F0 /* siamese_cat_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFD29E38DDC00CDE1F0 /* siamese_cat_playing.atlas */; };
+		D0292F2129E38DDC00CDE1F0 /* siamese_cat_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFE29E38DDC00CDE1F0 /* siamese_cat_sitting.atlas */; };
+		D0292F2229E38DDC00CDE1F0 /* siamese_cat_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292EFF29E38DDC00CDE1F0 /* siamese_cat_acting.atlas */; };
+		D0292F2B29E38FCB00CDE1F0 /* orange_cat_playing.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2429E38FCB00CDE1F0 /* orange_cat_playing.atlas */; };
+		D0292F2C29E38FCB00CDE1F0 /* orange_cat_dying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2529E38FCB00CDE1F0 /* orange_cat_dying.atlas */; };
+		D0292F2D29E38FCB00CDE1F0 /* orange_cat_sitting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2629E38FCB00CDE1F0 /* orange_cat_sitting.atlas */; };
+		D0292F2E29E38FCB00CDE1F0 /* orange_cat_standidng.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2729E38FCB00CDE1F0 /* orange_cat_standidng.atlas */; };
+		D0292F2F29E38FCB00CDE1F0 /* orange_cat_acting.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2829E38FCB00CDE1F0 /* orange_cat_acting.atlas */; };
+		D0292F3029E38FCB00CDE1F0 /* orange_cat_dead.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2929E38FCB00CDE1F0 /* orange_cat_dead.atlas */; };
+		D0292F3129E38FCB00CDE1F0 /* orange_cat_lying.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0292F2A29E38FCB00CDE1F0 /* orange_cat_lying.atlas */; };
 		D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */; };
 		D0AC154929B6F7F800A81504 /* ChoosePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */; };
 		D0AC154B29B6FD6500A81504 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC154A29B6FD6500A81504 /* AnimalCell.swift */; };
@@ -89,6 +159,76 @@
 		87EDAE6629B14FB8003A2466 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CA0981A529DFB83600562430 /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
 		CA0981A729DFB8AC00562430 /* bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bark.mp3; sourceTree = "<group>"; };
+		D0292E4129E38B2C00CDE1F0 /* base_dog_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_standing.atlas; sourceTree = "<group>"; };
+		D0292E4229E38B2C00CDE1F0 /* base_dog_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_dead.atlas; sourceTree = "<group>"; };
+		D0292E4329E38B2C00CDE1F0 /* base_dog_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_playing.atlas; sourceTree = "<group>"; };
+		D0292E4429E38B2C00CDE1F0 /* base_dog_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_lying.atlas; sourceTree = "<group>"; };
+		D0292E4529E38B2C00CDE1F0 /* base_dog_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_sitting.atlas; sourceTree = "<group>"; };
+		D0292E4629E38B2C00CDE1F0 /* base_dog_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_dying.atlas; sourceTree = "<group>"; };
+		D0292E4729E38B2C00CDE1F0 /* base_dog_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = base_dog_acting.atlas; sourceTree = "<group>"; };
+		D0292E4929E38B2C00CDE1F0 /* brown_dog_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_lying.atlas; sourceTree = "<group>"; };
+		D0292E4A29E38B2C00CDE1F0 /* brown_dog_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_dead.atlas; sourceTree = "<group>"; };
+		D0292E4B29E38B2C00CDE1F0 /* brown_dog_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_sitting.atlas; sourceTree = "<group>"; };
+		D0292E4C29E38B2C00CDE1F0 /* brown_dog_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_standing.atlas; sourceTree = "<group>"; };
+		D0292E4D29E38B2C00CDE1F0 /* brown_dog_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_acting.atlas; sourceTree = "<group>"; };
+		D0292E4E29E38B2C00CDE1F0 /* brown_dog_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_playing.atlas; sourceTree = "<group>"; };
+		D0292E4F29E38B2C00CDE1F0 /* brown_dog_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = brown_dog_dying.atlas; sourceTree = "<group>"; };
+		D0292E5129E38B2C00CDE1F0 /* b&w_dog_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_dying.atlas"; sourceTree = "<group>"; };
+		D0292E5229E38B2C00CDE1F0 /* b&w_dog_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_standing.atlas"; sourceTree = "<group>"; };
+		D0292E5329E38B2C00CDE1F0 /* b&w_dog_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_acting.atlas"; sourceTree = "<group>"; };
+		D0292E5429E38B2C00CDE1F0 /* b&w_dog_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_sitting.atlas"; sourceTree = "<group>"; };
+		D0292E5529E38B2C00CDE1F0 /* b&w_dog_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_lying.atlas"; sourceTree = "<group>"; };
+		D0292E5629E38B2C00CDE1F0 /* b&w_dog_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_playing.atlas"; sourceTree = "<group>"; };
+		D0292E5729E38B2C00CDE1F0 /* b&w_dog_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "b&w_dog_dead.atlas"; sourceTree = "<group>"; };
+		D0292E5929E38B2C00CDE1F0 /* black_dog_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_dying.atlas; sourceTree = "<group>"; };
+		D0292E5A29E38B2C00CDE1F0 /* black_dog_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_playing.atlas; sourceTree = "<group>"; };
+		D0292E5B29E38B2C00CDE1F0 /* black_dog_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_sitting.atlas; sourceTree = "<group>"; };
+		D0292E5C29E38B2C00CDE1F0 /* black_dog_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_dead.atlas; sourceTree = "<group>"; };
+		D0292E5D29E38B2C00CDE1F0 /* black_dog_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_acting.atlas; sourceTree = "<group>"; };
+		D0292E5E29E38B2C00CDE1F0 /* black_dog_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_standing.atlas; sourceTree = "<group>"; };
+		D0292E5F29E38B2C00CDE1F0 /* black_dog_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_dog_lying.atlas; sourceTree = "<group>"; };
+		D0292E6129E38B2C00CDE1F0 /* exotic_dog_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_lying.atlas; sourceTree = "<group>"; };
+		D0292E6229E38B2C00CDE1F0 /* exotic_dog_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_dead.atlas; sourceTree = "<group>"; };
+		D0292E6329E38B2C00CDE1F0 /* exotic_dog_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_sitting.atlas; sourceTree = "<group>"; };
+		D0292E6429E38B2C00CDE1F0 /* exotic_dog_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_playing.atlas; sourceTree = "<group>"; };
+		D0292E6529E38B2C00CDE1F0 /* exotic_dog_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_acting.atlas; sourceTree = "<group>"; };
+		D0292E6629E38B2C00CDE1F0 /* exotic_dog_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_dying.atlas; sourceTree = "<group>"; };
+		D0292E6729E38B2C00CDE1F0 /* exotic_dog_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = exotic_dog_standing.atlas; sourceTree = "<group>"; };
+		D0292EE129E38DDC00CDE1F0 /* grey_cat_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_sitting.atlas; sourceTree = "<group>"; };
+		D0292EE229E38DDC00CDE1F0 /* grey_cat_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_dead.atlas; sourceTree = "<group>"; };
+		D0292EE329E38DDC00CDE1F0 /* grey_cat_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_standing.atlas; sourceTree = "<group>"; };
+		D0292EE429E38DDC00CDE1F0 /* grey_cat_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_playing.atlas; sourceTree = "<group>"; };
+		D0292EE529E38DDC00CDE1F0 /* grey_cat_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_dying.atlas; sourceTree = "<group>"; };
+		D0292EE629E38DDC00CDE1F0 /* grey_cat_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat_acting.atlas; sourceTree = "<group>"; };
+		D0292EE729E38DDC00CDE1F0 /* grey_cat.lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grey_cat.lying.atlas; sourceTree = "<group>"; };
+		D0292EE929E38DDC00CDE1F0 /* pink_cat_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_sitting.atlas; sourceTree = "<group>"; };
+		D0292EEA29E38DDC00CDE1F0 /* pink_cat_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_playing.atlas; sourceTree = "<group>"; };
+		D0292EEB29E38DDC00CDE1F0 /* pink_cat_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_dying.atlas; sourceTree = "<group>"; };
+		D0292EEC29E38DDC00CDE1F0 /* pink_cat_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_standing.atlas; sourceTree = "<group>"; };
+		D0292EED29E38DDC00CDE1F0 /* pink_cat_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_dead.atlas; sourceTree = "<group>"; };
+		D0292EEE29E38DDC00CDE1F0 /* pink_cat_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_lying.atlas; sourceTree = "<group>"; };
+		D0292EEF29E38DDC00CDE1F0 /* pink_cat_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pink_cat_acting.atlas; sourceTree = "<group>"; };
+		D0292EF129E38DDC00CDE1F0 /* black_cat_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_lying.atlas; sourceTree = "<group>"; };
+		D0292EF229E38DDC00CDE1F0 /* black_cat_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_playing.atlas; sourceTree = "<group>"; };
+		D0292EF329E38DDC00CDE1F0 /* black_cat_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_acting.atlas; sourceTree = "<group>"; };
+		D0292EF429E38DDC00CDE1F0 /* black_cat_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_dead.atlas; sourceTree = "<group>"; };
+		D0292EF529E38DDC00CDE1F0 /* black_cat_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_dying.atlas; sourceTree = "<group>"; };
+		D0292EF629E38DDC00CDE1F0 /* black_cat_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_standing.atlas; sourceTree = "<group>"; };
+		D0292EF729E38DDC00CDE1F0 /* black_cat_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = black_cat_sitting.atlas; sourceTree = "<group>"; };
+		D0292EF929E38DDC00CDE1F0 /* siamese_cat_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_lying.atlas; sourceTree = "<group>"; };
+		D0292EFA29E38DDC00CDE1F0 /* siamese_cat_standing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_standing.atlas; sourceTree = "<group>"; };
+		D0292EFB29E38DDC00CDE1F0 /* siamese_cat_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_dead.atlas; sourceTree = "<group>"; };
+		D0292EFC29E38DDC00CDE1F0 /* siamese_cat_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_dying.atlas; sourceTree = "<group>"; };
+		D0292EFD29E38DDC00CDE1F0 /* siamese_cat_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_playing.atlas; sourceTree = "<group>"; };
+		D0292EFE29E38DDC00CDE1F0 /* siamese_cat_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_sitting.atlas; sourceTree = "<group>"; };
+		D0292EFF29E38DDC00CDE1F0 /* siamese_cat_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = siamese_cat_acting.atlas; sourceTree = "<group>"; };
+		D0292F2429E38FCB00CDE1F0 /* orange_cat_playing.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_playing.atlas; sourceTree = "<group>"; };
+		D0292F2529E38FCB00CDE1F0 /* orange_cat_dying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_dying.atlas; sourceTree = "<group>"; };
+		D0292F2629E38FCB00CDE1F0 /* orange_cat_sitting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_sitting.atlas; sourceTree = "<group>"; };
+		D0292F2729E38FCB00CDE1F0 /* orange_cat_standidng.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_standidng.atlas; sourceTree = "<group>"; };
+		D0292F2829E38FCB00CDE1F0 /* orange_cat_acting.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_acting.atlas; sourceTree = "<group>"; };
+		D0292F2929E38FCB00CDE1F0 /* orange_cat_dead.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_dead.atlas; sourceTree = "<group>"; };
+		D0292F2A29E38FCB00CDE1F0 /* orange_cat_lying.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orange_cat_lying.atlas; sourceTree = "<group>"; };
 		D0AC154629B6F7D900A81504 /* ChoosePet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosePet.storyboard; sourceTree = "<group>"; };
 		D0AC154829B6F7F800A81504 /* ChoosePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePetViewController.swift; sourceTree = "<group>"; };
 		D0AC154A29B6FD6500A81504 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
@@ -132,6 +272,8 @@
 		07CA9FED29A6C1330008D07C /* Habitotchi */ = {
 			isa = PBXGroup;
 			children = (
+				D0292ED729E38DDC00CDE1F0 /* cat_atlas_files */,
+				D0292E3F29E38B2C00CDE1F0 /* dog_atlas_files */,
 				87EDAE6329B142E4003A2466 /* CoreData */,
 				07CA9FEE29A6C1330008D07C /* AppDelegate.swift */,
 				07CA9FF029A6C1330008D07C /* SceneDelegate.swift */,
@@ -228,6 +370,171 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		D0292E3F29E38B2C00CDE1F0 /* dog_atlas_files */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E4029E38B2C00CDE1F0 /* base_dog */,
+				D0292E4829E38B2C00CDE1F0 /* brown_dog */,
+				D0292E5029E38B2C00CDE1F0 /* b&w_dog */,
+				D0292E5829E38B2C00CDE1F0 /* black_dog */,
+				D0292E6029E38B2C00CDE1F0 /* exotic_dog */,
+			);
+			path = dog_atlas_files;
+			sourceTree = "<group>";
+		};
+		D0292E4029E38B2C00CDE1F0 /* base_dog */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E4129E38B2C00CDE1F0 /* base_dog_standing.atlas */,
+				D0292E4229E38B2C00CDE1F0 /* base_dog_dead.atlas */,
+				D0292E4329E38B2C00CDE1F0 /* base_dog_playing.atlas */,
+				D0292E4429E38B2C00CDE1F0 /* base_dog_lying.atlas */,
+				D0292E4529E38B2C00CDE1F0 /* base_dog_sitting.atlas */,
+				D0292E4629E38B2C00CDE1F0 /* base_dog_dying.atlas */,
+				D0292E4729E38B2C00CDE1F0 /* base_dog_acting.atlas */,
+			);
+			path = base_dog;
+			sourceTree = "<group>";
+		};
+		D0292E4829E38B2C00CDE1F0 /* brown_dog */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E4929E38B2C00CDE1F0 /* brown_dog_lying.atlas */,
+				D0292E4A29E38B2C00CDE1F0 /* brown_dog_dead.atlas */,
+				D0292E4B29E38B2C00CDE1F0 /* brown_dog_sitting.atlas */,
+				D0292E4C29E38B2C00CDE1F0 /* brown_dog_standing.atlas */,
+				D0292E4D29E38B2C00CDE1F0 /* brown_dog_acting.atlas */,
+				D0292E4E29E38B2C00CDE1F0 /* brown_dog_playing.atlas */,
+				D0292E4F29E38B2C00CDE1F0 /* brown_dog_dying.atlas */,
+			);
+			path = brown_dog;
+			sourceTree = "<group>";
+		};
+		D0292E5029E38B2C00CDE1F0 /* b&w_dog */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E5129E38B2C00CDE1F0 /* b&w_dog_dying.atlas */,
+				D0292E5229E38B2C00CDE1F0 /* b&w_dog_standing.atlas */,
+				D0292E5329E38B2C00CDE1F0 /* b&w_dog_acting.atlas */,
+				D0292E5429E38B2C00CDE1F0 /* b&w_dog_sitting.atlas */,
+				D0292E5529E38B2C00CDE1F0 /* b&w_dog_lying.atlas */,
+				D0292E5629E38B2C00CDE1F0 /* b&w_dog_playing.atlas */,
+				D0292E5729E38B2C00CDE1F0 /* b&w_dog_dead.atlas */,
+			);
+			path = "b&w_dog";
+			sourceTree = "<group>";
+		};
+		D0292E5829E38B2C00CDE1F0 /* black_dog */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E5929E38B2C00CDE1F0 /* black_dog_dying.atlas */,
+				D0292E5A29E38B2C00CDE1F0 /* black_dog_playing.atlas */,
+				D0292E5B29E38B2C00CDE1F0 /* black_dog_sitting.atlas */,
+				D0292E5C29E38B2C00CDE1F0 /* black_dog_dead.atlas */,
+				D0292E5D29E38B2C00CDE1F0 /* black_dog_acting.atlas */,
+				D0292E5E29E38B2C00CDE1F0 /* black_dog_standing.atlas */,
+				D0292E5F29E38B2C00CDE1F0 /* black_dog_lying.atlas */,
+			);
+			path = black_dog;
+			sourceTree = "<group>";
+		};
+		D0292E6029E38B2C00CDE1F0 /* exotic_dog */ = {
+			isa = PBXGroup;
+			children = (
+				D0292E6129E38B2C00CDE1F0 /* exotic_dog_lying.atlas */,
+				D0292E6229E38B2C00CDE1F0 /* exotic_dog_dead.atlas */,
+				D0292E6329E38B2C00CDE1F0 /* exotic_dog_sitting.atlas */,
+				D0292E6429E38B2C00CDE1F0 /* exotic_dog_playing.atlas */,
+				D0292E6529E38B2C00CDE1F0 /* exotic_dog_acting.atlas */,
+				D0292E6629E38B2C00CDE1F0 /* exotic_dog_dying.atlas */,
+				D0292E6729E38B2C00CDE1F0 /* exotic_dog_standing.atlas */,
+			);
+			path = exotic_dog;
+			sourceTree = "<group>";
+		};
+		D0292ED729E38DDC00CDE1F0 /* cat_atlas_files */ = {
+			isa = PBXGroup;
+			children = (
+				D0292EE029E38DDC00CDE1F0 /* grey_cat */,
+				D0292EE829E38DDC00CDE1F0 /* pink_cat */,
+				D0292EF029E38DDC00CDE1F0 /* black_cat */,
+				D0292EF829E38DDC00CDE1F0 /* siamese_cat */,
+			);
+			path = cat_atlas_files;
+			sourceTree = "<group>";
+		};
+		D0292EE029E38DDC00CDE1F0 /* grey_cat */ = {
+			isa = PBXGroup;
+			children = (
+				D0292F2329E38FCB00CDE1F0 /* orange_cat */,
+				D0292EE129E38DDC00CDE1F0 /* grey_cat_sitting.atlas */,
+				D0292EE229E38DDC00CDE1F0 /* grey_cat_dead.atlas */,
+				D0292EE329E38DDC00CDE1F0 /* grey_cat_standing.atlas */,
+				D0292EE429E38DDC00CDE1F0 /* grey_cat_playing.atlas */,
+				D0292EE529E38DDC00CDE1F0 /* grey_cat_dying.atlas */,
+				D0292EE629E38DDC00CDE1F0 /* grey_cat_acting.atlas */,
+				D0292EE729E38DDC00CDE1F0 /* grey_cat.lying.atlas */,
+			);
+			path = grey_cat;
+			sourceTree = "<group>";
+		};
+		D0292EE829E38DDC00CDE1F0 /* pink_cat */ = {
+			isa = PBXGroup;
+			children = (
+				D0292EE929E38DDC00CDE1F0 /* pink_cat_sitting.atlas */,
+				D0292EEA29E38DDC00CDE1F0 /* pink_cat_playing.atlas */,
+				D0292EEB29E38DDC00CDE1F0 /* pink_cat_dying.atlas */,
+				D0292EEC29E38DDC00CDE1F0 /* pink_cat_standing.atlas */,
+				D0292EED29E38DDC00CDE1F0 /* pink_cat_dead.atlas */,
+				D0292EEE29E38DDC00CDE1F0 /* pink_cat_lying.atlas */,
+				D0292EEF29E38DDC00CDE1F0 /* pink_cat_acting.atlas */,
+			);
+			path = pink_cat;
+			sourceTree = "<group>";
+		};
+		D0292EF029E38DDC00CDE1F0 /* black_cat */ = {
+			isa = PBXGroup;
+			children = (
+				D0292EF129E38DDC00CDE1F0 /* black_cat_lying.atlas */,
+				D0292EF229E38DDC00CDE1F0 /* black_cat_playing.atlas */,
+				D0292EF329E38DDC00CDE1F0 /* black_cat_acting.atlas */,
+				D0292EF429E38DDC00CDE1F0 /* black_cat_dead.atlas */,
+				D0292EF529E38DDC00CDE1F0 /* black_cat_dying.atlas */,
+				D0292EF629E38DDC00CDE1F0 /* black_cat_standing.atlas */,
+				D0292EF729E38DDC00CDE1F0 /* black_cat_sitting.atlas */,
+			);
+			path = black_cat;
+			sourceTree = "<group>";
+		};
+		D0292EF829E38DDC00CDE1F0 /* siamese_cat */ = {
+			isa = PBXGroup;
+			children = (
+				D0292EF929E38DDC00CDE1F0 /* siamese_cat_lying.atlas */,
+				D0292EFA29E38DDC00CDE1F0 /* siamese_cat_standing.atlas */,
+				D0292EFB29E38DDC00CDE1F0 /* siamese_cat_dead.atlas */,
+				D0292EFC29E38DDC00CDE1F0 /* siamese_cat_dying.atlas */,
+				D0292EFD29E38DDC00CDE1F0 /* siamese_cat_playing.atlas */,
+				D0292EFE29E38DDC00CDE1F0 /* siamese_cat_sitting.atlas */,
+				D0292EFF29E38DDC00CDE1F0 /* siamese_cat_acting.atlas */,
+			);
+			path = siamese_cat;
+			sourceTree = "<group>";
+		};
+		D0292F2329E38FCB00CDE1F0 /* orange_cat */ = {
+			isa = PBXGroup;
+			children = (
+				D0292F2429E38FCB00CDE1F0 /* orange_cat_playing.atlas */,
+				D0292F2529E38FCB00CDE1F0 /* orange_cat_dying.atlas */,
+				D0292F2629E38FCB00CDE1F0 /* orange_cat_sitting.atlas */,
+				D0292F2729E38FCB00CDE1F0 /* orange_cat_standidng.atlas */,
+				D0292F2829E38FCB00CDE1F0 /* orange_cat_acting.atlas */,
+				D0292F2929E38FCB00CDE1F0 /* orange_cat_dead.atlas */,
+				D0292F2A29E38FCB00CDE1F0 /* orange_cat_lying.atlas */,
+			);
+			name = orange_cat;
+			path = Habitotchi/cat_atlas_files/orange_cat;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,17 +599,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0292EAD29E38B2D00CDE1F0 /* exotic_dog_lying.atlas in Resources */,
+				D0292E9F29E38B2D00CDE1F0 /* b&w_dog_dying.atlas in Resources */,
+				D0292E9329E38B2D00CDE1F0 /* base_dog_playing.atlas in Resources */,
 				8745431129B00BB600F60C0C /* HabitCreation.storyboard in Resources */,
+				D0292F0A29E38DDC00CDE1F0 /* grey_cat_playing.atlas in Resources */,
 				07CA9FFB29A6C1350008D07C /* LaunchScreen.storyboard in Resources */,
+				D0292F1629E38DDC00CDE1F0 /* black_cat_playing.atlas in Resources */,
+				D0292E9829E38B2D00CDE1F0 /* brown_dog_lying.atlas in Resources */,
 				87EDAE6529B14FAC003A2466 /* Signin.storyboard in Resources */,
+				D0292F1729E38DDC00CDE1F0 /* black_cat_acting.atlas in Resources */,
+				D0292EAC29E38B2D00CDE1F0 /* black_dog_lying.atlas in Resources */,
+				D0292EA929E38B2D00CDE1F0 /* black_dog_dead.atlas in Resources */,
+				D0292F2029E38DDC00CDE1F0 /* siamese_cat_playing.atlas in Resources */,
+				D0292E9929E38B2D00CDE1F0 /* brown_dog_dead.atlas in Resources */,
+				D0292F0829E38DDC00CDE1F0 /* grey_cat_dead.atlas in Resources */,
+				D0292E9629E38B2D00CDE1F0 /* base_dog_dying.atlas in Resources */,
+				D0292F1F29E38DDC00CDE1F0 /* siamese_cat_dying.atlas in Resources */,
+				D0292E9A29E38B2D00CDE1F0 /* brown_dog_sitting.atlas in Resources */,
+				D0292EA029E38B2D00CDE1F0 /* b&w_dog_standing.atlas in Resources */,
+				D0292F0D29E38DDC00CDE1F0 /* grey_cat.lying.atlas in Resources */,
 				877ECA4429AE646D00DEE93C /* HabitStatsView.storyboard in Resources */,
+				D0292EA229E38B2D00CDE1F0 /* b&w_dog_sitting.atlas in Resources */,
 				CA0981A829DFB8AC00562430 /* bark.mp3 in Resources */,
+				D0292E9729E38B2D00CDE1F0 /* base_dog_acting.atlas in Resources */,
+				D0292F3029E38FCB00CDE1F0 /* orange_cat_dead.atlas in Resources */,
+				D0292F0F29E38DDC00CDE1F0 /* pink_cat_playing.atlas in Resources */,
+				D0292F1429E38DDC00CDE1F0 /* pink_cat_acting.atlas in Resources */,
 				877ECA5029AE8A1A00DEE93C /* Main.storyboard in Resources */,
+				D0292F2229E38DDC00CDE1F0 /* siamese_cat_acting.atlas in Resources */,
+				D0292F1229E38DDC00CDE1F0 /* pink_cat_dead.atlas in Resources */,
+				D0292F1129E38DDC00CDE1F0 /* pink_cat_standing.atlas in Resources */,
+				D0292EB029E38B2D00CDE1F0 /* exotic_dog_playing.atlas in Resources */,
 				D0AC154729B6F7D900A81504 /* ChoosePet.storyboard in Resources */,
+				D0292F1A29E38DDC00CDE1F0 /* black_cat_standing.atlas in Resources */,
+				D0292F2D29E38FCB00CDE1F0 /* orange_cat_sitting.atlas in Resources */,
+				D0292E9B29E38B2D00CDE1F0 /* brown_dog_standing.atlas in Resources */,
+				D0292F2B29E38FCB00CDE1F0 /* orange_cat_playing.atlas in Resources */,
+				D0292E9C29E38B2D00CDE1F0 /* brown_dog_acting.atlas in Resources */,
+				D0292F1329E38DDC00CDE1F0 /* pink_cat_lying.atlas in Resources */,
 				CA0981A629DFB83600562430 /* meow.mp3 in Resources */,
+				D0292E9429E38B2D00CDE1F0 /* base_dog_lying.atlas in Resources */,
+				D0292F3129E38FCB00CDE1F0 /* orange_cat_lying.atlas in Resources */,
+				D0292F1929E38DDC00CDE1F0 /* black_cat_dying.atlas in Resources */,
+				D0292F2E29E38FCB00CDE1F0 /* orange_cat_standidng.atlas in Resources */,
+				D0292E9E29E38B2D00CDE1F0 /* brown_dog_dying.atlas in Resources */,
+				D0292E9229E38B2D00CDE1F0 /* base_dog_dead.atlas in Resources */,
+				D0292EA329E38B2D00CDE1F0 /* b&w_dog_lying.atlas in Resources */,
+				D0292F2F29E38FCB00CDE1F0 /* orange_cat_acting.atlas in Resources */,
 				07C9423C29DB27F400C4FE07 /* Profile.storyboard in Resources */,
+				D0292EA829E38B2D00CDE1F0 /* black_dog_sitting.atlas in Resources */,
+				D0292EB229E38B2D00CDE1F0 /* exotic_dog_dying.atlas in Resources */,
+				D0292F1B29E38DDC00CDE1F0 /* black_cat_sitting.atlas in Resources */,
+				D0292F1829E38DDC00CDE1F0 /* black_cat_dead.atlas in Resources */,
+				D0292F0B29E38DDC00CDE1F0 /* grey_cat_dying.atlas in Resources */,
+				D0292F1C29E38DDC00CDE1F0 /* siamese_cat_lying.atlas in Resources */,
+				D0292EA429E38B2D00CDE1F0 /* b&w_dog_playing.atlas in Resources */,
+				D0292EAA29E38B2D00CDE1F0 /* black_dog_acting.atlas in Resources */,
+				D0292F1529E38DDC00CDE1F0 /* black_cat_lying.atlas in Resources */,
+				D0292F1E29E38DDC00CDE1F0 /* siamese_cat_dead.atlas in Resources */,
+				D0292F1D29E38DDC00CDE1F0 /* siamese_cat_standing.atlas in Resources */,
+				D0292EA729E38B2D00CDE1F0 /* black_dog_playing.atlas in Resources */,
+				D0292F0929E38DDC00CDE1F0 /* grey_cat_standing.atlas in Resources */,
+				D0292E9129E38B2D00CDE1F0 /* base_dog_standing.atlas in Resources */,
+				D0292EA529E38B2D00CDE1F0 /* b&w_dog_dead.atlas in Resources */,
+				D0292F1029E38DDC00CDE1F0 /* pink_cat_dying.atlas in Resources */,
+				D0292EA629E38B2D00CDE1F0 /* black_dog_dying.atlas in Resources */,
 				07CA9FF829A6C1350008D07C /* Assets.xcassets in Resources */,
+				D0292F2C29E38FCB00CDE1F0 /* orange_cat_dying.atlas in Resources */,
+				D0292EB129E38B2D00CDE1F0 /* exotic_dog_acting.atlas in Resources */,
+				D0292F0729E38DDC00CDE1F0 /* grey_cat_sitting.atlas in Resources */,
+				D0292EA129E38B2D00CDE1F0 /* b&w_dog_acting.atlas in Resources */,
+				D0292E9529E38B2D00CDE1F0 /* base_dog_sitting.atlas in Resources */,
+				D0292F0E29E38DDC00CDE1F0 /* pink_cat_sitting.atlas in Resources */,
+				D0292EB329E38B2D00CDE1F0 /* exotic_dog_standing.atlas in Resources */,
+				D0292E9D29E38B2D00CDE1F0 /* brown_dog_playing.atlas in Resources */,
+				D0292EAE29E38B2D00CDE1F0 /* exotic_dog_dead.atlas in Resources */,
+				D0292F2129E38DDC00CDE1F0 /* siamese_cat_sitting.atlas in Resources */,
+				D0292EAB29E38B2D00CDE1F0 /* black_dog_standing.atlas in Resources */,
 				877ECA4A29AE740F00DEE93C /* AnimalStatus.storyboard in Resources */,
+				D0292EAF29E38B2D00CDE1F0 /* exotic_dog_sitting.atlas in Resources */,
+				D0292F0C29E38DDC00CDE1F0 /* grey_cat_acting.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
