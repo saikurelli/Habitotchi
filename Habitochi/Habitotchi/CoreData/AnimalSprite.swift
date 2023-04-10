@@ -12,7 +12,7 @@ public class AnimalSprite : SKSpriteNode{
     
     var animal : Animal!
     private var framesLibrary: [String : [SKTexture]] = [:]
-    private var imageName: String = "black_cat"
+    private var imageName: String = ""
     private var timePerFrame = 0.25
     private var scale: Float!
     //need a way to tell parent viewController to segue to another scene
@@ -22,14 +22,16 @@ public class AnimalSprite : SKSpriteNode{
         let imageSize: CGSize = initialTexture.size()
         super.init(texture: initialTexture, color: .clear, size: imageSize)
         self.scale = scale
-        determineCorrectScale(initialScale: scale!)
+        
         self.name = name
         self.isUserInteractionEnabled = true
         self.imageName = imageName
         self.animal = animal
+        
+        determineCorrectScale(initialScale: scale!)
     }
     
-    
+   
     func changeAnimationTo(animalState: AnimalState) {
         switch animalState {
             case AnimalState.ill:
@@ -40,7 +42,7 @@ public class AnimalSprite : SKSpriteNode{
                 animateHealthy()
             case AnimalState.aboutToLevelUp:
                 animateAboutToLevelUp()
-            case AnimalState.leveledUp:
+            case AnimalState.fed:
                 animateLeveledUp()
         }
         
@@ -85,6 +87,11 @@ public class AnimalSprite : SKSpriteNode{
             loadFrames(animalAction: "lying")
         }
         setUpAnimation(animalAction: "lying")
+        SKAction.repeatForever(SKAction.animate(with: framesLibrary["lying"]!,
+                                                timePerFrame: timePerFrame,
+                                                resize: false,
+                                                restore: true)
+        )
     }
     
     private func animateHealthy() {
@@ -163,9 +170,8 @@ public class AnimalSprite : SKSpriteNode{
     
     // To create the size difference between a dog and a cat
     func determineCorrectScale(initialScale: Float) {
-        print(imageName)
         if imageName.suffix(3) == "dog" {
-            self.scale = scale * 1.5
+            self.scale = scale * 1.35
         }
     }
     

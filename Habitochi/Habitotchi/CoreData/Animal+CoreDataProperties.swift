@@ -14,7 +14,7 @@ public enum AnimalState: String {
          unhealthy = "unhealthy",
          healthy = "healthy",
          aboutToLevelUp = "healthy, almost ready to level up!",
-         leveledUp = "leveled up"
+         fed = "fed"
 }
 
 extension Animal {

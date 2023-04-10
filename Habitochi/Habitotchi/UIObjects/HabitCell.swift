@@ -27,9 +27,13 @@ class HabitCell : UITableViewCell {
         if !tappedHabit.habitCompleted {
             CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: completed)
             updateCell(cell: self)
+//
+//
+
+            
         }
         
-        }
+    }
     func updateCell(cell : HabitCell){
         habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
         habitCompletionButton.tintColor = DARK_GREEN

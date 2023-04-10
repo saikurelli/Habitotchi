@@ -13,12 +13,15 @@ import UIKit
 import SpriteKit
 import AVKit
 
-class SpriteKitViewController: UIViewController {
+class SpriteKitViewController: UIViewController{
+
     
     @IBOutlet weak var skView: SKView!
     @IBOutlet var profileButton: UIButton!
     var scene : BackgroundScene!
     var audioPlayer: AVAudioPlayer!
+    
+
     
     //view will load check if there is a new habit, then add to Observer obeject?
 
@@ -85,6 +88,7 @@ class SpriteKitViewController: UIViewController {
         
         var vc : SpriteKitViewController!
         var habits: [Habit] = currentProfile.habits!.array as! [Habit]
+        var sprites: [String :AnimalSprite] = [:]
         
         init(size: CGSize, vc: SpriteKitViewController) {
             super.init(size: size)
@@ -120,13 +124,14 @@ class SpriteKitViewController: UIViewController {
                 var animalSprite = AnimalSprite(animal: animal,
                                                 imageName: animal.spriteName,
                                                 name: animal.name!,
-                                                scale: 2.0)
+                                                scale: 1.75)
                 animalSprite.isUserInteractionEnabled = true
-                animalSprite.position = CGPoint(x: pos , y: 110)
-//                animalSprite.changeAnimationTo(animalState: animal.getAnimalState())
-                animalSprite.changeAnimationTo(animalState: AnimalState.leveledUp)
+                animalSprite.position = CGPoint(x: pos , y: 100)
+                animalSprite.changeAnimationTo(animalState: animal.getAnimalState())
+//                animalSprite.changeAnimationTo(animalState: AnimalState.leveledUp)
              
                 addChild(animalSprite)
+                sprites[animal.spriteName] = animalSprite
                 pos += offset
             }
             
