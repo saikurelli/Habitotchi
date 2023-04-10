@@ -83,28 +83,18 @@ extension Habit {
     
     func dailyHabitCheck(){
         
-        if habitCompletedDays.count == 0 && !habitCompleted {
+        let lastDate = UserDefaults.standard.object(forKey: "lastOpened") as! Date
+        
+        var daysMissed = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
+        if habitCompleted == true {
+            daysMissed -= 1
+        }
+        
+        if daysMissed > 0 {
             streak = 0
-            
-            let lastDate = habitCreationDate
-            
-            let totalHealthLoss = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
-            let healthLoss = animal.maxHealth - animal.health
-            
-            animal.failedToCompleteHabit(daysLost: totalHealthLoss - Int(healthLoss))
+            animal.failedToCompleteHabit(daysLost: daysMissed)
         }
-        // check if skipped a day in between
-        if habitCompletedDays.count > 0 {
-            let lastDate = habitCompletedDays.last!
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
-            
-            let daysMissed = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: lastDate)!, to: Date()).day! - 1
-            if daysMissed > 0 {
-                streak = 0
-                animal.failedToCompleteHabit(daysLost: daysMissed)
-            }
-        }
+        
         
         habitCompleted = false
     }
