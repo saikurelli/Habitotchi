@@ -95,7 +95,6 @@ extension Habit {
             animal.failedToCompleteHabit(daysLost: daysMissed)
         }
         
-        
         habitCompleted = false
     }
 }
