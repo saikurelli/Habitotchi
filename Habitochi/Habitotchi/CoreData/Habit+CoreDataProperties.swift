@@ -82,10 +82,30 @@ extension Habit {
     }
     
     func dailyHabitCheck(){
-        if !habitCompleted{
+        
+        if habitCompletedDays.count == 0 && !habitCompleted {
             streak = 0
-            animal.failedToCompleteHabit()
+            
+            let lastDate = habitCreationDate
+            
+            let totalHealthLoss = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
+            let healthLoss = animal.maxHealth - animal.health
+            
+            animal.failedToCompleteHabit(daysLost: totalHealthLoss - Int(healthLoss))
         }
+        // check if skipped a day in between
+        if habitCompletedDays.count > 0 {
+            let lastDate = habitCompletedDays.last!
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+            
+            let daysMissed = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: lastDate)!, to: Date()).day! - 1
+            if daysMissed > 0 {
+                streak = 0
+                animal.failedToCompleteHabit(daysLost: daysMissed)
+            }
+        }
+        
         habitCompleted = false
     }
 }

@@ -71,19 +71,8 @@ extension Animal {
         xptsNeeded = Int64(Double(xptsNeeded) * 1.15)
     }
     
-    func failedToCompleteHabit(){
-        // get last date from completed habit
-        if habit!.habitCompletedDays.count > 0 {
-            let lastDate = habit!.habitCompletedDays.last!
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
-            
-            let daysMissed = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: lastDate)!, to: Date()).day!
-            if daysMissed > 1 {
-                health -= Int64(daysMissed)
-            }
-        }
-        
+    func failedToCompleteHabit(daysLost: Int){
+        health -= Int64(daysLost)
         //Need to check if the animal is dead
         
     }
