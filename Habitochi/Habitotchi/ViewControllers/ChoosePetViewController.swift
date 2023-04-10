@@ -9,7 +9,7 @@ import UIKit
 
 class ChoosePetViewController: UIViewController {
     
-    let animals = ["grey_cat", "black_cat", "orange_cat", "base_dog"]
+    let animals = ["grey_cat", "black_cat", "orange_cat", "pink_cat", "siamese_cat"]
     
     @IBOutlet weak var animalCollectionView: UICollectionView!
     var delegate: UIViewController!

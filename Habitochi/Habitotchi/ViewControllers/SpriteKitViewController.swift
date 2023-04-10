@@ -123,8 +123,8 @@ class SpriteKitViewController: UIViewController {
                                                 scale: 2.0)
                 animalSprite.isUserInteractionEnabled = true
                 animalSprite.position = CGPoint(x: pos , y: 110)
-                animalSprite.changeAnimationTo(animalState: animal.getAnimalState())
-//                animalSprite.changeAnimationTo(animalState: AnimalState.unhealthy)
+//                animalSprite.changeAnimationTo(animalState: animal.getAnimalState())
+                animalSprite.changeAnimationTo(animalState: AnimalState.leveledUp)
              
                 addChild(animalSprite)
                 pos += offset

@@ -13,7 +13,7 @@ public class AnimalSprite : SKSpriteNode{
     var animal : Animal!
     private var framesLibrary: [String : [SKTexture]] = [:]
     private var imageName: String = "black_cat"
-    private var timePerFrame = 0.2
+    private var timePerFrame = 0.25
     private var scale: Float!
     //need a way to tell parent viewController to segue to another scene
     init(animal: Animal, imageName: String, name: String, scale: Float? = 1.0){
