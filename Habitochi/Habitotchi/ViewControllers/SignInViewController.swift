@@ -85,7 +85,7 @@ class SignInViewController: UIViewController, saveImage, UITextFieldDelegate {
     }
     
     func createProfileButton(){
-        let profileButton = RoundButton(frame: CGRect(x: 145, y: 150, width: 132, height: 132))
+        let profileButton = RoundButton(frame: CGRect(x: 140, y: 280, width: 132, height: 132))
 
         //profileButton.backgroundColor = .black
         profileButton.setBackgroundImage(UIImage(systemName: "person.crop.circle"), for: .normal)
