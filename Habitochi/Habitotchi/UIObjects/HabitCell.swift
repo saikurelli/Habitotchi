@@ -9,30 +9,30 @@ import Foundation
 import UIKit
 
 class HabitCell : UITableViewCell {
-    
-    
+
+
     @IBOutlet weak var habitCompletionButton: UIButton!
     @IBOutlet var tableCellLabel: UILabel!
     var completed = false
     var delegate : TableViewController!
     var indexPath : IndexPath!
-    
-    @IBAction func buttonPressed(_ sender: Any) {
-        //need to be able to reset it at beginning of new day
-        
-        // fetch all habits related to this profile
-        let tappedHabit = currentProfile.habits![indexPath.row] as! Habit
-        
-        
-        if !tappedHabit.habitCompleted {
-            CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: completed)
-            updateCell(cell: self)
-//
-//
 
+    @IBAction func buttonPressed(_ sender: Any) {
+        // fetch all habits related to this profile then get current habit
+        let tappedHabit = currentProfile.habits![indexPath.row] as! Habit
+
+        if !tappedHabit.habitCompleted {
+            // have a ui alert to confirm that they want to complete the habit
+            let alert = UIAlertController(title: "Confirm Habit Completion", message: "Did you complete \(tappedHabit.name) today?", preferredStyle: .alert)
             
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: true)
+                self.updateCell(cell: self)
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            self.delegate.present(alert, animated: true)
         }
-        
+
     }
     func updateCell(cell : HabitCell){
         habitCompletionButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
@@ -40,5 +40,3 @@ class HabitCell : UITableViewCell {
         cell.backgroundColor = GREEN
     }
 }
-    
-
