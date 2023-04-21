@@ -12,6 +12,7 @@ import CoreData
 @objc(Profile)
 public class Profile: NSManagedObject {
     var addedOrEditedHabit: Bool = false
+    var displayHabitAlert: Bool = true
     var tableDelegate : TableViewController!
     var skvDelegate : SpriteKitViewController!
 }

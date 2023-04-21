@@ -22,15 +22,22 @@ class HabitCell : UITableViewCell {
         let tappedHabit = currentProfile.habits![indexPath.row] as! Habit
 
         if !tappedHabit.habitCompleted {
-            // have a ui alert to confirm that they want to complete the habit
-            let alert = UIAlertController(title: "Confirm Habit Completion", message: "Did you complete \(tappedHabit.name) today?", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            if let profile = CoreDataManager.dataManager.fetchProfile(), profile.displayHabitAlert {
+                // have a ui alert to confirm that they want to complete the habit
+                let alert = UIAlertController(title: "Confirm Habit Completion", message: "Did you complete \(tappedHabit.name) today?", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                    CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: true)
+                    self.updateCell(cell: self)
+                }))
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                self.delegate.present(alert, animated: true)
+            }else{
                 CoreDataManager.dataManager.updateHabit(habit: tappedHabit, doCheckOffHabit: true)
-                self.updateCell(cell: self)
-            }))
-            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-            self.delegate.present(alert, animated: true)
+               self.updateCell(cell: self)
+            }
+            
+            
         }
 
     }

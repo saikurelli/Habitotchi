@@ -8,20 +8,28 @@
 import UIKit
 
 class ProfileViewController: UIViewController, saveImage {
-    
+
+    @IBOutlet weak var confirmHabitAlert: UISwitch!
     var tempImage : UIImage!
     @IBOutlet weak var nameLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
         // Do any additional setup after loading the view.
     }
-    
+
+    @IBAction func enableHabitAlert(_ sender: Any) {
+        // update core manager's profile's displayHabitAlert to match the switch
+        let switchButton = sender as! UISwitch
+        CoreDataManager.dataManager.updateProfile(profile: currentProfile, displayHabitAlert: switchButton.isOn)
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         setUpViews()
+        confirmHabitAlert.isOn = currentProfile.displayHabitAlert
     }
-    
+
     private func configureNavBar(){
         let navController = self.navigationController
         navController?.navigationBar.backgroundColor = .clear
@@ -36,8 +44,7 @@ class ProfileViewController: UIViewController, saveImage {
         nav.rightBarButtonItem?.action = #selector(buttonPressed)
         nav.rightBarButtonItem?.target = self
     }
-    
-    
+
     @objc func buttonPressed(){
         let controller = UIAlertController()
         controller.addAction(UIAlertAction(title: "Change Profile Picture", style: .default){ _ in
@@ -46,21 +53,21 @@ class ProfileViewController: UIViewController, saveImage {
         controller.addAction(UIAlertAction(title: "Change Name", style: .default) { _ in
             self.changeName()
         })
-        
+
         controller.addAction(UIAlertAction(title: "Delete Profile", style: .destructive) { _ in
-            
+
             CoreDataManager.dataManager.deleteProfile(profile: currentProfile)
             let storyboard = UIStoryboard(name: "Signin", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
             vc.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(vc, animated: true)
         })
-        
+
         controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        
+
         present(controller, animated: true)
     }
-    
+
     func setUpViews(){
         let profilePicture = CircularImageView(frame: CGRect(x: 94, y: 130, width: 200, height: 200))
         profilePicture.image = UIImage(data: currentProfile.profileImage!)
@@ -72,9 +79,9 @@ class ProfileViewController: UIViewController, saveImage {
         profilePicture.contentMode = .scaleAspectFill
         self.view.addSubview(profilePicture)
         nameLabel.text = currentProfile.name
-        
+
     }
-    
+
     func changeProfilePicture(){
         let controller = UIAlertController()
         controller.addAction(UIAlertAction(title: "Take Photo", style: .default){ _ in
@@ -92,18 +99,18 @@ class ProfileViewController: UIViewController, saveImage {
             self.present(vc, animated: false)
         })
         controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        
+
         present(controller, animated: true)
-        
+
     }
-    
+
     func changeName(){
         let controller = UIAlertController(title: "Change Name", message: "", preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         controller.addTextField(configurationHandler: {
             (textField) in textField.placeholder = "Enter your name"
         } )
-        
+
         controller.addAction(UIAlertAction(
             title: "OK",
             style: .default,
@@ -112,11 +119,11 @@ class ProfileViewController: UIViewController, saveImage {
                 CoreDataManager.dataManager.updateProfile(profile: currentProfile, name: enteredText!)
                 self.setUpViews()
             } ))
-                               
+
         present(controller, animated: true)
-        
+
     }
-    
+
     func changeImage(image: UIImage) {
         CoreDataManager.dataManager.updateProfile(profile: currentProfile, image: image)
         setUpViews()

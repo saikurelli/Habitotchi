@@ -56,7 +56,8 @@ class CoreDataManager {
     func updateProfile(profile: Profile,
                        name: String? = nil,
                        image: UIImage? = nil,
-                       checkLastOpened: Date? = nil) {
+                       checkLastOpened: Date? = nil,
+                       displayHabitAlert: Bool? = nil) {
         var edited: Bool = false
         if name != nil {
             profile.name = name!
@@ -70,7 +71,10 @@ class CoreDataManager {
         if checkLastOpened != nil {
             profile.checkDates(lastOpened: checkLastOpened!)
         }
-        
+        if displayHabitAlert != nil {
+            profile.displayHabitAlert = displayHabitAlert!
+            edited = true
+        }
         if edited {save()}
     }
     
