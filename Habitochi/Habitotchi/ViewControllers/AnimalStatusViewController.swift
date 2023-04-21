@@ -20,15 +20,15 @@ class AnimalStatusViewController: UIViewController {
     @IBOutlet weak var hpLabel: UILabel!
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    
-//    var temp = ""
+    @IBOutlet weak var foodLabel: UILabel!
+    //    var temp = ""
 //    let healthStatus = ["healthy", "sick"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = clickedAnimal.name
         levelLabel.text = "LVL \(clickedAnimal.level)"
-        
+        foodLabel.text = "Food Remaining: \(clickedAnimal.food)"
         setUpBars()
     
         let scene = SKScene(size: animalView.bounds.size)
@@ -64,6 +64,16 @@ class AnimalStatusViewController: UIViewController {
 //        }else{
 //            statusLabel.text = "Status \(healthStatus[0])"
 //        }
-        
     }
+    @IBAction func feedButtonClicked(_ sender: Any) {
+        if(clickedAnimal.health < clickedAnimal.maxHealth && clickedAnimal.food > 0){
+            clickedAnimal.health += 1
+            let currentHP = Float(clickedAnimal.health)/Float(clickedAnimal.maxHealth)
+            hpBar.progress = currentHP
+            hpLabel.text = "\(clickedAnimal.health)/\(clickedAnimal.maxHealth)"
+            clickedAnimal.food -= 1
+            foodLabel.text = "Food Remaining: \(clickedAnimal.food)"
+        }
+    }
+    
 }

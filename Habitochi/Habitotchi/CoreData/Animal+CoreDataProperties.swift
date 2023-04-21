@@ -32,6 +32,7 @@ extension Animal {
     @NSManaged public var sprite: AnimalSprite?
     @NSManaged public var habit: Habit?
     @NSManaged public var spriteName : String
+    @NSManaged public var food: Int64
 
     convenience init(name : String,
                      spriteName : String,
@@ -48,6 +49,7 @@ extension Animal {
         sprite = AnimalSprite(animal: self, imageName: spriteName, name: name)
         xptsNeeded = 10
         self.spriteName = spriteName
+        food = 0
     }
 
     func habitCompleted(){
@@ -60,7 +62,7 @@ extension Animal {
     }
 
     private func checkLevelUp() {
-        if xpts == xptsNeeded {
+        if xpts >= xptsNeeded {
             levelUp()
         }
     }
@@ -68,11 +70,14 @@ extension Animal {
     //MARK: need to add further functionality
     private func levelUp(){
         level += 1
+        xpts = xpts - xptsNeeded
         xptsNeeded = Int64(Double(xptsNeeded) * 1.15)
+        food += 3
     }
     
     func failedToCompleteHabit(daysLost: Int){
         health -= Int64(daysLost)
+        health = max(0, health) // prevent negative health
         //Need to check if the animal is dead
         
     }
