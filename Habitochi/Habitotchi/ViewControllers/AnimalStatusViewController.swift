@@ -73,6 +73,7 @@ class AnimalStatusViewController: UIViewController {
             hpLabel.text = "\(clickedAnimal.health)/\(clickedAnimal.maxHealth)"
             clickedAnimal.food -= 1
             foodLabel.text = "Food Remaining: \(clickedAnimal.food)"
+            CoreDataManager.dataManager.save()
         }
     }
     

@@ -11,5 +11,5 @@ import CoreData
 
 @objc(Animal)
 public class Animal: NSManagedObject {
-    var delegate : SpriteKitViewController!
+    weak var delegate : SpriteKitViewController?
 }

@@ -36,12 +36,7 @@ class Habit : NSObject{
         self.animal = animal
         self.daysCompleted = 0
         self.streak = 0
-<<<<<<< Updated upstream
-        self.HabitCreationDate = Date()
-        
-=======
         self.habitCreationDate = Date()
->>>>>>> Stashed changes
     }
     
     func habitCircleChecked(){

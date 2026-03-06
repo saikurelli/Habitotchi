@@ -13,6 +13,6 @@ import CoreData
 public class Profile: NSManagedObject {
     var addedOrEditedHabit: Bool = false
     var displayHabitAlert: Bool = true
-    var tableDelegate : TableViewController!
-    var skvDelegate : SpriteKitViewController!
+    weak var tableDelegate : TableViewController?
+    weak var skvDelegate : SpriteKitViewController?
 }
