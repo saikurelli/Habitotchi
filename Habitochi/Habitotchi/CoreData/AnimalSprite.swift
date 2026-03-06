@@ -87,11 +87,11 @@ public class AnimalSprite : SKSpriteNode{
             loadFrames(animalAction: "lying")
         }
         setUpAnimation(animalAction: "lying")
-        SKAction.repeatForever(SKAction.animate(with: framesLibrary["lying"]!,
-                                                timePerFrame: timePerFrame,
-                                                resize: false,
-                                                restore: true)
-        )
+        self.run(SKAction.repeatForever(SKAction.animate(with: framesLibrary["lying"]!,
+                                                         timePerFrame: timePerFrame,
+                                                         resize: false,
+                                                         restore: true)
+        ))
     }
     
     private func animateHealthy() {

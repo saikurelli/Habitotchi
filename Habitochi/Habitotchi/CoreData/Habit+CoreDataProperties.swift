@@ -83,7 +83,10 @@ extension Habit {
     
     func dailyHabitCheck(){
         
-        let lastDate = UserDefaults.standard.object(forKey: "lastOpened") as! Date
+        guard let lastDate = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
+            habitCompleted = false
+            return
+        }
         
         var daysMissed = Calendar.current.dateComponents([.day], from: lastDate, to: Date()).day!
         if habitCompleted == true {

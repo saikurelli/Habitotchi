@@ -30,7 +30,7 @@ class SpriteKitViewController: UIViewController{
         
         super.viewDidLoad()
         currentProfile.skvDelegate = self
-        currentProfile.tableDelegate.spkDelegate = self
+        currentProfile.tableDelegate?.spkDelegate = self
         profileButton.tintColor = .black
         
         self.view = skView

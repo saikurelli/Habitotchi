@@ -31,12 +31,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             storyboard = UIStoryboard(name: "Signin", bundle: nil)
             vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
         }else{
-            guard let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
-                return
+            if let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date {
+                print("Retrieved Date from User Defaults \(lastOpened)")
+                currentProfile.checkDates(lastOpened: lastOpened)
             }
-            print("Retrieved Date from User Defaults \(lastOpened)")
-            
-            currentProfile.checkDates(lastOpened: lastOpened)
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             vc = storyboard.instantiateViewController(identifier: "HomeViewController")
         }
@@ -60,14 +58,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        guard let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date else {
-            return 
+        if let lastOpened = UserDefaults.standard.object(forKey: "lastOpened") as? Date {
+            if currentProfile != nil {
+                currentProfile.checkDates(lastOpened: lastOpened)
+            }
+            print("Retrieved Date from User Defaults \(lastOpened)")
         }
-        if currentProfile != nil {
-            currentProfile.checkDates(lastOpened: lastOpened)
-        }
-       
-        print("Retrieved Date from User Defaults \(lastOpened)")
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
